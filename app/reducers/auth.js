@@ -151,6 +151,7 @@ export default function auth(state = initialState, action) {
         currentUser: null,
         credentials: null,
         signingOut: false,
+        refreshedUser: false,
       }
     case 'AUTH_SIGN_OUT_FAILURE':
       return {
