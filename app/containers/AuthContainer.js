@@ -23,7 +23,7 @@ class AuthContainer extends Component {
     if (Platform.OS === 'android') {
       const { gcm, auth: { currentUser, refreshedUser } } = nextProps
       const oldRefreshedUser = this.props.auth.refreshedUser
-      if (refreshedUser && !oldRefreshedUser && currentUser.gcm_token !== gcm.token) {
+      if (refreshedUser && !oldRefreshedUser) {
         dispatch(GcmActions.store(credentials, gcm.token))
       }
     }
