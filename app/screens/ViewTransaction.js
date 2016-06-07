@@ -158,7 +158,7 @@ class ViewTransaction extends Component {
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundColor: Colors.beige,
+          backgroundColor: Colors.mediumLightBeige,
           height: (inputFocused ? focusedHeight : blurredHeight),
           flexDirection: 'row',
         }}>

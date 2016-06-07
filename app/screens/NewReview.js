@@ -68,6 +68,14 @@ class NewReview extends Component {
           }}>
             {demand.name}
           </Headline>
+          <Sentence style={{
+            fontSize: 14,
+            lineHeight: 18,
+            textAlign: 'center',
+            margin: 10,
+          }}>
+            Ajude seus vizinhos a conhecer {user.first_name} melhor: conte como foi sua experiência
+          </Sentence>
           <View style={{
             flexDirection: 'row',
             alignItems: 'center',
@@ -95,14 +103,6 @@ class NewReview extends Component {
             }}
             {...text}
           />
-          <Sentence style={{
-            fontSize: 14,
-            lineHeight: 18,
-            textAlign: 'center',
-            margin: 10,
-          }}>
-            Sua avaliação ficará exposta publicamente no perfil de {user.first_name}
-          </Sentence>
           { createError && <FormError message={ReviewValidators.errorMessage(createError)} /> }
           <FormSubmit
             {...this.props}
