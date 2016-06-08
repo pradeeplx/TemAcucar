@@ -1,4 +1,4 @@
-import React, { Component, ScrollView, View, Platform } from 'react-native'
+import React, { Component, ScrollView, View, Platform, StyleSheet } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import truncate from 'truncate'
 
@@ -43,7 +43,7 @@ export default class ViewDemand extends Component {
               alignSelf: 'stretch',
               paddingBottom: 20,
               marginBottom: 20,
-              borderBottomWidth: 0.5,
+              borderBottomWidth: StyleSheet.hairlineWidth,
               borderColor: Colors.beige,
             }}>
               <DemandHeader

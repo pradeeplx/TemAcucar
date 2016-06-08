@@ -1,4 +1,4 @@
-import React, { Component, View, TouchableOpacity, Platform } from 'react-native'
+import React, { Component, View, TouchableOpacity, Platform, StyleSheet } from 'react-native'
 import truncate from 'truncate'
 import Colors from "../Colors"
 import Icon from "./Icon"
@@ -17,7 +17,7 @@ export default class TransacionMiniature extends Component {
     return (
       <TouchableOpacity onPress={this.handleView.bind(this)} style={{
         borderColor: Colors.ice,
-        borderBottomWidth: 0.5,
+        borderBottomWidth: StyleSheet.hairlineWidth,
         padding: 10,
         flexDirection: 'row',
         alignItems: 'center',

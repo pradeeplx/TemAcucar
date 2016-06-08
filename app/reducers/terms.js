@@ -32,6 +32,7 @@ export default function terms(state = initialState, action) {
       return {
         ...state, 
         rejectedTerms: false,
+        scrolledToBottom: false,
       }
     case 'TERMS_SCROLL_TO_BOTTOM':
       return {

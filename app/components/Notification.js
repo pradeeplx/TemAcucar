@@ -1,4 +1,4 @@
-import React, { Component, TouchableOpacity, View } from 'react-native'
+import React, { Component, TouchableOpacity, View, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import HtmlSentence from "./HtmlSentence"
 import TimeAgo from "./TimeAgo"
@@ -17,7 +17,7 @@ export default class Notification extends Component {
         style={{
           backgroundColor: (read ? Colors.white : Colors.beige),
           borderColor: Colors.ice,
-          borderBottomWidth: 0.5,
+          borderBottomWidth: StyleSheet.hairlineWidth,
           padding: 10,
         }}
       >

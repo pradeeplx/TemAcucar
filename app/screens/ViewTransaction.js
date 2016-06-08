@@ -1,4 +1,4 @@
-import React, { Component, View, ScrollView, Platform, NativeModules, TouchableOpacity, TextInput } from 'react-native'
+import React, { Component, View, ScrollView, Platform, NativeModules, TouchableOpacity, TextInput, Dimensions } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -81,6 +81,9 @@ class ViewTransaction extends Component {
   }
 
   render() {
+    const dimensions = Dimensions.get('window')
+    const height = dimensions.height * dimensions.scale
+    const smallScreen = height <= 320
     const { transaction, auth, fields: { text } } = this.props
     const { currentUser } = auth
     const { demand, can_review_ids } = transaction
@@ -88,7 +91,7 @@ class ViewTransaction extends Component {
     const user = (transaction.user.id === currentUser.id ? transaction.demand.user : transaction.user)
     const { inputFocused } = this.state
     const blurredHeight = 44
-    const focusedHeight = (Platform.OS === 'ios' ? 336 : 400)
+    const focusedHeight = (Platform.OS === 'ios' ? 336 : (smallScreen ? 320 : 400))
     const focusedInputHeight = 88
     return (
       <View style={{

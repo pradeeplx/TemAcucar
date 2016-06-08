@@ -1,11 +1,11 @@
-import React, { View, Platform } from 'react-native'
+import React, { View, Platform, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import Headline from "./Headline"
 
 export default SetLocationHeader = (props) => (
   <View style={{
     borderColor: Colors.mediumLightBeige,
-    borderBottomWidth: 0.5,
+    borderBottomWidth: StyleSheet.hairlineWidth,
     alignSelf: 'stretch',
   }}>
     <Headline style={{

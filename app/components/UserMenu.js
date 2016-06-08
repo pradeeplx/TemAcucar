@@ -1,4 +1,4 @@
-import React, { Platform, ScrollView, View } from 'react-native'
+import React, { Platform, ScrollView, View, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import UserMenuItem from "./UserMenuItem"
@@ -66,7 +66,7 @@ export default UserMenu = ({ currentUser, onSettings, onAbout, onSignOut, onUser
         marginTop: 20,
         marginBottom: 10,
         marginHorizontal: 10,
-        borderTopWidth: 0.3,
+        borderTopWidth: StyleSheet.hairlineWidth,
         borderColor: Colors.pink,
         alignSelf: 'stretch',
       }} />
