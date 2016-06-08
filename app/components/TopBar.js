@@ -18,7 +18,6 @@ export default TopBar = ({ onMenuOpen }) => (
       justifyContent: 'center',
     }}>
       {true == true && <Image source={require('../img/icon.png')} style={{
-        marginTop: -2,
         width: 25,
         height: 25,
       }} />}
