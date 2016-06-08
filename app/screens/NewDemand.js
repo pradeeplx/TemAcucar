@@ -1,4 +1,4 @@
-import React, { Component, View, Image, Platform, Dimensions } from 'react-native'
+import React, { Component, View, Image, Platform } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -13,6 +13,7 @@ import Form from "../components/Form"
 import FormTextInput from "../components/FormTextInput"
 import FormError from "../components/FormError"
 import FormSubmit from "../components/FormSubmit"
+import UserMap from "../components/UserMap"
 
 const validators = {
   radius: DemandValidators.radius,
@@ -45,54 +46,13 @@ class NewDemand extends Component {
     const { auth, fields } = this.props
     const { currentUser: { latitude, longitude } } = auth
     const radius = parseInt(fields.radius.value) / 1000
-    const height = Dimensions.get('window').height
     return (
-      <View>
-        <MapView
-          showsUserLocation={false}
-          zoomEnabled={false}
-          rotateEnabled={false}
-          scrollEnabled={false}
-          pitchEnabled={false}
-          style={{
-            height: height * (height < 570 ? 0.12 : 0.25),
-            alignSelf: 'stretch',
-          }}
-          region={{
-            latitude: parseFloat(latitude), 
-            longitude: parseFloat(longitude),
-            latitudeDelta: parseFloat(0.02 * radius),
-            longitudeDelta: parseFloat(0.02 * radius),
-          }}
-        >
-          <MapView.Marker coordinate={{latitude, longitude}}>
-            <Image source={require('../img/icon.png')} style={{width: 15, height: 15}} />
-          </MapView.Marker>
-        </MapView>
-        <View style={{
-          position: 'absolute',
-          bottom: 10,
-          left: 0,
-          right: 0,
-          alignItems: 'center',
-        }}>
-          <View style={{
-            backgroundColor: Colors.lightPink,
-            paddingVertical: 4,
-            paddingHorizontal: 30,
-            borderRadius: 12,
-          }}>
-            <Sentence style={{
-              color: Colors.white, 
-              fontFamily: 'OpenSans-Bold', 
-              textAlign: 'center',
-              fontSize: 12,
-            }}>
-              { radius > 1 ? `${Math.round(radius * 10) / 10}km` : `${Math.round(radius * 1000)}m` }
-            </Sentence>
-          </View>
-        </View>
-      </View>
+      <UserMap
+        latitude={latitude}
+        longitude={longitude}
+        delta={parseFloat(0.02 * radius)}
+        text={ radius > 1 ? `${Math.round(radius * 10) / 10}km` : `${Math.round(radius * 1000)}m` }
+      />
     )
   }
 

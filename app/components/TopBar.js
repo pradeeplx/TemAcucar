@@ -1,6 +1,7 @@
-import React, { Platform, View, Text, Image, TouchableOpacity } from 'react-native'
+import React, { Platform, View, Text, TouchableOpacity } from 'react-native'
 import Colors from "../Colors"
 import Sentence from "./Sentence"
+import LogoIcon from "./LogoIcon"
 import Icon from "./Icon"
 
 export default TopBar = ({ onMenuOpen }) => (
@@ -17,10 +18,7 @@ export default TopBar = ({ onMenuOpen }) => (
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      {true == true && <Image source={require('../img/icon.png')} style={{
-        width: 25,
-        height: 25,
-      }} />}
+      {true == true && <LogoIcon />}
     </View>
     <TouchableOpacity onPress={onMenuOpen} style={{
       paddingHorizontal: 10,

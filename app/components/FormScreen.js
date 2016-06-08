@@ -1,7 +1,8 @@
-import React, { Platform, View, Image } from 'react-native'
+import React, { Platform, View } from 'react-native'
 
 import Colors from "../Colors"
 import BorderedScreen from "./BorderedScreen"
+import Logo from "./Logo"
 import NavBar from "./NavBar"
 import Form from "./Form"
 
@@ -13,11 +14,9 @@ export default FormScreen = (props) => (
         alignItems: 'center',
         paddingTop: 40,
       }}>
-        <Image source={require('../img/logo.png')} style={{
+        <Logo style={{
           marginBottom: 30,
-          width: 134,
-          height: 86,
-        }}/>
+        }} />
       </View>
       { props.children }
     </Form>
