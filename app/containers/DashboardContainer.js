@@ -25,6 +25,13 @@ class DashboardContainer extends Component {
   componentWillMount() {
     const { dispatch } = this.props
     dispatch(DashboardActions.startUp())
+    this.timer = null
+  }
+
+  componentWillUnmount() {
+    if (this.timer) {
+      clearTimeout(this.timer)
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,7 +42,7 @@ class DashboardContainer extends Component {
       this.handleListUserDemands()
       this.handleListTransactions()
       this.handleListReadNotifications()
-      this.handleListUnreadNotifications()
+      this.handleListUnreadNotifications(true)
       if (currentUser.admin) {
         this.handleListAdminDemands()
         this.handleListFlaggedDemands()
@@ -92,12 +99,13 @@ class DashboardContainer extends Component {
     dispatch(TransactionsActions.list(credentials, currentUser, offset))
   }
 
-  handleListUnreadNotifications() {
+  handleListUnreadNotifications(initial = false) {
     const { dispatch, auth, unreadNotifications: { list, listing, readingAll } } = this.props
     const { credentials, currentUser } = auth
     if (!listing && !readingAll) {
       dispatch(UnreadNotificationsActions.list(credentials, currentUser))
     }
+    this.timer = setTimeout(this.handleListUnreadNotifications.bind(this), (initial ? 40000 : 20000))
   }
 
   handleListReadNotifications() {
@@ -249,6 +257,9 @@ class DashboardContainer extends Component {
   }
 
   handleSignOut() {
+    if (this.timer) {
+      clearTimeout(this.timer)
+    }
     const { dispatch } = this.props
     dispatch(DashboardActions.signOut())
   }
