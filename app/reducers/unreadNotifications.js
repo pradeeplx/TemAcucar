@@ -65,6 +65,8 @@ export default function unreadNotifications(state = initialState, action) {
         list: [action.notification].concat(state.list),
         count: state.count + 1,
       }
+    case 'DASHBOARD_REFRESH':
+      return initialState
     case 'STORED_AUTH_RESET_SUCCESS':
       return initialState
     default:

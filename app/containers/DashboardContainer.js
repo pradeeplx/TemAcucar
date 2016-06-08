@@ -23,23 +23,26 @@ import DashboardRouter from "../routers/DashboardRouter"
 
 class DashboardContainer extends Component {
   componentWillMount() {
-    const { dispatch, auth: { credentials, currentUser } } = this.props
-    this.handleListUserDemands()
-    this.handleListTransactions()
-    this.handleListReadNotifications()
-    this.handleListUnreadNotifications()
-    if (currentUser.admin) {
-      this.handleListAdminDemands()
-      this.handleListFlaggedDemands()
-    }
+    const { dispatch } = this.props
+    dispatch(DashboardActions.startUp())
   }
 
   componentWillReceiveProps(nextProps) {
-    const { dispatch, demands, auth: { credentials, currentUser }, dashboard: { signingOut }, unreadNotifications, onSignOut } = nextProps
-    if (demands.startingUp && !demands.listing) {
+    const { dispatch, demands, auth: { credentials, currentUser }, dashboard: { startingUp, signingOut }, unreadNotifications, onSignOut } = nextProps
+    if (startingUp) {
+      dispatch(DashboardActions.startUp())
+    } else if(!startingUp && this.props.dashboard.startingUp) {
+      this.handleListUserDemands()
+      this.handleListTransactions()
+      this.handleListReadNotifications()
+      this.handleListUnreadNotifications()
+      if (currentUser.admin) {
+        this.handleListAdminDemands()
+        this.handleListFlaggedDemands()
+      }
+    } else if (demands.startingUp && !demands.listing) {
       this.handleListDemands()
-    }
-    if (signingOut && !unreadNotifications.listing) {
+    } else if (signingOut && !unreadNotifications.listing) {
       onSignOut()
     }
   }
@@ -240,6 +243,11 @@ class DashboardContainer extends Component {
     Communications.web('https://www.facebook.com/sharer/sharer.php?u=http://www.temacucar.com/')
   }
 
+  handleRefresh() {
+    const { dispatch } = this.props
+    dispatch(DashboardActions.refresh())
+  }
+
   handleSignOut() {
     const { dispatch } = this.props
     dispatch(DashboardActions.signOut())
@@ -316,6 +324,7 @@ class DashboardContainer extends Component {
         onReadAllNotifications={this.handleReadAllNotifications.bind(this)}
         onViewNotification={this.handleViewNotification.bind(this)}
         onShare={this.handleShare.bind(this)}
+        onRefresh={this.handleRefresh.bind(this)}
         onSignOut={this.handleSignOut.bind(this)}
       />
     )

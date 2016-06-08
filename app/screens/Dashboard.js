@@ -59,7 +59,7 @@ export default class Dashboard extends Component {
   }
 
   render() {
-    const { demands, transactions, unreadNotifications, readNotifications, onDrawerOpen, onDrawerClose, onNewDemand, onListDemands, onCreateTransaction, onRefuseDemand, onFlagDemand, onCompleteDemand, onCancelDemand,  onViewDemand, onListTransactions, onListReadNotifications, onViewTransaction, onSignOut, onUserDemands, onUserReviews, onSetLocation, onAdminDemands, onFlaggedDemands, onViewNotification, onShare, onFacebook, onAbout, onSettings } = this.props
+    const { demands, transactions, unreadNotifications, readNotifications, onDrawerOpen, onDrawerClose, onNewDemand, onListDemands, onCreateTransaction, onRefuseDemand, onFlagDemand, onCompleteDemand, onCancelDemand,  onViewDemand, onListTransactions, onListReadNotifications, onViewTransaction, onSignOut, onUserDemands, onUserReviews, onSetLocation, onAdminDemands, onFlaggedDemands, onViewNotification, onShare, onFacebook, onAbout, onSettings, onRefresh } = this.props
     const { drawerOpen, signingOut } = this.props.dashboard
     const { currentUser, facebookConnecting } = this.props.auth
     const { latitude, longitude, neighbors_count, neighbors_image_url } = currentUser
@@ -99,7 +99,7 @@ export default class Dashboard extends Component {
               renderTabBar={() => <TabBar notificationsCount={unreadNotifications.count} />}
               onChangeTab={this.handleChangeTab.bind(this)}
             >
-              <Tab tabLabel="home">
+              <Tab tabLabel="home" onRefresh={onRefresh}>
                 <NeighborsMap 
                   url={neighbors_image_url}
                   count={neighbors_count}
@@ -121,7 +121,7 @@ export default class Dashboard extends Component {
                   showTip={true}
                 />
               </Tab>
-              <Tab tabLabel="chat">
+              <Tab tabLabel="chat" onRefresh={onRefresh}>
                 <TransactionDemands
                   currentUser={currentUser}
                   demands={transactions.list}
@@ -134,7 +134,7 @@ export default class Dashboard extends Component {
                   onCancel={onCancelDemand}
                 />
               </Tab>
-              <Tab tabLabel="notifications">
+              <Tab tabLabel="notifications" onRefresh={onRefresh}>
                 <Notifications
                   notifications={unreadNotifications.list}
                   listing={false}

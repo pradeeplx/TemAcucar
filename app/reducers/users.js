@@ -28,6 +28,8 @@ export default function users(state = initialState, action) {
         startingUp: false,
         listError: action.error,
       }
+    case 'DASHBOARD_REFRESH':
+      return initialState
     case 'LOCATION_SET_LOCATION_SUCCESS':
       return initialState
     case 'STORED_AUTH_RESET_SUCCESS':

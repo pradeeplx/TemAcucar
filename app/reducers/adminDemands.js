@@ -134,6 +134,8 @@ export default function adminDemands(state = initialState, action) {
           }
         }),
       }
+    case 'DASHBOARD_REFRESH':
+      return initialState
     case 'STORED_AUTH_RESET_SUCCESS':
       return initialState
     default:
