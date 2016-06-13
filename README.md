@@ -73,5 +73,5 @@ Use this if you didn't need to rebuild and just want to publish new JS + assets 
 
 ```
 bin/bundle-android
-code-push release TemAcucar-Android ./release/android-bundle 0.0.1 --description "Release Changelog" --mandatory
+code-push release TemAcucar-Android ./release/android-bundle 0.0.1 --description "JS version X.Y.Z" --mandatory
 ```
