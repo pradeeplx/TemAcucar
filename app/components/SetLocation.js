@@ -44,7 +44,7 @@ class SetLocation extends Component {
         />
         <FormTextInput 
           name='thoroughfare'
-          title='Logradouro'
+          title='Rua, Av., etc'
           placeholder='Sua rua, etc'
           {...thoroughfare}
         />

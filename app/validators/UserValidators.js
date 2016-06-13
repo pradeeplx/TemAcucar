@@ -40,7 +40,7 @@ export default UserValidators = {
     }]
   },
   address_thoroughfare: {
-    title: 'Logradouro',
+    title: 'Rua, Av., etc',
     validate: [{
       validator: 'isLength',
       arguments: [1, 255],

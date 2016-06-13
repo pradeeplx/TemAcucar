@@ -251,6 +251,10 @@ class DashboardContainer extends Component {
     Communications.web('https://www.facebook.com/sharer/sharer.php?u=http://www.temacucar.com/')
   }
 
+  handleFeedback() {
+    Communications.web('mailto:temacucar@gmail.com?subject=Feedback')
+  }
+
   handleRefresh() {
     const { dispatch } = this.props
     dispatch(DashboardActions.refresh())
@@ -335,6 +339,7 @@ class DashboardContainer extends Component {
         onReadAllNotifications={this.handleReadAllNotifications.bind(this)}
         onViewNotification={this.handleViewNotification.bind(this)}
         onShare={this.handleShare.bind(this)}
+        onFeedback={this.handleFeedback.bind(this)}
         onRefresh={this.handleRefresh.bind(this)}
         onSignOut={this.handleSignOut.bind(this)}
       />

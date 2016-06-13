@@ -3,7 +3,7 @@ import Colors from "../Colors"
 import Sentence from "./Sentence"
 import UserMenuItem from "./UserMenuItem"
 
-export default UserMenu = ({ currentUser, onSettings, onAbout, onSignOut, onUserDemands, onUserReviews, onSetLocation, onFacebook, facebookConnecting, onAdminDemands, onFlaggedDemands, signingOut }) => (
+export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSignOut, onUserDemands, onUserReviews, onSetLocation, onFacebook, facebookConnecting, onAdminDemands, onFlaggedDemands, signingOut }) => (
   <View style={{
     flex: 1,
     justifyContent: 'flex-start',
@@ -59,6 +59,9 @@ export default UserMenu = ({ currentUser, onSettings, onAbout, onSignOut, onUser
       { currentUser.admin && <UserMenuItem onPress={onFlaggedDemands} icon="report">
         Pedidos impróprios
       </UserMenuItem> }
+      <UserMenuItem onPress={onFeedback} icon="feedback">
+        Feedback
+      </UserMenuItem>
       <UserMenuItem onPress={onAbout} icon="perm-device-information">
         Sobre
       </UserMenuItem>
