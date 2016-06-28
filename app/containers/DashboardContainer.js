@@ -1,4 +1,4 @@
-import React, { Component } from 'react-native'
+import React, { Component, Platform, PushNotificationIOS } from 'react-native'
 import Communications from 'react-native-communications'
 import { connect } from 'react-redux'
 import codePush from "react-native-code-push"
@@ -51,6 +51,11 @@ class DashboardContainer extends Component {
       this.handleListDemands()
     } else if (signingOut && !unreadNotifications.listing) {
       onSignOut()
+    }
+    if (Platform.OS === 'ios') {
+      if (unreadNotifications.count !== this.props.unreadNotifications.count) {
+        PushNotificationIOS.setApplicationIconBadgeNumber(unreadNotifications.count)
+      }
     }
   }
 
