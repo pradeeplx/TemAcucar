@@ -29,7 +29,7 @@ class ConfigContainer extends Component {
   }
 
   handleContact() {
-    Communications.web('mailto:temacucar@gmail.com')
+    Communications.web('mailto:hello@temacucar.com')
   }
 
   handleScrollTerms(event) {

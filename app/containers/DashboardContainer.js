@@ -252,7 +252,7 @@ class DashboardContainer extends Component {
   }
 
   handleFeedback() {
-    Communications.web('mailto:temacucar@gmail.com?subject=Feedback')
+    Communications.web('mailto:hello@temacucar.com?subject=Feedback')
   }
 
   handleRefresh() {
