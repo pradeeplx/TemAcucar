@@ -61,6 +61,7 @@
 		937F65DB1C513C39002D091D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937F65D81C513C39002D091D /* FBSDKShareKit.framework */; };
 		937F65E21C514450002D091D /* libRCTFBLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 937F65E11C514416002D091D /* libRCTFBLogin.a */; };
 		938260DD1C4AC4FA005AB6AD /* libRNGeocoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F0A8A01C4AB88000557F7C /* libRNGeocoder.a */; };
+		93B2F2F61D2331AE0089622F /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B2F2F51D23318F0089622F /* libRCTPushNotification.a */; };
 		93D336981C76106F004E5E89 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D336871C76104A004E5E89 /* libCodePush.a */; };
 		93D3369A1C7610AD004E5E89 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D336991C7610AD004E5E89 /* libz.tbd */; };
 		9B91A56EDEDF423F9A13F662 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F784372B4854BE788A20AF1 /* Zocial.ttf */; };
@@ -193,6 +194,13 @@
 			remoteGlobalIDString = EB2648DF1C7BE17A00B8F155;
 			remoteInfo = ReactNativeConfig;
 		};
+		93B2F2F41D23318F0089622F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93B2F2F01D23318E0089622F /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTPushNotification;
+		};
 		93D336861C76104A004E5E89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 93D336811C76104A004E5E89 /* CodePush.xcodeproj */;
@@ -295,6 +303,7 @@
 		937F65D71C513C39002D091D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		937F65D81C513C39002D091D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		937F65DC1C514416002D091D /* RCTFBLogin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTFBLogin.xcodeproj; path = "../node_modules/react-native-facebook-login/RCTFBLogin.xcodeproj"; sourceTree = "<group>"; };
+		93B2F2F01D23318E0089622F /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
 		93D336811C76104A004E5E89 /* CodePush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/CodePush.xcodeproj"; sourceTree = "<group>"; };
 		93D336991C7610AD004E5E89 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		93F0A8911C4AB87F00557F7C /* RNGeocoder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGeocoder.xcodeproj; path = "../node_modules/react-native-geocoder/RNGeocoder.xcodeproj"; sourceTree = "<group>"; };
@@ -320,6 +329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B2F2F61D2331AE0089622F /* libRCTPushNotification.a in Frameworks */,
 				930F7DA91CD9DF11000580CD /* libsqlite3.0.tbd in Frameworks */,
 				930F7DA71CD9DEF6000580CD /* SystemConfiguration.framework in Frameworks */,
 				930F7DA51CD9DEDC000580CD /* CoreData.framework in Frameworks */,
@@ -498,6 +508,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				93B2F2F01D23318E0089622F /* RCTPushNotification.xcodeproj */,
 				930F7D891CD9DE90000580CD /* RCTGoogleAnalyticsBridge.xcodeproj */,
 				93D336811C76104A004E5E89 /* CodePush.xcodeproj */,
 				937F65DC1C514416002D091D /* RCTFBLogin.xcodeproj */,
@@ -611,6 +622,14 @@
 			isa = PBXGroup;
 			children = (
 				9398518F1C87DDB00096C8BC /* libReactNativeConfig.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93B2F2F11D23318E0089622F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93B2F2F51D23318F0089622F /* libRCTPushNotification.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -765,6 +784,10 @@
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 93B2F2F11D23318E0089622F /* Products */;
+					ProjectRef = 93B2F2F01D23318E0089622F /* RCTPushNotification.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -922,6 +945,13 @@
 			fileType = archive.ar;
 			path = libReactNativeConfig.a;
 			remoteRef = 9398518E1C87DDB00096C8BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		93B2F2F51D23318F0089622F /* libRCTPushNotification.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTPushNotification.a;
+			remoteRef = 93B2F2F41D23318F0089622F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		93D336871C76104A004E5E89 /* libCodePush.a */ = {
@@ -1144,6 +1174,7 @@
 					"$(SRCROOT)/../node_modules/react-native-code-push/**",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native/React/Libraries/PushNotificationIOS/**",
 				);
 				INFOPLIST_FILE = TemAcucar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1174,6 +1205,7 @@
 					"$(SRCROOT)/../node_modules/react-native-code-push/**",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../node_modules/react-native/React/Libraries/PushNotificationIOS/**",
 				);
 				INFOPLIST_FILE = TemAcucar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
