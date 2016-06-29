@@ -10,30 +10,23 @@ class ApnContainer extends Component {
       const { dispatch } = this.props
       dispatch(ApnActions.register(token))
     })   
-    PushNotificationIOS.addEventListener('notification', (data) => {
-      alert(JSON.stringify(data))
-      // const notification = {
-      //   id: data.id,
-      //   triggering_user: JSON.parse(data.triggering_user || "null"),
-      //   demand: JSON.parse(data.demand || "null"),
-      //   transaction: JSON.parse(data.transaction || "null"),
-      //   message: JSON.parse(data.message || "null"),
-      //   review: JSON.parse(data.review || "null"),
-      //   subject: data.subject,
-      //   text: data.text,
-      //   read: JSON.parse(data.read),
-      //   admin: JSON.parse(data.admin),
-      //   created_at: data.created_at,
-      // }
-      // const { dispatch } = this.props
-      // dispatch(ApnActions.notify(notification))
-      // const createNotification = JSON.parse(data.app_notifications)
-      // if (createNotification) {
-      //   Notification.create({
-      //     subject: data.subject,
-      //     message: data.sanitized_text,
-      //   })
-      // }
+    PushNotificationIOS.addEventListener('notification', (pushNotification) => {
+      const data = pushNotification._data
+      const notification = {
+        id: data.id,
+        triggering_user: data.triggering_user,
+        demand: data.demand,
+        transaction: data.transaction,
+        message: data.message,
+        review: data.review,
+        subject: data.subject,
+        text: data.text,
+        read: data.read,
+        admin: data.admin,
+        created_at: data.created_at,
+      }
+      const { dispatch } = this.props
+      dispatch(ApnActions.notify(notification))
     })
     PushNotificationIOS.requestPermissions()
   }
