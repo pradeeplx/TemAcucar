@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { reducer as formReducer } from 'redux-form'
+import apn from './reducers/apn'
 import gcm from './reducers/gcm'
 import toast from './reducers/toast'
 import versions from './reducers/versions'
@@ -23,6 +24,7 @@ import viewDemand from './reducers/viewDemand'
 
 const reducer = combineReducers({
   form: formReducer,
+  apn,
   gcm,
   toast,
   versions,
