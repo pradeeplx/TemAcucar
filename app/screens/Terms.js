@@ -347,7 +347,7 @@ export default class Terms extends Component {
               </View>
             </View>
           </ScrollView>
-          <TextBox style={{height: 60, fontFamily: 'BoosterNextFY-Bold'}}>
+          <TextBox style={{height: 60, fontFamily: 'Avenir'}}>
             { (scrolledToBottom ? 'Para continuar, aceite os termos de uso.' : 'Para continuar, leia os termos de uso até o final.') }
           </TextBox>
         </View>

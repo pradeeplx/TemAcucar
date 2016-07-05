@@ -104,7 +104,7 @@ class ViewTransaction extends Component {
             justifyContent: 'center',
           }}>
             <Sentence style={{
-              fontFamily: 'BoosterNextFY-Black',
+              fontFamily: 'Avenir',
               fontSize: 12,
               lineHeight: (Platform.OS === 'ios' ? 12 : 16),
               color: Colors.white,
@@ -134,7 +134,7 @@ class ViewTransaction extends Component {
           backgroundColor: Colors.mediumLightBeige,
         }}>
           <Sentence style={{
-            fontFamily: 'OpenSans-Bold',
+            fontFamily: 'Avenir',
             fontSize: 12,
             lineHeight: (Platform.OS === 'ios' ? 16 : 16),
             marginRight: 6,

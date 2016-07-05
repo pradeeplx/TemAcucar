@@ -14,10 +14,10 @@ export default class About extends Component {
     return (
       <SimpleScreen headline="Sobre" navBar={true} navBarTitle="Sobre">
         <Sentence style={{marginBottom: 20}}>
-          <Text style={{fontFamily: 'OpenSans-Bold'}}>Versão compilada:</Text> {Config.BUILD}
+          <Text style={{fontFamily: 'Avenir-Medium'}}>Versão compilada:</Text> {Config.BUILD}
         </Sentence>
         <Sentence>
-          <Text style={{fontFamily: 'OpenSans-Bold'}}>Versão JavaScript:</Text> {Package.version}
+          <Text style={{fontFamily: 'Avenir-Medium'}}>Versão JavaScript:</Text> {Package.version}
         </Sentence>
       </SimpleScreen>
     )

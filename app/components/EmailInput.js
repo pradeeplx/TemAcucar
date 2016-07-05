@@ -17,7 +17,7 @@ class EmailInput extends Component {
         name='email'
         title='E-mail'
         placeholder='Digite seu e-mail'
-        icon='mail-outline'
+        icon='ios-at-outline'
         autoCapitalize='none'
         keyboardType='email-address'
         { ...this.props }

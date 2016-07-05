@@ -9,20 +9,20 @@ export default Button = (props) => (
     textStyle={[{
       textAlign: 'center',
       color: Colors.white,
-      fontSize: 14,
-      fontFamily: 'BoosterNextFY-Black',
-      lineHeight: 20,
+      fontSize: 12,
+      fontFamily: 'Avenir',
+      lineHeight: 16,
     }, props.textStyle]}
     disabledStyle={[{
-      backgroundColor: Colors.gray,
-      borderColor: Colors.darkGray,
+      opacity: 0.6,
     }, props.disabledStyle]}
     style={[{
+      height: 36,
       alignSelf: 'center',
       borderWidth: 0,
-      borderRadius: 6,
+      borderRadius: 24,
       paddingHorizontal: 30,
-      paddingVertical: 8,
+      paddingVertical: 0,
       backgroundColor: Colors.pink,
       marginBottom: 0,
     }, props.style]}

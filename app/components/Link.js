@@ -4,7 +4,7 @@ import Colors from "../Colors"
 export default Link = ({ style, onPress, children }) => (
   <TouchableOpacity onPress={onPress}>
     <Text style={[{
-      fontFamily: 'BoosterNextFY-Bold',
+      fontFamily: 'Avenir',
       fontSize: 14,
       color: Colors.brown,
     }, style]}>

@@ -23,7 +23,7 @@ export default class Reviews extends Component {
               color: Colors.brown,
               fontSize: 14,
               lineHeight: (Platform.OS === 'ios' ? 14 : 16),
-              fontFamily: 'BoosterNextFY-Black',
+              fontFamily: 'Avenir',
             }}>
               { user.id === currentUser.id ? 'Suas avaliações' : `Avaliações de ${user.first_name} ${user.last_name}` }
             </Text>

@@ -12,14 +12,14 @@ export default DemandState = ({ state, style }) => (
     justifyContent: 'center',
     alignSelf: 'center',
   }, style]}>
-    <Icon name={(state === 'completed' ? 'check-circle' : (state === 'canceled' ? 'cancel' : (state === 'flagged' ? 'report' : 'schedule')))} style={{ 
+    <Icon name={(state === 'completed' ? 'ios-checkmark-circle-outline' : (state === 'canceled' ? 'ios-close-circle-outline' : (state === 'flagged' ? 'report' : 'ios-time-outline')))} style={{ 
       color: (state === 'completed' ? Colors.green : (state === 'canceled' ? Colors.red : Colors.ice)),
       color: Colors.white,
       fontSize: 14,
       marginRight: 6,
     }} />
     <Sentence style={{
-      fontFamily: 'BoosterNextFY-Bold',
+      fontFamily: 'Avenir',
       fontSize: 8,
       lineHeight: 10,
       color: (state === 'completed' ? Colors.green : (state === 'canceled' ? Colors.red : Colors.ice)),

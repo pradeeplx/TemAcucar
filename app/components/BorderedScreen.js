@@ -5,7 +5,7 @@ import NavBar from "./NavBar"
 export default BorderedScreen = ({ children, navBar, navBarTitle }) => (
   <View style={{
     flex: 1,
-    backgroundColor: Colors.blue,
+    backgroundColor: Colors.white,
     paddingTop: (!navBar && Platform.OS === 'ios' ? 20 : 0)
   }}>
     { navBar && <NavBar title={navBarTitle} /> }
@@ -18,7 +18,7 @@ export default BorderedScreen = ({ children, navBar, navBarTitle }) => (
       borderRightColor: Colors.mediumPink,
       borderTopColor: (Platform.OS === 'ios' ? Colors.mediumDarkPink : Colors.mediumPink),
       borderBottomColor: (Platform.OS === 'ios' ? Colors.mediumDarkPink : Colors.mediumPink),
-      borderWidth: 8,
+      borderWidth: 0,
     }}>
       <View style={{
         borderColor: Colors.lightPink,

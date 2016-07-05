@@ -14,13 +14,13 @@ export default Review = ({ review: { rating, text, reviewer, created_at } }) => 
   }}>
     <ReviewRating rating={rating} />
     <Sentence style={{
-      fontFamily: 'OpenSans-Bold',
+      fontFamily: 'Avenir',
       fontSize: 10,
     }}>
       { `${reviewer.first_name} ${reviewer.last_name}` }
     </Sentence>
     <Sentence style={{
-      fontFamily: 'OpenSans',
+      fontFamily: 'Avenir',
       textAlign: 'center',
       fontSize: 10,
     }}>
@@ -32,7 +32,7 @@ export default Review = ({ review: { rating, text, reviewer, created_at } }) => 
       justifyContent: 'center',
       marginTop: 4,
     }}>
-      <Icon name="schedule" style={{ 
+      <Icon name="ios-time-outline" style={{ 
         color: Colors.ice,
         marginRight: 4,
         marginTop: 2,

@@ -3,8 +3,8 @@ import Colors from "../Colors"
 
 export default Tip = ({ children }) => (
   <View style={{
-    borderTopWidth: 4,
-    borderColor: Colors.beige,
+    borderTopWidth: 12,
+    borderColor: Colors.lightBeige,
     backgroundColor: Colors.white,
     padding: 10,
     alignItems: 'center',

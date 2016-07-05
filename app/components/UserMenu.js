@@ -7,10 +7,10 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
   <View style={{
     flex: 1,
     justifyContent: 'flex-start',
-    backgroundColor: Colors.darkPink,
+    backgroundColor: Colors.blue,
   }}>
     <View style={{
-      backgroundColor: Colors.pink,
+      backgroundColor: Colors.white,
       alignSelf: 'stretch',
       padding: 10,
       paddingTop: (Platform.OS == 'ios' ? 30 : 10),
@@ -23,8 +23,8 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
         flex: 1,
       }}>
         <Sentence style={{ 
-          fontFamily: 'BoosterNextFY-Black', 
-          color: Colors.yellow,
+          fontFamily: 'Avenir', 
+          color: Colors.blue,
           fontSize: 20,
           lineHeight: 28,
         }}>
@@ -35,34 +35,34 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
     <ScrollView style={{
       flex: 1,
     }}>
-      <UserMenuItem onPress={onUserDemands} icon="view-list">
+      <UserMenuItem onPress={onUserDemands} icon="ios-list-outline">
         Meus pedidos
       </UserMenuItem>
-      <UserMenuItem onPress={onUserReviews} icon="star">
+      <UserMenuItem onPress={onUserReviews} icon="ios-star-outline">
         Minhas avaliações
       </UserMenuItem>
-      { !currentUser.facebook_uid && <UserMenuItem onPress={onFacebook} icon="facebook-official" iconSet="FontAwesome" iconStyle={{
+      { !currentUser.facebook_uid && <UserMenuItem onPress={onFacebook} icon="logo-facebook" iconStyle={{
         fontSize: 22,
         marginLeft: 4,
       }}>
         { facebookConnecting ? 'Conectando...' : 'Conectar Facebook' }
       </UserMenuItem> }
-      <UserMenuItem onPress={onSetLocation} icon="place">
+      <UserMenuItem onPress={onSetLocation} icon="ios-pin-outline">
         Alterar endereço
       </UserMenuItem>
-      <UserMenuItem onPress={onSettings} icon="settings">
+      <UserMenuItem onPress={onSettings} icon="ios-settings-outline">
         Configurações
       </UserMenuItem>
-      { currentUser.admin && <UserMenuItem onPress={onAdminDemands} icon="playlist-add-check">
+      { currentUser.admin && <UserMenuItem onPress={onAdminDemands} icon="ios-list-box-outline">
         Todos os pedidos
       </UserMenuItem> }
-      { currentUser.admin && <UserMenuItem onPress={onFlaggedDemands} icon="report">
+      { currentUser.admin && <UserMenuItem onPress={onFlaggedDemands} icon="ios-alert-outline">
         Pedidos impróprios
       </UserMenuItem> }
-      <UserMenuItem onPress={onFeedback} icon="feedback">
+      <UserMenuItem onPress={onFeedback} icon="ios-heart-outline">
         Feedback
       </UserMenuItem>
-      <UserMenuItem onPress={onAbout} icon="perm-device-information">
+      <UserMenuItem onPress={onAbout} icon="ios-information-circle-outline">
         Sobre
       </UserMenuItem>
       <View style={{
@@ -70,10 +70,10 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
         marginBottom: 10,
         marginHorizontal: 10,
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: Colors.pink,
+        borderColor: Colors.white,
         alignSelf: 'stretch',
       }} />
-      <UserMenuItem onPress={onSignOut} icon="power-settings-new" type="light" style={{
+      <UserMenuItem onPress={onSignOut} icon="ios-power-outline" type="light" style={{
         paddingBottom: 20,
       }}>
         { signingOut ? 'Saindo...' : 'Sair' }

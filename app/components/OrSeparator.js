@@ -5,7 +5,7 @@ import TextBox from "./TextBox"
 export default OrSeparator = () => (
   <TextBox style={{
     margin: 10,
-    fontFamily: 'BoosterNextFY-Bold',
+    fontFamily: 'Avenir',
     fontSize: 14,
     lineHeight: 18,
     color: Colors.brown,

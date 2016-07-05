@@ -28,7 +28,7 @@ export default class TransacionMiniature extends Component {
           flex: 1,
         }}>
           <Sentence style={{
-            fontFamily: 'BoosterNextFY-Bold',
+            fontFamily: 'Avenir',
             fontSize: 12,
             lineHeight: (Platform.OS === 'ios' ? 12 : 14),
             color: Colors.brown,
@@ -43,7 +43,7 @@ export default class TransacionMiniature extends Component {
             { truncate((last_message_text ? last_message_text : 'Escreva uma mensagem para ' + transaction.demand.user.first_name), 35) }
           </Sentence>
         </View>
-        <Icon name="keyboard-arrow-right" style={{
+        <Icon name="ios-arrow-forward-outline" style={{
           color: Colors.ice,
         }} />
       </TouchableOpacity>

@@ -44,7 +44,7 @@ class SignUpForm extends Component {
           name='first_name'
           title='Nome'
           placeholder='Digite seu nome'
-          icon='account-circle'
+          icon='ios-contact-outline'
           autoCapitalize='words'
           {...first_name}
         />
@@ -52,7 +52,7 @@ class SignUpForm extends Component {
           name='last_name'
           title='Sobrenome'
           placeholder='Digite seu sobrenome'
-          icon='account-circle'
+          icon='ios-contact-outline'
           autoCapitalize='words'
           {...last_name}
         />

@@ -18,6 +18,7 @@ export default class Demands extends Component {
           <View key={demand.id}>
             { index === 1 && showTip && <DemandsTip {...tipProps} /> }
             <DemandMiniature
+              index={index}
               demand={demand}
               currentUser={currentUser}
               onAccept={onAccept}

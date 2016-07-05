@@ -38,10 +38,10 @@ export default function toast(state = initialState, action) {
       return success("Descobrimos seu endereço pela sua localização. Por favor, confira antes de continuar.")
     case 'LOCATION_GET_ADDRESS_FAILURE':
       return tip("Não foi possível detectar sua localização. Por favor, informe seu endereço.")
-    case 'LOCATION_SEARCH_SUCCESS':
-      return success("Pronto! Verificamos seu endereço :D por favor, confira antes de continuar.")
+    // case 'LOCATION_SEARCH_SUCCESS':
+    //   return success("Pronto! Verificamos seu endereço :D por favor, confira antes de continuar.")
     case 'LOCATION_SEARCH_FAILURE':
-      return tip("Não foi possível encontrar seu endereço. Por favor, informe novamente.")
+      return tip("Não foi possível encontrar seu endereço. Por favor, tente novamente.")
     case 'LOCATION_SET_LOCATION_FAILURE':
       return networkError
     case 'USERS_LIST_FAILURE':

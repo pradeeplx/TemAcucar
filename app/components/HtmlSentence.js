@@ -13,10 +13,10 @@ export default class HtmlSentence extends Component {
       text = node.text
     } else if (name === 'b') {
       text = children[0].text
-      style = { fontFamily: 'OpenSans-Bold' }
+      style = { fontFamily: 'Avenir-Medium' }
     } else if (name === 'i') {
       text = children[0].text
-      style = { fontFamily: 'OpenSans-Italic' }
+      style = { fontFamily: 'Avenir-Oblique' }
     }
     return (
       <Sentence {...this.props} style={[style, this.props.style]}>

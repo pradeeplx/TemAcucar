@@ -9,7 +9,7 @@ export default TransactionDemandTimeAgo = ({ index, demand: { created_at, user }
     flex: 1,
     alignItems: 'flex-end',
   }}>
-    <Icon name="schedule" style={{ 
+    <Icon name="ios-time-outline" style={{ 
       color: (currentUser.id === user.id ? Colors.lightPink : Colors.lightBlue),
       fontSize: 14,
     }} />

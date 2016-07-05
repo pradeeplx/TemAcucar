@@ -3,9 +3,10 @@ import Colors from "../Colors"
 
 export default Headline = (props) => (
   <Text style={[{
-    fontFamily: 'BoosterNextFY-Black',
-    color: Colors.brown,
-    fontSize: 20,
+    fontFamily: 'Avenir',
+    color: Colors.gray,
+    fontSize: 16,
+    lineHeight: 18,
     textAlign: 'center',
     marginHorizontal: 20,
     marginBottom: 20,

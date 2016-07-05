@@ -84,7 +84,7 @@ class NewDemand extends Component {
         <Form>
           { radius.value && this.renderMap() }
           <Sentence style={{
-            fontFamily: 'BoosterNextFY-Bold',
+            fontFamily: 'Avenir',
             fontSize: 14,
             textAlign: 'center',
             marginTop: 15,

@@ -91,7 +91,7 @@ export default class Dashboard extends Component {
         <View {...this.panResponder.panHandlers} style={{
           flex: 1, 
           alignSelf: 'stretch',
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.white,
         }} >
           <TopBar onMenuOpen={this.handleMenuOpen.bind(this)} />
           <View style={{ flex: 1 }}>
@@ -100,7 +100,7 @@ export default class Dashboard extends Component {
               renderTabBar={() => <TabBar notificationsCount={unreadNotifications.count} />}
               onChangeTab={this.handleChangeTab.bind(this)}
             >
-              <Tab tabLabel="home" onRefresh={onRefresh}>
+              <Tab tabLabel="ios-home-outline" onRefresh={onRefresh}>
                 <NeighborsMap 
                   url={neighbors_image_url}
                   count={neighbors_count}
@@ -122,7 +122,7 @@ export default class Dashboard extends Component {
                   showTip={true}
                 />
               </Tab>
-              <Tab tabLabel="chat" onRefresh={onRefresh}>
+              <Tab tabLabel="ios-chatboxes-outline" onRefresh={onRefresh}>
                 <TransactionDemands
                   currentUser={currentUser}
                   demands={transactions.list}
@@ -135,7 +135,7 @@ export default class Dashboard extends Component {
                   onCancel={onCancelDemand}
                 />
               </Tab>
-              <Tab tabLabel="notifications" onRefresh={onRefresh}>
+              <Tab tabLabel="ios-notifications-outline" onRefresh={onRefresh}>
                 <Notifications
                   notifications={unreadNotifications.list}
                   listing={false}

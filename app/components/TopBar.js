@@ -1,4 +1,4 @@
-import React, { Platform, View, Text, TouchableOpacity } from 'react-native'
+import React, { Platform, View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import LogoIcon from "./LogoIcon"
@@ -7,10 +7,12 @@ import Icon from "./Icon"
 export default TopBar = ({ onMenuOpen }) => (
   <View style={{
     marginTop: (Platform.OS == 'ios' ? 20 : 0),
-    height: 36,
+    height: 40,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    borderColor: Colors.pink,
+    borderBottomWidth: StyleSheet.hairlineWidth,
   }}>
     <View style={{
       flex: 1, 
@@ -28,8 +30,8 @@ export default TopBar = ({ onMenuOpen }) => (
       bottom: 0,
       justifyContent: 'center',
     }}>
-      <Icon name="menu" style={{
-        color: Colors.yellow,
+      <Icon name="ios-menu" style={{
+        color: Colors.brown,
         fontSize: 28,
       }} />
     </TouchableOpacity>

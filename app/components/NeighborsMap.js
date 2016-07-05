@@ -16,14 +16,14 @@ export default NeighborsMap = ({ url, count }) => (
       alignItems: 'center',
     }}>
       <View style={{
-        backgroundColor: Colors.lightPink,
+        backgroundColor: Colors.white,
         paddingVertical: 4,
         paddingHorizontal: 30,
         borderRadius: 12,
       }}>
         <Sentence style={{
-          color: Colors.white, 
-          fontFamily: 'OpenSans-Bold', 
+          color: Colors.blue, 
+          fontFamily: 'Avenir', 
           textAlign: 'center',
           fontSize: 12,
         }}>

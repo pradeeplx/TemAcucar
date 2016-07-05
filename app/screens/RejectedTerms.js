@@ -16,7 +16,7 @@ export default class RejectedTerms extends Component {
       <SimpleScreen headline="Vamos sentir sua falta :)">
         <View style={{paddingHorizontal: 20, marginBottom: 20}}>
           <Sentence style={{marginBottom: 20}}>
-            Escreva para <Text onPress={onContact} style={{fontFamily: 'OpenSans-Bold'}}>hello@temacucar.com</Text> caso queira compartilhar o motivo de ter recusado os termos. Vai ser um prazer falar com você!
+            Escreva para <Text onPress={onContact} style={{fontFamily: 'Avenir-Medium'}}>hello@temacucar.com</Text> caso queira compartilhar o motivo de ter recusado os termos. Vai ser um prazer falar com você!
           </Sentence>
           <Sentence>
             Caso você tenha recusado sem querer, clique no botão abaixo para ler uma vez mais.

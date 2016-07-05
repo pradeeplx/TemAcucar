@@ -33,7 +33,7 @@ export default class DemandHeader extends Component {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <Icon name="schedule" style={{ 
+            <Icon name="ios-time-outline" style={{ 
               color: Colors.ice,
               marginRight: 4,
               marginTop: 2,
@@ -49,7 +49,7 @@ export default class DemandHeader extends Component {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <Icon name="place" style={{ 
+            <Icon name="ios-pin-outline" style={{ 
               color: Colors.ice,
               marginLeft: 10,
               marginRight: 2,
@@ -59,7 +59,7 @@ export default class DemandHeader extends Component {
             <Text style={{
               color: Colors.ice,
               fontSize: 9,
-              fontFamily: 'OpenSans',
+              fontFamily: 'Avenir',
             }}>
               A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
             </Text>
@@ -70,7 +70,7 @@ export default class DemandHeader extends Component {
           color: Colors.ice,
           fontSize: 10,
           lineHeight: (Platform.OS === 'ios' ? 12 : 14),
-          fontFamily: 'BoosterNextFY-Bold',
+          fontFamily: 'Avenir',
           marginTop: 14,
         }}>
           { currentUser.id === user.id ? 'Você' : user.first_name } { verbToUse } um(a)
@@ -81,7 +81,7 @@ export default class DemandHeader extends Component {
           color: Colors.pink,
           fontSize: 12,
           lineHeight: (Platform.OS === 'ios' ? 14 : 16),
-          fontFamily: 'BoosterNextFY-Black',
+          fontFamily: 'Avenir',
         }}>
           { fullHeader ? name.toUpperCase() : truncate(name.toUpperCase(), 30) }
         </Text>
@@ -91,7 +91,7 @@ export default class DemandHeader extends Component {
             marginHorizontal: 10,
             marginTop: 4,
             lineHeight: (Platform.OS === 'ios' ? 10 : 12),
-            fontFamily: 'BoosterNextFY-Regular',
+            fontFamily: 'Avenir',
             textAlign: 'center',
           }}>
             { fullHeader ? description : truncate(description, 110) }

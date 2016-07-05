@@ -1,4 +1,4 @@
-import React, { Component, Platform, View, TouchableOpacity } from 'react-native'
+import React, { Component, Platform, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
 import Colors from "../Colors"
@@ -14,7 +14,9 @@ export default class NavBar extends Component {
     const { children, title } = this.props
     return (
       <View style={{
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
+        borderColor: Colors.pink,
+        borderBottomWidth: StyleSheet.hairlineWidth,
       }}>
         <View style={{
           marginTop: (Platform.OS == 'ios' ? 20 : 0),
@@ -26,10 +28,10 @@ export default class NavBar extends Component {
           { children }
           { !children &&
             <Sentence style={{
-              fontFamily: 'BoosterNextFY-Black',
+              fontFamily: 'Avenir',
               fontSize: 12,
               lineHeight: (Platform.OS === 'ios' ? 12 : 16),
-              color: Colors.white,
+              color: Colors.brown,
               marginTop: 8,
               marginBottom: 6,
             }}>
@@ -41,8 +43,8 @@ export default class NavBar extends Component {
             top: 0,
             left: 0,
           }}>
-            <Icon name="keyboard-arrow-left" style={{
-              color: Colors.yellow,
+            <Icon name="ios-arrow-back-outline" style={{
+              color: Colors.brown,
               fontSize: 32,
               marginTop: (Platform.OS === 'ios' ? 3 : 5),
               marginHorizontal: 12,

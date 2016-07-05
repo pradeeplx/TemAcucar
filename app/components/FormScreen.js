@@ -2,7 +2,7 @@ import React, { Platform, View, Dimensions } from 'react-native'
 
 import Colors from "../Colors"
 import BorderedScreen from "./BorderedScreen"
-import Logo from "./Logo"
+import LogoBigIcon from "./LogoBigIcon"
 import NavBar from "./NavBar"
 import Form from "./Form"
 
@@ -18,7 +18,7 @@ export default FormScreen = (props) => {
           alignItems: 'center',
           paddingTop: (smallScreen ? 0 : 40),
         }}>
-          { !smallScreen && <Logo style={{ marginBottom: 30 }} /> }
+          { !smallScreen && <LogoBigIcon style={{ marginBottom: 30 }} /> }
         </View>
         { props.children }
       </Form>

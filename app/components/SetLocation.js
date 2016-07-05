@@ -94,7 +94,7 @@ class SetLocation extends Component {
             marginBottom: 0,
           }}
         >
-          {dirty || !valid ? 'Buscar endereço e confirmar' : 'Confirmar endereço e continuar'}
+          {dirty || !valid ? 'Buscar endereço' : 'Confirmar endereço'}
         </FormSubmit>
       </Form>
     )

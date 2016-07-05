@@ -26,7 +26,7 @@ class FormTextInput extends Component {
           backgroundColor: Colors.lightBeige,
         }, style]}
         titleStyle={[{
-          fontFamily: 'OpenSans',
+          fontFamily: 'Avenir',
           color: Colors.brown,
           fontSize: 12,
           lineHeight,
@@ -41,8 +41,8 @@ class FormTextInput extends Component {
           color: Colors.darkBeige,
         }, messageStyle]}
         icon={ icon && <Icon name={icon} color={Colors.brown} /> }
-        validIcon={ <Icon name='check' color={Colors.green} /> }
-        invalidIcon={ <Icon name='more-horiz' color={Colors.darkBeige} /> }
+        validIcon={ <Icon name='ios-checkmark' color={Colors.green} /> }
+        invalidIcon={ <Icon name='ios-more' color={Colors.darkBeige} /> }
         message={message}
       />
     )

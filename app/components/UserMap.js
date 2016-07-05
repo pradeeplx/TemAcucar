@@ -50,7 +50,7 @@ export default UserMap = ({ latitude, longitude, delta, text }) => {
         }}>
           <Sentence style={{
             color: Colors.white, 
-            fontFamily: 'OpenSans-Bold', 
+            fontFamily: 'Avenir', 
             textAlign: 'center',
             fontSize: 12,
           }}>

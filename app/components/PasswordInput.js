@@ -17,7 +17,7 @@ class PasswordInput extends Component {
         name='password'
         title='Senha'
         placeholder='Digite sua senha'
-        icon='vpn-key'
+        icon='ios-key-outline'
         autoCorrect={false}
         autoCapitalize='none'
         secureTextEntry={true}

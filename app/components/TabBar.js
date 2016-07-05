@@ -20,9 +20,9 @@ export default class TabBar extends Component {
         justifyContent: 'center',
         alignItems: 'center',
         height: 60,
-        backgroundColor: (isActive ? Colors.pink : Colors.lightBeige),
+        backgroundColor: (isActive ? Colors.white : Colors.white),
       }}>
-        <Icon name={name} size={36} color={isActive ? Colors.lightBeige : Colors.ice} />
+        <Icon name={name} size={36} color={isActive ? Colors.pink : Colors.gray} />
         { page === 2 && notificationsCount > 0 &&
           <View style={{
             position: 'absolute',
@@ -38,7 +38,7 @@ export default class TabBar extends Component {
             <Text style={{
               backgroundColor: 'transparent',
               color: (isActive ? Colors.pink : Colors.lightBeige),
-              fontFamily: 'BoosterNextFY-Black',
+              fontFamily: 'Avenir',
               textAlign: 'center',
               fontSize: 11,
               lineHeight: 14,
@@ -54,7 +54,7 @@ export default class TabBar extends Component {
   render() {
     return (
       <View elevation={3} style={{
-        backgroundColor: Colors.lightBeige,
+        backgroundColor: Colors.white,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -67,7 +67,7 @@ export default class TabBar extends Component {
         },
         overflow: 'visible',
         transform: [{'translate': [0,0,1]}],
-        borderColor: Colors.ice,
+        borderColor: Colors.white,
         borderBottomWidth: StyleSheet.hairlineWidth,
       }}>
         {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
