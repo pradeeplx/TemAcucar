@@ -17,7 +17,7 @@ export default class SignIn extends Component {
     const { onFacebook } = this.props
     return(
       <SimpleScreen navBar={true} navBarTitle="Já possui cadastro?">
-        <Button onPress={onFacebook} style={{ backgroundColor: Colors.facebook, borderColor: Colors.darkFacebook, paddingHorizontal: 20 }}>
+        <Button onPress={onFacebook} style={{ backgroundColor: Colors.facebook, paddingHorizontal: 20 }}>
           Entre com seu Facebook
         </Button>
         <OrSeparator />

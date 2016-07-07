@@ -34,13 +34,13 @@ export default class DemandHeader extends Component {
             justifyContent: 'center',
           }}>
             <Icon name="ios-time-outline" style={{ 
-              color: Colors.ice,
+              color: Colors.beige,
               marginRight: 4,
               marginTop: 2,
               fontSize: 12,
             }} />
             <TimeAgo time={created_at} style={{
-              color: Colors.ice,
+              color: Colors.beige,
             }} />
           </View>
           <View style={{
@@ -50,14 +50,14 @@ export default class DemandHeader extends Component {
             justifyContent: 'center',
           }}>
             <Icon name="ios-pin-outline" style={{ 
-              color: Colors.ice,
+              color: Colors.beige,
               marginLeft: 10,
               marginRight: 2,
               marginTop: 2,
               fontSize: 12,
             }} />
             <Sentence style={{
-              color: Colors.ice,
+              color: Colors.beige,
               fontSize: 9,
             }}>
               A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
@@ -66,7 +66,7 @@ export default class DemandHeader extends Component {
         </View>
         <Sentence style={{
           textAlign: 'center',
-          color: Colors.ice,
+          color: Colors.beige,
           fontSize: 10,
           marginTop: 14,
         }}>

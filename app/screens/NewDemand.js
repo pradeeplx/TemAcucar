@@ -99,7 +99,7 @@ class NewDemand extends Component {
             marginBottom: 5,
           }}>
             <Sentence style={{
-              color: Colors.ice,
+              color: Colors.beige,
             }}>
               500m
             </Sentence>
@@ -128,7 +128,7 @@ class NewDemand extends Component {
               }}
             />
             <Sentence style={{
-              color: Colors.ice,
+              color: Colors.beige,
             }}>
               10km
             </Sentence>

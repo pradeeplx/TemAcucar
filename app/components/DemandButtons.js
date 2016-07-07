@@ -52,7 +52,7 @@ export default class DemandButtons extends Component {
         </DemandButton>
         <DemandButton
           onPress={this.handleFlag.bind(this)}
-          style={{ backgroundColor: Colors.ice }}
+          style={{ backgroundColor: Colors.beige }}
         >
           Denunciar
         </DemandButton>

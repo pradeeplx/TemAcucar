@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React, { Platform } from 'react-native'
 import ReactNativeButton from 'apsl-react-native-button'
 import Colors from "../Colors"
 
@@ -10,7 +10,7 @@ export default Button = (props) => (
       textAlign: 'center',
       color: Colors.white,
       fontSize: 12,
-      fontFamily: 'Avenir',
+      fontFamily: (Platform.OS === 'ios' ? 'Avenir' : 'Roboto'),
     }, props.textStyle]}
     disabledStyle={[{
       opacity: 0.6,

@@ -31,13 +31,13 @@ export default Review = ({ review: { rating, text, reviewer, created_at } }) => 
       marginTop: 4,
     }}>
       <Icon name="ios-time-outline" style={{ 
-        color: Colors.ice,
+        color: Colors.lightBeige,
         marginRight: 4,
         marginTop: 2,
         fontSize: 12,
       }} />
       <TimeAgo time={created_at} style={{
-        color: Colors.ice,
+        color: Colors.lightBeige,
       }} />
     </View>
   </View>

@@ -1,6 +1,7 @@
 import React, { View, Image, PixelRatio, Dimensions } from 'react-native'
 import MapView from 'react-native-maps'
 import Colors from "../Colors"
+import MapText from "./MapText"
 import LogoMarker from "./LogoMarker"
 
 export default UserMap = ({ latitude, longitude, delta, text }) => {
@@ -35,27 +36,7 @@ export default UserMap = ({ latitude, longitude, delta, text }) => {
       }}>
         <LogoMarker />
       </View>
-      <View style={{
-        position: 'absolute',
-        bottom: 10,
-        left: 0,
-        right: 0,
-        alignItems: 'center',
-      }}>
-        <View style={{
-          backgroundColor: Colors.lightPink,
-          paddingVertical: 4,
-          paddingHorizontal: 30,
-          borderRadius: 12,
-        }}>
-          <Sentence style={{
-            color: Colors.white, 
-            textAlign: 'center',
-          }}>
-            { text }
-          </Sentence>
-        </View>
-      </View>
+      <MapText>{text}</MapText>
     </View>
   )
 }

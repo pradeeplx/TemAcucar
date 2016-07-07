@@ -16,7 +16,7 @@ export default class Notification extends Component {
         onPress={this.handlePress.bind(this)}
         style={{
           backgroundColor: (read ? Colors.white : Colors.beige),
-          borderColor: Colors.ice,
+          borderColor: Colors.lightBeige,
           borderBottomWidth: StyleSheet.hairlineWidth,
           padding: 10,
         }}
@@ -33,7 +33,7 @@ export default class Notification extends Component {
               {text}
             </HtmlSentence>
             <TimeAgo time={created_at} style={{
-              color: Colors.ice,
+              color: Colors.lightBeige,
               marginTop: 4,
             }} />
           </View>

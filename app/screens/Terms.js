@@ -26,7 +26,7 @@ export default class Terms extends Component {
           <Headline style={{marginTop: 10, marginBottom: 10}}>Termos de uso</Headline>
           <ScrollView
             style={{
-              backgroundColor: Colors.beige,
+              backgroundColor: Colors.lightBeige,
               padding: 10,
               marginBottom: 20,
               flex: 1,
@@ -327,8 +327,7 @@ export default class Terms extends Component {
                 <Button
                   style={{
                     paddingHorizontal: 10,
-                    backgroundColor: Colors.ice,
-                    borderColor: Colors.darkIce,
+                    backgroundColor: Colors.beige,
                     height: 36,
                     width: 100,
                   }}

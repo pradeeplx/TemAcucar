@@ -62,14 +62,14 @@ export default class DemandUserButtons extends Component {
           { canCancel && <DemandButton
             onPress={this.handleCancel.bind(this)}
             isLoading={canceling}
-            style={{ marginTop: 10, backgroundColor: Colors.ice, marginLeft: (canComplete ? 4 : 0), marginRight: (canReactivate ? 4 : 0) }}
+            style={{ marginTop: 10, backgroundColor: Colors.beige, marginLeft: (canComplete ? 4 : 0), marginRight: (canReactivate ? 4 : 0) }}
           >
             Cancelar pedido
           </DemandButton> }
           { canReactivate && <DemandButton
             onPress={this.handleReactivate.bind(this)}
             isLoading={reactivating}
-            style={{ marginTop: 10, backgroundColor: Colors.ice }}
+            style={{ marginTop: 10, backgroundColor: Colors.beige }}
           >
             Reativar pedido
           </DemandButton> }

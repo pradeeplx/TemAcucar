@@ -1,5 +1,4 @@
 import React, { View, Image, Dimensions } from 'react-native'
-import MapView from 'react-native-maps'
 import Colors from "../Colors"
 
 export default NeighborsMap = ({ url, count }) => (
