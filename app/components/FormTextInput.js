@@ -16,7 +16,6 @@ class FormTextInput extends Component {
   render() {
     const { icon, error, style, titleStyle, inputStyle, messageStyle } = this.props
     const message = ( error && error.length > 0 ? error[0] : null)
-    const lineHeight = (Platform.OS === 'ios' ? 12 : 16)
     return (
       <InlineTextInput
         ref='input'
@@ -29,19 +28,17 @@ class FormTextInput extends Component {
           fontFamily: 'Avenir',
           color: Colors.brown,
           fontSize: 12,
-          lineHeight,
         }, titleStyle]}
         inputStyle={[{
           color: Colors.pink,
           backgroundColor: Colors.lightBeige,
           fontSize: 12,
-          lineHeight,
         }, inputStyle]}
         messageStyle={[{
           color: Colors.darkBeige,
         }, messageStyle]}
         icon={ icon && <Icon name={icon} color={Colors.brown} /> }
-        validIcon={ <Icon name='ios-checkmark' color={Colors.green} /> }
+        validIcon={ <Icon name='md-checkmark' color={Colors.green} /> }
         invalidIcon={ <Icon name='ios-more' color={Colors.darkBeige} /> }
         message={message}
       />

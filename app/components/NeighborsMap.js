@@ -23,9 +23,7 @@ export default NeighborsMap = ({ url, count }) => (
       }}>
         <Sentence style={{
           color: Colors.blue, 
-          fontFamily: 'Avenir', 
           textAlign: 'center',
-          fontSize: 12,
         }}>
           { `${count} ${count === 1 ? 'vizinho' : 'vizinhos'}` }
         </Sentence>

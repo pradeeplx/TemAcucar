@@ -29,9 +29,7 @@ export default class Notification extends Component {
             flex: 1,
             flexDirection: 'column',
           }}>
-            <HtmlSentence style={{
-              fontSize: 12,
-            }}>
+            <HtmlSentence>
               {text}
             </HtmlSentence>
             <TimeAgo time={created_at} style={{

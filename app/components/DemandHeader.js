@@ -56,42 +56,34 @@ export default class DemandHeader extends Component {
               marginTop: 2,
               fontSize: 12,
             }} />
-            <Text style={{
+            <Sentence style={{
               color: Colors.ice,
               fontSize: 9,
-              fontFamily: 'Avenir',
             }}>
               A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
-            </Text>
+            </Sentence>
           </View>
         </View>
-        <Text style={{
+        <Sentence style={{
           textAlign: 'center',
           color: Colors.ice,
           fontSize: 10,
-          lineHeight: (Platform.OS === 'ios' ? 12 : 14),
-          fontFamily: 'Avenir',
           marginTop: 14,
         }}>
           { currentUser.id === user.id ? 'Você' : user.first_name } { verbToUse } um(a)
-        </Text>
-        <Text style={{
+        </Sentence>
+        <Sentence style={{
           marginHorizontal: 30,
           textAlign: 'center',
           color: Colors.pink,
-          fontSize: 12,
-          lineHeight: (Platform.OS === 'ios' ? 14 : 16),
-          fontFamily: 'Avenir',
         }}>
           { fullHeader ? name.toUpperCase() : truncate(name.toUpperCase(), 30) }
-        </Text>
+        </Sentence>
         { !hideDescription && 
           <Sentence style={{
             fontSize: 10,
             marginHorizontal: 10,
             marginTop: 4,
-            lineHeight: (Platform.OS === 'ios' ? 10 : 12),
-            fontFamily: 'Avenir',
             textAlign: 'center',
           }}>
             { fullHeader ? description : truncate(description, 110) }

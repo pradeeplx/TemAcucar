@@ -19,9 +19,7 @@ export default DemandState = ({ state, style }) => (
       marginRight: 6,
     }} />
     <Sentence style={{
-      fontFamily: 'Avenir',
       fontSize: 8,
-      lineHeight: 10,
       color: (state === 'completed' ? Colors.green : (state === 'canceled' ? Colors.red : Colors.ice)),
       color: Colors.white,
     }}>

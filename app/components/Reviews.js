@@ -2,9 +2,10 @@ import React, { Component, Platform, View, Text } from 'react-native'
 import GiftedSpinner from 'react-native-gifted-spinner'
 
 import Colors from "../Colors"
-import LoadMore from "../components/LoadMore"
-import Review from "../components/Review"
-import NoReviews from "../components/NoReviews"
+import Sentence from "./Sentence"
+import LoadMore from "./LoadMore"
+import Review from "./Review"
+import NoReviews from "./NoReviews"
 
 export default class Reviews extends Component {
   render() {
@@ -17,16 +18,14 @@ export default class Reviews extends Component {
       }}>
         { !hideTitle && 
           <View>
-            <Text style={{
+            <Sentence style={{
               marginHorizontal: 20,
               textAlign: 'center',
               color: Colors.brown,
               fontSize: 14,
-              lineHeight: (Platform.OS === 'ios' ? 14 : 16),
-              fontFamily: 'Avenir',
             }}>
               { user.id === currentUser.id ? 'Suas avaliações' : `Avaliações de ${user.first_name} ${user.last_name}` }
-            </Text>
+            </Sentence>
           </View>
         }
         { reviews.map((review, index) => (

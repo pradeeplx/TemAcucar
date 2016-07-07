@@ -5,7 +5,7 @@ import Headline from "../components/Headline"
 
 export default Loading = ({ status }) => (
   <SimpleScreen>
-    <Headline style={{ height: 50, lineHeight: 20 }}>{status}</Headline>
+    <Headline style={{ height: 50 }}>{status}</Headline>
     <GiftedSpinner style={{ marginVertical: 20 }} />
   </SimpleScreen>
 )

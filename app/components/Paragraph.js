@@ -6,8 +6,6 @@ export default Paragraph = ({ children }) => (
   <Sentence style={{
     alignSelf: 'stretch',
     marginBottom: 20,
-    fontSize: 12,
-    lineHeight: 16,
   }}>
     {children}
   </Sentence>

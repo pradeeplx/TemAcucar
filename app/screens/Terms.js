@@ -320,10 +320,6 @@ export default class Terms extends Component {
                     height: 36,
                     width: 100,
                   }}
-                  textStyle={{
-                    fontSize: 12,
-                    lineHeight: 16,
-                  }}
                   onPress={onAcceptTerms}
                 >
                   Eu aceito
@@ -336,10 +332,6 @@ export default class Terms extends Component {
                     height: 36,
                     width: 100,
                   }}
-                  textStyle={{
-                    fontSize: 12,
-                    lineHeight: 16,
-                  }}
                   onPress={onRejectTerms}
                 >
                   Eu não aceito
@@ -347,7 +339,7 @@ export default class Terms extends Component {
               </View>
             </View>
           </ScrollView>
-          <TextBox style={{height: 60, fontFamily: 'Avenir'}}>
+          <TextBox style={{height: 60}}>
             { (scrolledToBottom ? 'Para continuar, aceite os termos de uso.' : 'Para continuar, leia os termos de uso até o final.') }
           </TextBox>
         </View>

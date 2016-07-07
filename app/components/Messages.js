@@ -19,10 +19,7 @@ export default class Messages extends Component {
             borderRadius: 4,
             padding: 10,
           }}>
-            <Sentence style={{
-              color: Colors.brown,
-              fontSize: 12,
-            }}>
+            <Sentence>
               Apresente-se, diga os cuidados e informações sobre seu objeto, combine data de entrega, devolução e local de encontro. Um número de telefone para imprevistos vai bem :)
             </Sentence>
           </View>

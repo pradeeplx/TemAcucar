@@ -70,7 +70,6 @@ class NewReview extends Component {
           </Headline>
           <Sentence style={{
             fontSize: 14,
-            lineHeight: 18,
             textAlign: 'center',
             margin: 10,
           }}>

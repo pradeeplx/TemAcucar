@@ -104,16 +104,12 @@ class ViewTransaction extends Component {
             justifyContent: 'center',
           }}>
             <Sentence style={{
-              fontFamily: 'Avenir',
-              fontSize: 12,
-              lineHeight: (Platform.OS === 'ios' ? 12 : 16),
               color: Colors.white,
             }}>
               {user.first_name} {user.last_name}
             </Sentence>
             <Sentence style={{
               fontSize: 10,
-              lineHeight: (Platform.OS === 'ios' ? 10 : 14),
               color: Colors.white,
               marginBottom: 2,
             }}>
@@ -134,9 +130,6 @@ class ViewTransaction extends Component {
           backgroundColor: Colors.mediumLightBeige,
         }}>
           <Sentence style={{
-            fontFamily: 'Avenir',
-            fontSize: 12,
-            lineHeight: (Platform.OS === 'ios' ? 16 : 16),
             marginRight: 6,
           }}>
             Avaliar { user.first_name }

@@ -11,7 +11,6 @@ export default Button = (props) => (
       color: Colors.white,
       fontSize: 12,
       fontFamily: 'Avenir',
-      lineHeight: 16,
     }, props.textStyle]}
     disabledStyle={[{
       opacity: 0.6,

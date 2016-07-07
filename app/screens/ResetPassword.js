@@ -27,7 +27,6 @@ class ResetPassword extends Component {
       <FormScreen navBar={true} navBarTitle="Confira seu e-mail">
         <Headline style={{
           fontSize: 14, 
-          lineHeight: 20, 
           marginBottom: 10
         }}>
           Confira seu e-mail: enviamos seu código para {email} ;)

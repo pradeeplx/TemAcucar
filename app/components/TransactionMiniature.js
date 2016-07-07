@@ -28,16 +28,11 @@ export default class TransacionMiniature extends Component {
           flex: 1,
         }}>
           <Sentence style={{
-            fontFamily: 'Avenir',
-            fontSize: 12,
-            lineHeight: (Platform.OS === 'ios' ? 12 : 14),
             color: Colors.brown,
           }}>
             { user.id === currentUser.id ? `${demand.user.first_name} ${demand.user.last_name}` : `${user.first_name} ${user.last_name}` }
           </Sentence>
           <Sentence style={{
-            fontSize: 12,
-            lineHeight: (Platform.OS === 'ios' ? 12 : 16),
             color: Colors.ice,
           }}>
             { truncate((last_message_text ? last_message_text : 'Escreva uma mensagem para ' + transaction.demand.user.first_name), 35) }

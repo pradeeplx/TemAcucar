@@ -28,9 +28,6 @@ export default class NavBar extends Component {
           { children }
           { !children &&
             <Sentence style={{
-              fontFamily: 'Avenir',
-              fontSize: 12,
-              lineHeight: (Platform.OS === 'ios' ? 12 : 16),
               color: Colors.brown,
               marginTop: 8,
               marginBottom: 6,

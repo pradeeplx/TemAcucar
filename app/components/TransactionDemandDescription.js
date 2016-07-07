@@ -21,8 +21,6 @@ export default TransactionDemandDescription = ({ index, demand: { user, name }, 
         {currentUser.id === user.id ? 'Você' : user.first_name} pediu um(a)
       </Sentence>
       <Sentence style={{
-        fontFamily: 'Avenir',
-        fontSize: 12,
         color: Colors.white,
       }}>
         {truncate(name, 25)}

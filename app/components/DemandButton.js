@@ -9,10 +9,6 @@ export default DemandButton = (props) => (
       paddingVertical: 0,
       height: 30,
     }, props.style]}
-    textStyle={[{
-      fontSize: 12,
-      lineHeight: 16,
-    }, props.textStyle]}
   >
     {props.children}
   </Button>

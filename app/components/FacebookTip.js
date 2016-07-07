@@ -24,10 +24,6 @@ export default FacebookTip = ({ onPress, loading, title }) => (
         backgroundColor: Colors.facebook,
         borderColor: Colors.darkFacebook,
       }}
-      textStyle={{
-        fontSize: 12,
-        lineHeight: 16,
-      }}
     >
       Conecte sua conta do Facebook
     </Button>

@@ -23,10 +23,8 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
         flex: 1,
       }}>
         <Sentence style={{ 
-          fontFamily: 'Avenir', 
           color: Colors.blue,
           fontSize: 20,
-          lineHeight: 28,
         }}>
           { currentUser.first_name } { currentUser.last_name }
         </Sentence>

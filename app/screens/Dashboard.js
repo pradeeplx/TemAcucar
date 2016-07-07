@@ -163,10 +163,6 @@ export default class Dashboard extends Component {
                 marginBottom: 10,
                 marginTop: 10,
               }}
-              textStyle={{
-                fontSize: 16,
-                lineHeight: 20,
-              }}
             >
               Pedir emprestado
             </Button>

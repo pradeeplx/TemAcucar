@@ -84,7 +84,6 @@ class NewDemand extends Component {
         <Form>
           { radius.value && this.renderMap() }
           <Sentence style={{
-            fontFamily: 'Avenir',
             fontSize: 14,
             textAlign: 'center',
             marginTop: 15,
@@ -100,7 +99,6 @@ class NewDemand extends Component {
             marginBottom: 5,
           }}>
             <Sentence style={{
-              fontSize: 12,
               color: Colors.ice,
             }}>
               500m
@@ -130,7 +128,6 @@ class NewDemand extends Component {
               }}
             />
             <Sentence style={{
-              fontSize: 12,
               color: Colors.ice,
             }}>
               10km
@@ -174,7 +171,6 @@ class NewDemand extends Component {
             }}>
             </View>
             <Sentence style={{
-              fontSize: 12,
               textAlign: 'center',
               backgroundColor: 'transparent',
               position: 'absolute',

@@ -11,9 +11,7 @@ export default Message = ({ message: { created_at, text }, fromCurrentUser, date
         marginBottom: 10,
         alignItems: 'center',
       }}>
-        <Sentence style={{
-          fontSize: 12,
-        }}>
+        <Sentence>
           {date}
         </Sentence>
       </View>
@@ -28,7 +26,6 @@ export default Message = ({ message: { created_at, text }, fromCurrentUser, date
     }}>
       <Sentence style={{
         color: Colors.white,
-        fontSize: 12,
       }}>
         {text}
       </Sentence>

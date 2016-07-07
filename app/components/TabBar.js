@@ -1,5 +1,6 @@
 import React, { Component, View, Text, TouchableOpacity, Dimensions, StyleSheet } from 'react-native'
 import Colors from "../Colors"
+import Sentence from "./Sentence"
 import Icon from "./Icon"
 
 export default class TabBar extends Component {
@@ -35,16 +36,14 @@ export default class TabBar extends Component {
             borderColor: (isActive ? Colors.lightBeige : Colors.pink),
             borderRadius: 9,
           }}>
-            <Text style={{
+            <Sentence style={{
               backgroundColor: 'transparent',
               color: (isActive ? Colors.pink : Colors.lightBeige),
-              fontFamily: 'Avenir',
               textAlign: 'center',
               fontSize: 11,
-              lineHeight: 14,
             }}>
               {notificationsCount}
-            </Text>
+            </Sentence>
           </View>
         }
       </TouchableOpacity>

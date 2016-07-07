@@ -14,13 +14,11 @@ export default Review = ({ review: { rating, text, reviewer, created_at } }) => 
   }}>
     <ReviewRating rating={rating} />
     <Sentence style={{
-      fontFamily: 'Avenir',
       fontSize: 10,
     }}>
       { `${reviewer.first_name} ${reviewer.last_name}` }
     </Sentence>
     <Sentence style={{
-      fontFamily: 'Avenir',
       textAlign: 'center',
       fontSize: 10,
     }}>
