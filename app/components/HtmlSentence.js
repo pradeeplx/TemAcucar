@@ -7,16 +7,18 @@ import Sentence from "./Sentence"
 export default class HtmlSentence extends Component {
   renderNode(node) {
     const { name, children } = node
+    const boldStyle = (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })
+    const italicStyle = (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Oblique' } : { fontStyle: 'italic' })
     let text
     let style = {}
     if (name === 'text') {
       text = node.text
     } else if (name === 'b') {
       text = children[0].text
-      style = { fontFamily: 'Avenir-Medium' }
+      style = boldStyle
     } else if (name === 'i') {
       text = children[0].text
-      style = { fontFamily: 'Avenir-Oblique' }
+      style = italicStyle
     }
     return (
       <Sentence {...this.props} style={[style, this.props.style]}>

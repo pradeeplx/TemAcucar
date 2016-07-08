@@ -1,4 +1,4 @@
-import React, { Component, Text } from 'react-native'
+import React, { Component, Text, Platform } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import Package from '../../package.json'
 import Config from 'react-native-config'
@@ -11,13 +11,14 @@ export default class About extends Component {
   }
 
   render() {
+    const boldStyle = (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })
     return (
       <SimpleScreen headline="Sobre" navBar={true} navBarTitle="Sobre">
         <Sentence style={{marginBottom: 20}}>
-          <Text style={{fontFamily: 'Avenir-Medium'}}>Versão compilada:</Text> {Config.BUILD}
+          <Text style={boldStyle}>Versão compilada:</Text> {Config.BUILD}
         </Sentence>
         <Sentence>
-          <Text style={{fontFamily: 'Avenir-Medium'}}>Versão JavaScript:</Text> {Package.version}
+          <Text style={boldStyle}>Versão JavaScript:</Text> {Package.version}
         </Sentence>
       </SimpleScreen>
     )
