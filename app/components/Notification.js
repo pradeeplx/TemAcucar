@@ -15,8 +15,8 @@ export default class Notification extends Component {
       <TouchableOpacity
         onPress={this.handlePress.bind(this)}
         style={{
-          backgroundColor: (read ? Colors.white : Colors.beige),
-          borderColor: Colors.lightBeige,
+          backgroundColor: (read ? Colors.white : Colors.lightBeige),
+          borderColor: Colors.gray,
           borderBottomWidth: StyleSheet.hairlineWidth,
           padding: 10,
         }}
@@ -33,7 +33,7 @@ export default class Notification extends Component {
               {text}
             </HtmlSentence>
             <TimeAgo time={created_at} style={{
-              color: Colors.lightBeige,
+              color: Colors.gray,
               marginTop: 4,
             }} />
           </View>

@@ -1,4 +1,4 @@
-import React, { Component, View } from 'react-native'
+import React, { Component, View, Platform } from 'react-native'
 import HtmlRender from 'react-native-html-render'
 
 import Colors from "../Colors"

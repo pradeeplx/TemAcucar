@@ -12,7 +12,7 @@ export default class DemandMiniature extends Component {
 
   render() {
     const { demand, currentUser, admin, index } = this.props
-    const Buttons = (currentUser.id === demand.user.id || (admin && currentUser.admin) ? DemandUserButtons : DemandButtons)
+    const Buttons = (currentUser.id === demand.user.id || (admin && currentUser.admin) ? DemandUserButtons : null)
     return (
       <TouchableOpacity onPress={this.handleView.bind(this)} style={{
         backgroundColor: Colors.white,
@@ -25,18 +25,18 @@ export default class DemandMiniature extends Component {
         }}>
           <DemandHeader {...this.props} />
         </View>
-        <Buttons {...this.props} />
+        { Buttons && <Buttons {...this.props} /> }
         <View style={{
           position: 'absolute',
           top: 0,
           bottom: 0,
-          right: 0,
+          right: 10,
         }}>
           <Icon name="ios-arrow-forward" style={{
             backgroundColor: 'transparent',
-            fontSize: 48,
-            color: Colors.beige,
-            marginTop: 44,
+            fontSize: 24,
+            color: Colors.gray,
+            marginTop: 52,
           }} />
         </View> 
       </TouchableOpacity>

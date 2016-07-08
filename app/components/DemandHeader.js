@@ -1,4 +1,4 @@
-import React, { Component, View, Text, Platform } from 'react-native'
+import React, { Component, View, Text, Platform, StyleSheet } from 'react-native'
 import truncate from 'truncate'
 
 import Colors from "../Colors"
@@ -22,8 +22,8 @@ export default class DemandHeader extends Component {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'center',
-          borderWidth: 1,
-          borderColor: Colors.beige,
+          borderWidth: StyleSheet.hairlineWidth,
+          borderColor: Colors.gray,
           borderRadius: 12,
         }}>
           <View style={{
@@ -34,13 +34,13 @@ export default class DemandHeader extends Component {
             justifyContent: 'center',
           }}>
             <Icon name="ios-time-outline" style={{ 
-              color: Colors.beige,
+              color: Colors.gray,
               marginRight: 4,
               marginTop: 2,
               fontSize: 12,
             }} />
             <TimeAgo time={created_at} style={{
-              color: Colors.beige,
+              color: Colors.gray,
             }} />
           </View>
           <View style={{
@@ -50,14 +50,14 @@ export default class DemandHeader extends Component {
             justifyContent: 'center',
           }}>
             <Icon name="ios-pin-outline" style={{ 
-              color: Colors.beige,
+              color: Colors.gray,
               marginLeft: 10,
               marginRight: 2,
               marginTop: 2,
               fontSize: 12,
             }} />
             <Sentence style={{
-              color: Colors.beige,
+              color: Colors.gray,
               fontSize: 9,
             }}>
               A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
@@ -66,7 +66,7 @@ export default class DemandHeader extends Component {
         </View>
         <Sentence style={{
           textAlign: 'center',
-          color: Colors.beige,
+          color: Colors.gray,
           fontSize: 10,
           marginTop: 14,
         }}>
