@@ -7,7 +7,7 @@ export default MapText = ({ children }) => (
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'rgba(0,0,0,0.4)',
+    backgroundColor: 'rgba(0,0,0,0.25)',
   }}>
     <Sentence style={{
       color: Colors.white, 
