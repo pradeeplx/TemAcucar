@@ -1,4 +1,4 @@
-import React, { Component, View, Image, Platform } from 'react-native'
+import React, { Component, View, Image, Platform, StyleSheet } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -99,7 +99,7 @@ class NewDemand extends Component {
             marginBottom: 5,
           }}>
             <Sentence style={{
-              color: Colors.beige,
+              color: Colors.gray,
             }}>
               500m
             </Sentence>
@@ -110,7 +110,7 @@ class NewDemand extends Component {
               step={100}
               value={parseInt(radius.value)}
               onValueChange={this.handleSlide.bind(this)}
-              minimumTrackTintColor={Colors.pink}
+              minimumTrackTintColor={Colors.blue}
               style={{
                 flex: 1,
                 height: 30,
@@ -118,17 +118,19 @@ class NewDemand extends Component {
               }}
               trackStyle={{
                 height: 2,
-                backgroundColor: Colors.lighterPink,
+                backgroundColor: Colors.lightGray,
               }}
               thumbStyle={{
                 width: 24,
                 height: 24,
-                backgroundColor: Colors.pink,
+                backgroundColor: Colors.white,
+                borderWidth: StyleSheet.hairlineWidth,
+                borderColor: Colors.gray,
                 borderRadius: 12,
               }}
             />
             <Sentence style={{
-              color: Colors.beige,
+              color: Colors.gray,
             }}>
               10km
             </Sentence>
@@ -152,7 +154,7 @@ class NewDemand extends Component {
             {...description}
           />
           <View style={{
-            backgroundColor: Colors.beige,
+            backgroundColor: Colors.lightGray,
             borderRadius: 12,
             margin: 15,
             marginBottom: 0,
@@ -184,14 +186,14 @@ class NewDemand extends Component {
             </Sentence>
           </View>
           { createError && <FormError message={DemandValidators.errorMessage(createError)} /> }
-          <FormSubmit
-            {...this.props}
-            isLoading={creating}
-            onSubmit={onCreateDemand}
-          >
-            Pedir emprestado
-          </FormSubmit>
         </Form>
+        <FormSubmit
+          {...this.props}
+          isLoading={creating}
+          onSubmit={onCreateDemand}
+        >
+          Pedir emprestado
+        </FormSubmit>
       </View>
     )
   }

@@ -3,8 +3,9 @@ import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { Actions } from 'react-native-router-flux'
 
 import SimpleScreen from "../components/SimpleScreen"
-import OrSeparator from "../components/OrSeparator"
 import Button from "../components/Button"
+import BottomView from "../components/BottomView"
+import BottomButton from "../components/BottomButton"
 
 export default class SignInFailed extends Component {
   componentDidMount() {
@@ -14,16 +15,17 @@ export default class SignInFailed extends Component {
   render() {
     return(
       <SimpleScreen headline="Ooops! Seu login falhou :(">
-        <TextBox style={{marginBottom: 20}}>
+        <TextBox style={{marginBottom: 30}}>
           Se você está cadastrado na versão antiga do Tem Açúcar, precisa criar uma nova senha.
         </TextBox>
-        <Button onPress={Actions.requestPassword}>
-          Criar nova senha
-        </Button>
-        <OrSeparator />
-        <Button onPress={Actions.signIn} style={{paddingHorizontal: 34}}>
+        <Button onPress={Actions.signIn}>
           Tentar outra vez
         </Button>
+        <BottomView>
+          <BottomButton onPress={Actions.requestPassword}>
+            Criar nova senha
+          </BottomButton>
+        </BottomView>
       </SimpleScreen>
     )
   }

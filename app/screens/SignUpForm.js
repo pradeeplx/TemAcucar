@@ -1,4 +1,4 @@
-import React, { Component } from 'react-native'
+import React, { Component, View } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -39,26 +39,33 @@ class SignUpForm extends Component {
     const { onSignUp, fields, auth: { signingUp, signUpError } } = this.props
     const { first_name, last_name, email, password } = fields
     return (
-      <FormScreen navBar={true} navBarTitle="Crie sua conta com seu e-mail">
-        <FormTextInput 
-          name='first_name'
-          title='Nome'
-          placeholder='Digite seu nome'
-          icon='ios-contact-outline'
-          autoCapitalize='words'
-          {...first_name}
-        />
-        <FormTextInput 
-          name='last_name'
-          title='Sobrenome'
-          placeholder='Digite seu sobrenome'
-          icon='ios-contact-outline'
-          autoCapitalize='words'
-          {...last_name}
-        />
-        <EmailInput {...email} />
-        <PasswordInput {...password} />
-        { signUpError && <FormError message={UserValidators.errorMessage(signUpError)} /> }
+      <View style={{
+        flex: 1,
+      }}>
+        <FormScreen navBar={true} navBarTitle="Crie sua conta com seu e-mail">
+          <FormTextInput 
+            name='first_name'
+            title='Nome'
+            placeholder='Digite seu nome'
+            icon='ios-contact-outline'
+            autoCapitalize='words'
+            {...first_name}
+          />
+          <FormTextInput 
+            name='last_name'
+            title='Sobrenome'
+            placeholder='Digite seu sobrenome'
+            icon='ios-contact-outline'
+            autoCapitalize='words'
+            {...last_name}
+          />
+          <EmailInput {...email} />
+          <PasswordInput {...password} />
+          { signUpError && <FormError message={UserValidators.errorMessage(signUpError)} /> }
+          <FormFooter>
+            <SignInLink />
+          </FormFooter>
+        </FormScreen>
         <FormSubmit
           {...this.props}
           isLoading={signingUp}
@@ -66,10 +73,7 @@ class SignUpForm extends Component {
         >
           Fazer cadastro
         </FormSubmit>
-        <FormFooter>
-          <SignInLink />
-        </FormFooter>
-      </FormScreen>
+      </View>
     )
   }
 }

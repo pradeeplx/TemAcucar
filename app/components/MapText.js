@@ -4,23 +4,17 @@ import Colors from "../Colors"
 export default MapText = ({ children }) => (
   <View style={{
     position: 'absolute',
-    bottom: 10,
+    bottom: 0,
     left: 0,
     right: 0,
-    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.4)',
   }}>
-    <View style={{
-      backgroundColor: Colors.white,
+    <Sentence style={{
+      color: Colors.white, 
+      textAlign: 'center',
       paddingVertical: 4,
-      paddingHorizontal: 30,
-      borderRadius: 12,
     }}>
-      <Sentence style={{
-        color: Colors.blue, 
-        textAlign: 'center',
-      }}>
-        { children }
-      </Sentence>
-    </View>
+      { children }
+    </Sentence>
   </View>
 )

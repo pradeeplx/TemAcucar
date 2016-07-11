@@ -4,7 +4,7 @@ import truncate from 'truncate'
 
 import Colors from "../Colors"
 import ReviewsContainer from "../containers/ReviewsContainer"
-import BottomGradient from "../components/BottomGradient"
+import BottomView from "../components/BottomView"
 import Sentence from "../components/Sentence"
 import NavBar from "../components/NavBar"
 import DemandHeader from "../components/DemandHeader"
@@ -54,7 +54,7 @@ export default class ViewDemand extends Component {
             <ReviewsContainer {...this.props} user={demand.user} />
           </View>
         </ScrollView>
-        <BottomGradient>
+        <BottomView>
           { showButtons && <DemandButtons
             currentUser={currentUser}
             demand={demand}
@@ -70,7 +70,7 @@ export default class ViewDemand extends Component {
             onCancel={onCancelDemand}
             onReactivate={onReactivateDemand}
           /> }
-        </BottomGradient>
+        </BottomView>
       </View>
     )
   }

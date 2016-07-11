@@ -4,12 +4,12 @@ import ScrollableTabView from 'react-native-scrollable-tab-view'
 import DrawerLayout from 'react-native-drawer-layout'
 
 import Colors from "../Colors"
-import Button from "../components/Button"
 import TopBar from "../components/TopBar"
 import UserMenu from "../components/UserMenu"
 import TabBar from "../components/TabBar"
 import Tab from "../components/Tab"
-import BottomGradient from "../components/BottomGradient"
+import BottomView from "../components/BottomView"
+import BottomButton from "../components/BottomButton"
 import NeighborsMap from "../components/NeighborsMap"
 import Demands from "../components/Demands"
 import TransactionDemands from "../components/TransactionDemands"
@@ -155,18 +155,11 @@ export default class Dashboard extends Component {
               </Tab>
             </ScrollableTabView>
           </View>
-          <BottomGradient>
-            <Button
-              onPress={onNewDemand}
-              style={{
-                alignSelf: 'stretch',
-                marginBottom: 10,
-                marginTop: 10,
-              }}
-            >
+          <BottomView>
+            <BottomButton onPress={onNewDemand}>
               Pedir emprestado
-            </Button>
-          </BottomGradient>
+            </BottomButton>
+          </BottomView>
         </View>
       </DrawerLayout>
     )

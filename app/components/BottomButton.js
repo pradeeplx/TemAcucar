@@ -1,29 +1,30 @@
-import React, { Platform, StyleSheet } from 'react-native'
+import React, { Platform } from 'react-native'
 import ReactNativeButton from 'apsl-react-native-button'
 import Colors from "../Colors"
 
-export default Button = (props) => (
+export default BottonButton = (props) => (
   <ReactNativeButton 
     {...props}
-    activityIndicatorColor={Colors.pink}
+    activityIndicatorColor={Colors.white}
     textStyle={[{
       textAlign: 'center',
-      color: Colors.pink,
-      fontSize: 12,
+      color: Colors.white,
+      fontSize: 14,
       fontFamily: (Platform.OS === 'ios' ? 'Avenir' : 'Roboto'),
     }, props.textStyle]}
     disabledStyle={[{
       opacity: 0.6,
     }, props.disabledStyle]}
     style={[{
-      height: 36,
-      alignSelf: 'center',
-      borderRadius: 24,
-      paddingHorizontal: 30,
+      flex: 1,
+      height: 70,
+      backgroundColor: Colors.pink,
+      borderWidth: 0,
+      borderRadius: 0,
+      alignSelf: 'stretch',
+      paddingHorizontal: 0,
       paddingVertical: 0,
       marginBottom: 0,
-      borderWidth: StyleSheet.hairlineWidth,
-      borderColor: Colors.gray,
     }, props.style]}
   >
     {props.children}

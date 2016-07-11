@@ -6,7 +6,7 @@ export default BorderedScreen = ({ children, navBar, navBarTitle }) => (
   <View style={{
     flex: 1,
     backgroundColor: Colors.white,
-    paddingTop: (!navBar && Platform.OS === 'ios' ? 20 : 0)
+    paddingTop: (!navBar && Platform.OS === 'ios' ? 20 : 0),
   }}>
     { navBar && <NavBar title={navBarTitle} /> }
     <View style={{

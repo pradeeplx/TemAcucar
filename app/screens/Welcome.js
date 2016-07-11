@@ -2,11 +2,10 @@ import React, { Component, View } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { Actions } from 'react-native-router-flux'
 
-import BorderedScreen from "../components/BorderedScreen"
-import Logo from "../components/Logo"
-import Headline from "../components/Headline"
-import OrSeparator from "../components/OrSeparator"
+import SimpleScreen from "../components/SimpleScreen"
 import Button from "../components/Button"
+import BottomView from "../components/BottomView"
+import BottomButton from "../components/BottomButton"
 
 export default class Welcome extends Component {
   componentDidMount() {
@@ -15,27 +14,16 @@ export default class Welcome extends Component {
 
   render() {
     return(
-      <BorderedScreen>
-        <View style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginBottom: 26,
-        }}>
-          <Logo />
-        </View>
-        <Headline style={{
-          marginHorizontal: 60,
-        }}>
-          Compartilhe coisas com seus vizinhos
-        </Headline>
-        <Button onPress={Actions.signUp}>
-          Quero me cadastrar
-        </Button>
-        <OrSeparator />
-        <Button onPress={Actions.signIn} style={{paddingHorizontal: 35}}>
+      <SimpleScreen logo="complete" headline="Compartilhe coisas com seus vizinhos">
+        <Button onPress={Actions.signIn}>
           Já tenho cadastro
         </Button>
-      </BorderedScreen>
+        <BottomView>
+          <BottomButton onPress={Actions.signUp}>
+            Quero me cadastrar
+          </BottomButton>
+        </BottomView>
+      </SimpleScreen>
     )
   }
 }
