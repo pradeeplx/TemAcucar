@@ -10,9 +10,9 @@ export default TransactionDemandTimeAgo = ({ index, demand: { created_at, user }
     alignItems: 'flex-end',
   }}>
     <Icon name="ios-time-outline" style={{ 
-      color: (currentUser.id === user.id ? Colors.lightPink : Colors.lightBlue),
+      color: Colors.white,
       fontSize: 14,
     }} />
-    <TimeAgo time={created_at} style={{color: (currentUser.id === user.id ? Colors.lightPink : Colors.lightBlue)}} />
+    <TimeAgo time={created_at} style={{color: Colors.white}} />
   </View>
 )

@@ -54,23 +54,21 @@ export default class ViewDemand extends Component {
             <ReviewsContainer {...this.props} user={demand.user} />
           </View>
         </ScrollView>
-        <BottomView>
-          { showButtons && <DemandButtons
-            currentUser={currentUser}
-            demand={demand}
-            onAccept={onCreateTransaction}
-            onRefuse={onRefuseDemand}
-            onFlag={onFlagDemand}
-          /> }
-          { showUserButtons && <DemandUserButtons
-            admin={admin}
-            currentUser={currentUser}
-            demand={demand}
-            onComplete={onCompleteDemand}
-            onCancel={onCancelDemand}
-            onReactivate={onReactivateDemand}
-          /> }
-        </BottomView>
+        { showButtons && <BottomView><DemandButtons
+          currentUser={currentUser}
+          demand={demand}
+          onAccept={onCreateTransaction}
+          onRefuse={onRefuseDemand}
+          onFlag={onFlagDemand}
+        /></BottomView> }
+        { showUserButtons && <BottomView><DemandUserButtons
+          admin={admin}
+          currentUser={currentUser}
+          demand={demand}
+          onComplete={onCompleteDemand}
+          onCancel={onCancelDemand}
+          onReactivate={onReactivateDemand}
+        /></BottomView> }
       </View>
     )
   }

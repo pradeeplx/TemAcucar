@@ -32,8 +32,8 @@ export default class TabBar extends Component {
             height: 18,
             width: 18,
             backgroundColor: (isActive ? Colors.white : Colors.pink),
-            borderWidth: 1,
-            borderColor: (isActive ? Colors.white : Colors.pink),
+            borderWidth: StyleSheet.hairlineWidth,
+            borderColor: (isActive ? Colors.pink : Colors.pink),
             borderRadius: 9,
           }}>
             <Sentence style={{
