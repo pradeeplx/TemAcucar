@@ -1,6 +1,7 @@
-import React, { Component, Alert, View } from 'react-native'
+import React, { Component, Alert, View, Text } from 'react-native'
 import Colors from "../Colors"
-import DemandButton from "./DemandButton"
+import BottomView from "./BottomView"
+import BottomButton from "./BottomButton"
 
 export default class DemandUserButtons extends Component {
   handleComplete() {
@@ -42,39 +43,37 @@ export default class DemandUserButtons extends Component {
     const canComplete = (onComplete && (state === 'notifying' || state === 'active'))
     const canCancel = (onCancel && (state === 'notifying' || state === 'active'  || (state === 'flagged' && admin)))
     const canReactivate = (onReactivate && (state === 'completed' || ((state === 'flagged' || state === 'canceled') && admin)))
-    return (
-      <View style={{
-        alignSelf: 'stretch',
-        padding: 10,
-        paddingTop: 0,
-      }}>
-        <DemandState state={state} />
-        <View style={{
-          flexDirection: 'row',
-        }}>
-          { canComplete && <DemandButton
-            onPress={this.handleComplete.bind(this)}
-            isLoading={completing}
-            style={{ marginTop: 10, backgroundColor: Colors.green }}
-          >
-            { admin ? 'Concluir pedido' : 'Já consegui' }
-          </DemandButton> }
-          { canCancel && <DemandButton
-            onPress={this.handleCancel.bind(this)}
-            isLoading={canceling}
-            style={{ marginTop: 10, backgroundColor: Colors.beige, marginLeft: (canComplete ? 4 : 0), marginRight: (canReactivate ? 4 : 0) }}
-          >
-            Cancelar pedido
-          </DemandButton> }
-          { canReactivate && <DemandButton
+    if (canReactivate) {
+      return (
+        <BottomView>
+          <BottomButton
             onPress={this.handleReactivate.bind(this)}
             isLoading={reactivating}
-            style={{ marginTop: 10, backgroundColor: Colors.beige }}
           >
             Reativar pedido
-          </DemandButton> }
-        </View>
-      </View>
-    )
+          </BottomButton>
+        </BottomView>
+      )
+    }
+    if (canComplete && canCancel) {
+      return (
+        <BottomView>
+          <BottomButton
+            onPress={this.handleComplete.bind(this)}
+            isLoading={completing}
+          >
+            { admin ? 'Concluir pedido' : 'Já consegui' }
+          </BottomButton>
+          <BottomButton
+            onPress={this.handleCancel.bind(this)}
+            isLoading={canceling}
+            secondary={true}
+          >
+            Cancelar pedido
+          </BottomButton>
+        </BottomView>
+      )
+    }
+    return null
   }
 }

@@ -27,11 +27,11 @@ export default class NavBar extends Component {
         }}>
           { children }
           { !children &&
-            <Sentence style={{
+            <Sentence style={[{
               color: Colors.brown,
               marginTop: 8,
               marginBottom: 6,
-            }}>
+            }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
               {title || ' ' }
             </Sentence>
           }

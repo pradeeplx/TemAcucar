@@ -1,4 +1,4 @@
-import React, { Component, View, ScrollView, Platform, NativeModules, TouchableOpacity, TextInput, Dimensions } from 'react-native'
+import React, { Component, View, ScrollView, Platform, NativeModules, TouchableOpacity, TextInput, Dimensions, StyleSheet } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -104,13 +104,13 @@ class ViewTransaction extends Component {
             justifyContent: 'center',
           }}>
             <Sentence style={{
-              color: Colors.white,
+              color: Colors.brown,
             }}>
               {user.first_name} {user.last_name}
             </Sentence>
             <Sentence style={{
               fontSize: 10,
-              color: Colors.white,
+              color: Colors.brown,
               marginBottom: 2,
             }}>
               {truncate(demand.name, 40)}
@@ -127,7 +127,9 @@ class ViewTransaction extends Component {
           alignItems: 'center',
           justifyContent: 'center',
           padding: 10,
-          backgroundColor: Colors.mediumLightBeige,
+          backgroundColor: Colors.white,
+          borderBottomWidth: StyleSheet.hairlineWidth,
+          borderColor: Colors.gray,
         }}>
           <Sentence style={{
             marginRight: 6,
@@ -137,7 +139,7 @@ class ViewTransaction extends Component {
           { [1, 2, 3, 4, 5].map((index) => (
             <TouchableOpacity key={index} onPress={this.newReviewFunction(index)}>
               <Icon name="ios-star-outline" style={{
-                color: Colors.yellow,
+                color: Colors.darkYellow,
                 fontSize: 30,
               }} />
             </TouchableOpacity>
@@ -154,7 +156,7 @@ class ViewTransaction extends Component {
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundColor: Colors.mediumLightBeige,
+          backgroundColor: Colors.blue,
           height: (inputFocused ? focusedHeight : blurredHeight),
           flexDirection: 'row',
         }}>
@@ -167,9 +169,10 @@ class ViewTransaction extends Component {
               fontSize: 12, 
               height: (inputFocused ? focusedInputHeight : blurredHeight),
               padding: 10,
-              color: Colors.brown,
-              backgroundColor: Colors.mediumLightBeige,
+              color: Colors.white,
+              backgroundColor: Colors.blue,
             }}
+            placeholderTextColor={Colors.white}
             {...text}
             onFocus={this.handleFocus.bind(this)}
             onBlur={this.handleBlur.bind(this)}
@@ -178,8 +181,9 @@ class ViewTransaction extends Component {
             flex: 1,
             padding: 10,
           }}>
-            <Icon name="send" style={{
+            <Icon name="ios-send" style={{
               fontSize: 24,
+              color: Colors.white
             }} />
           </TouchableOpacity>
         </View>

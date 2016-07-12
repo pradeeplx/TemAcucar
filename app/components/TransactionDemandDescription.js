@@ -15,13 +15,13 @@ export default TransactionDemandDescription = ({ index, demand: { user, name }, 
       flex: 2,
     }}>
       <Sentence style={{
-        color: Colors.white,
+        color: Colors.darkGray,
         fontSize: 10,
       }}>
         {currentUser.id === user.id ? 'Você' : user.first_name} pediu um(a)
       </Sentence>
       <Sentence style={{
-        color: Colors.white,
+        color: Colors.darkGray,
       }}>
         {truncate(name, 25)}
       </Sentence>

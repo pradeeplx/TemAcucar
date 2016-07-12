@@ -17,7 +17,7 @@ export default Message = ({ message: { created_at, text }, fromCurrentUser, date
       </View>
     }
     <View style={{
-      backgroundColor: (fromCurrentUser ? Colors.pink : Colors.blue),
+      backgroundColor: (fromCurrentUser ? Colors.lightBeige : Colors.lightGray),
       padding: 10,
       borderRadius: 4,
       marginBottom: 10,
@@ -25,13 +25,13 @@ export default Message = ({ message: { created_at, text }, fromCurrentUser, date
       alignSelf: (fromCurrentUser ? 'flex-end' : 'flex-start'),
     }}>
       <Sentence style={{
-        color: Colors.white,
+        color: Colors.darkGray,
       }}>
         {text}
       </Sentence>
       <Sentence style={{
         fontSize: 10,
-        color: (fromCurrentUser ? Colors.lightPink : Colors.lightBlue),
+        color: Colors.black,
         alignSelf: 'flex-end',
       }}>
         {moment(created_at).format('HH:mm')}

@@ -11,7 +11,7 @@ export default MapText = ({ children }) => (
   }}>
     <View style={{
       backgroundColor: Colors.white,
-      paddingVertical: 4,
+      paddingVertical: 3,
       paddingHorizontal: 30,
       borderRadius: 12,
     }}>

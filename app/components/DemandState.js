@@ -5,8 +5,8 @@ export default DemandState = ({ state, style }) => (
   <View style={[{
     borderRadius: 4,
     backgroundColor: (state === 'completed' ? Colors.green : (state === 'canceled' ? Colors.red : Colors.gray)),
-    paddingVertical: 5,
-    paddingHorizontal: 10,
+    paddingVertical: 2,
+    paddingHorizontal: 6,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

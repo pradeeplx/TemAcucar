@@ -51,41 +51,21 @@ class NewReview extends Component {
     const { demand } = transaction
     const user = (transaction.user.id === currentUser.id ? transaction.demand.user : transaction.user)
     return (
-      <BaseScreen navBar={true} navBarTitle="Como foi sua experiência?">
+      <BaseScreen navBar={true} navBarTitle={`Avaliar ${user.first_name}`}>
         <Form>
-          <Headline style={{
-            marginTop: 20,
-            marginBottom: 0,
-            fontSize: 16,
-          }}>
-            Avaliação para o pedido
-          </Headline>
-          <Headline style={{
-            marginHorizontal: 10,
-            marginBottom: 0,
-            fontSize: 16,
-            color: Colors.pink,
-          }}>
-            {demand.name}
-          </Headline>
-          <Sentence style={{
-            fontSize: 14,
-            textAlign: 'center',
-            margin: 10,
-          }}>
-            Ajude seus vizinhos a conhecer {user.first_name} melhor: conte como foi sua experiência
-          </Sentence>
+          <View style={{alignItems: 'center', paddingTop: 20, paddingBottom: 10}}>
+            <UserImage source={{uri: user.image_url}} size={64} />
+          </View>
           <View style={{
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: 10,
-            marginBottom: 5,
+            marginBottom: 10,
           }}>
             { [1, 2, 3, 4, 5].map((index) => (
               <TouchableOpacity key={index} onPress={this.ratingChangeFunction(index)}>
                 <Icon name={(index > rating ? "ios-star-outline" : "ios-star")} style={{
-                  color: Colors.yellow,
+                  color: Colors.darkYellow,
                   fontSize: 30,
                 }} />
               </TouchableOpacity>
@@ -103,14 +83,14 @@ class NewReview extends Component {
             {...text}
           />
           { createError && <FormError message={ReviewValidators.errorMessage(createError)} /> }
-          <FormSubmit
-            {...this.props}
-            isLoading={creating}
-            onSubmit={onCreateReview}
-          >
-            {`Avaliar ${user.first_name}`}
-          </FormSubmit>
         </Form>
+        <FormSubmit
+          {...this.props}
+          isLoading={creating}
+          onSubmit={onCreateReview}
+        >
+          {`Avaliar ${user.first_name}`}
+        </FormSubmit>
       </BaseScreen>
     )
   }

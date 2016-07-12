@@ -5,19 +5,42 @@ import truncate from 'truncate'
 import Colors from "../Colors"
 import ReviewsContainer from "../containers/ReviewsContainer"
 import BottomView from "../components/BottomView"
+import BottomButton from "../components/BottomButton"
 import Sentence from "../components/Sentence"
 import NavBar from "../components/NavBar"
 import DemandHeader from "../components/DemandHeader"
-import DemandButtons from "../components/DemandButtons"
+import DemandState from "../components/DemandState"
 import DemandUserButtons from "../components/DemandUserButtons"
 
 export default class ViewDemand extends Component {
+  handleAccept() {
+    const { demand, onCreateTransaction } = this.props
+    onCreateTransaction(demand)
+  }
+
+  handleRefuse() {
+    const { demand, onRefuseDemand } = this.props
+    onRefuseDemand(demand)
+  }
+
+  handleFlag() {
+    Alert.alert(
+      'Pedido impróprio?',
+      'Você tem certeza que quer denunciar este pedido como impróprio?',
+      [{ text: 'Não', style: 'cancel' }, { text: 'Sim', onPress: () => {
+        const { demand, onFlagDemand } = this.props
+        onFlagDemand(demand)
+      }}]
+    )
+  }
+
   componentDidMount() {
     GoogleAnalytics.trackScreenView('ViewDemand')
   }
 
   render() {
-    const { auth: { currentUser }, demand, transactions, userDemands, adminDemands, onFlagDemand, onCreateTransaction, onRefuseDemand, onCompleteDemand, onCancelDemand, onReactivateDemand, admin } = this.props
+    const { auth: { currentUser }, demand, transactions, userDemands, adminDemands, onCompleteDemand, onCancelDemand, onReactivateDemand, admin } = this.props
+    const { state, creatingTransaction } = demand
     const transactionDemands = transactions.list
     const showUserButtons = (currentUser.id === demand.user.id || (admin && currentUser.admin))
     const showButtons = !showUserButtons && (demand.state === 'notifying' || demand.state === 'active') && transactionDemands.map(demand => demand.id).indexOf(demand.id) < 0
@@ -50,25 +73,27 @@ export default class ViewDemand extends Component {
                 demand={demand}
                 currentUser={currentUser}
                 fullHeader={true} />
+              <DemandState state={state} />
             </View>
             <ReviewsContainer {...this.props} user={demand.user} />
           </View>
         </ScrollView>
-        { showButtons && <BottomView><DemandButtons
-          currentUser={currentUser}
-          demand={demand}
-          onAccept={onCreateTransaction}
-          onRefuse={onRefuseDemand}
-          onFlag={onFlagDemand}
-        /></BottomView> }
-        { showUserButtons && <BottomView><DemandUserButtons
+        { showButtons && <BottomView>
+          <BottomButton onPress={this.handleAccept.bind(this)} isLoading={creatingTransaction}>
+            Ajudar
+          </BottomButton>
+          <BottomButton secondary={true} onPress={this.handleRefuse.bind(this)}>
+            Não posso
+          </BottomButton>
+        </BottomView> }
+        { showUserButtons && <DemandUserButtons
           admin={admin}
           currentUser={currentUser}
           demand={demand}
           onComplete={onCompleteDemand}
           onCancel={onCancelDemand}
           onReactivate={onReactivateDemand}
-        /></BottomView> }
+        /> }
       </View>
     )
   }

@@ -15,11 +15,13 @@ export default class Messages extends Component {
       <View>
         { !listing && messages.length === 0 &&
           <View style={{
-            backgroundColor: Colors.beige,
+            backgroundColor: Colors.lightGray,
             borderRadius: 4,
             padding: 10,
           }}>
-            <Sentence>
+            <Sentence style={{
+              color: Colors.darkGray,
+            }}>
               Apresente-se, diga os cuidados e informações sobre seu objeto, combine data de entrega, devolução e local de encontro. Um número de telefone para imprevistos vai bem :)
             </Sentence>
           </View>
