@@ -1,9 +1,10 @@
-import React, { Component, ScrollView, View, Platform, StyleSheet } from 'react-native'
+import React, { Component, Alert, ScrollView, View, Platform, StyleSheet } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import truncate from 'truncate'
 
 import Colors from "../Colors"
 import ReviewsContainer from "../containers/ReviewsContainer"
+import Button from "../components/Button"
 import BottomView from "../components/BottomView"
 import BottomButton from "../components/BottomButton"
 import Sentence from "../components/Sentence"
@@ -101,6 +102,15 @@ export default class ViewDemand extends Component {
                 { description }
               </Sentence>
               { showUserButtons && <DemandState state={state} style={{marginTop: 10}} /> }
+              { !showUserButtons && (state === 'notifying' || state === 'active') &&
+                <Button
+                  secondary={true}
+                  style={{marginTop: 10}}
+                  onPress={this.handleFlag.bind(this)}
+                >
+                  Denunciar pedido
+                </Button>
+              }
             </View>
             <ReviewsContainer {...this.props} user={user} />
           </View>

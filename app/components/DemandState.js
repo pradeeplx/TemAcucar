@@ -13,7 +13,7 @@ export default DemandState = ({ state, style }) => (
     justifyContent: 'center',
     alignSelf: 'center',
   }, style]}>
-    <Icon name={(state === 'completed' ? 'ios-checkmark-circle-outline' : (state === 'canceled' ? 'ios-close-circle-outline' : (state === 'flagged' ? 'report' : 'ios-time-outline')))} style={{ 
+    <Icon name={(state === 'completed' ? 'ios-checkmark-circle-outline' : (state === 'canceled' ? 'ios-close-circle-outline' : (state === 'flagged' ? 'ios-warning-outline' : 'ios-time-outline')))} style={{ 
       color: Colors.white,
       fontSize: 14,
       marginRight: 6,

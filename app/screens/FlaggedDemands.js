@@ -10,6 +10,7 @@ export default FlaggedDemands = ({ auth: {currentUser}, flaggedDemands, onListFl
     <NavBar title="Pedidos impróprios" />
     <ScrollView style={{
       flex: 1,
+      backgroundColor: Colors.lightBeige,
     }}>
       <Demands
         admin={true}

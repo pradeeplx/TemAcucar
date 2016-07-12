@@ -17,8 +17,9 @@ export default class DemandMiniature extends Component {
   }
 
   render() {
-    const { demand, currentUser, index } = this.props
+    const { demand, currentUser, admin, index } = this.props
     const { user, name, description, distance, created_at, state } = demand
+    const showClose = (!admin && currentUser.id !== user.id)
     return (
       <TouchableOpacity onPress={this.handleView.bind(this)} style={{
         backgroundColor: Colors.white,
@@ -78,7 +79,7 @@ export default class DemandMiniature extends Component {
           flex: 1,
           alignItems: 'center',
         }}>
-          { currentUser.id !== user.id && <TouchableOpacity onPress={this.handleRefuse.bind(this)}>
+          { showClose && <TouchableOpacity onPress={this.handleRefuse.bind(this)}>
             <Icon name="ios-close-outline" style={{
               backgroundColor: 'transparent',
               color: Colors.gray,
@@ -92,8 +93,8 @@ export default class DemandMiniature extends Component {
           <Icon name="ios-arrow-forward" style={{
             backgroundColor: 'transparent',
             fontSize: 28,
-            color: Colors.gray,
-            marginTop: 18,
+            color: (showClose ? Colors.lightGray : Colors.gray),
+            marginTop: (showClose ? 18 : 6),
           }} />
         </View>
       </TouchableOpacity>

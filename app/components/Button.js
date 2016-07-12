@@ -5,25 +5,25 @@ import Colors from "../Colors"
 export default Button = (props) => (
   <ReactNativeButton 
     {...props}
-    activityIndicatorColor={Colors.pink}
+    activityIndicatorColor={props.secondary ? Colors.white : Colors.pink}
     textStyle={[{
       textAlign: 'center',
-      color: Colors.pink,
-      fontSize: 12,
+      color: (props.secondary ? Colors.white : Colors.pink),
+      fontSize: (props.secondary ? 10 : 12),
       fontFamily: (Platform.OS === 'ios' ? 'Avenir' : 'Roboto'),
     }, props.textStyle]}
     disabledStyle={[{
       opacity: 0.6,
     }, props.disabledStyle]}
     style={[{
-      height: 36,
+      height: (props.secondary ? 24 : 36),
       alignSelf: 'center',
       borderRadius: 24,
-      paddingHorizontal: 30,
+      paddingHorizontal: (props.secondary ? 20 : 30),
       paddingVertical: 0,
       marginBottom: 0,
       borderWidth: StyleSheet.hairlineWidth,
-      borderColor: Colors.gray,
+      borderColor: (props.secondary ? Colors.white : Colors.gray),
     }, props.style]}
   >
     {props.children}
