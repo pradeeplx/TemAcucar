@@ -82,16 +82,17 @@ export default class DemandMiniature extends Component {
             <Icon name="ios-close-outline" style={{
               backgroundColor: 'transparent',
               color: Colors.gray,
-              paddingTop: 2,
+              paddingTop: 4,
               paddingBottom: 4,
               paddingHorizontal: 8,
+              fontSize: 22,
             }} />
           </TouchableOpacity> }
           <Icon name="ios-arrow-forward" style={{
             backgroundColor: 'transparent',
-            fontSize: 24,
+            fontSize: 28,
             color: Colors.gray,
-            marginTop: 24,
+            marginTop: 18,
           }} />
         </View>
       </TouchableOpacity>
