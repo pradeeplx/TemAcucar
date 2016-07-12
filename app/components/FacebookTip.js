@@ -7,6 +7,7 @@ import Button from "./Button"
 export default FacebookTip = ({ onPress, loading, title }) => (
   <Tip>
     <Sentence style={{
+      color: Colors.black,
       fontSize: 10,
       marginBottom: 10,
       textAlign: 'center',

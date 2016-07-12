@@ -63,14 +63,15 @@ export default class DemandMiniature extends Component {
             </Sentence>
             <TimeAgo time={created_at} lowerCase={true} style={{
               color: Colors.black,
+              fontSize: 10,
             }} />
           </View>
           <Sentence style={{
             color: Colors.gray,
-            fontSize: 9,
+            fontSize: 10,
             marginTop: 10,
           }}>
-            { truncate(description, 128) }
+            { truncate(description, 110) }
           </Sentence>
         </View>
         <View style={{

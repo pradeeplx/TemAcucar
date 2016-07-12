@@ -7,6 +7,7 @@ import Button from "./Button"
 export default ShareTip = ({ title, callToAction, onPress }) => (
   <Tip>
     <Sentence style={{
+      color: Colors.black,
       fontSize: 10,
       marginBottom: 10,
       textAlign: 'center',
