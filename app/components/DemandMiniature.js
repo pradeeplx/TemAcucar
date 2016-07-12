@@ -1,4 +1,4 @@
-import React, { Component, View, TouchableOpacity } from 'react-native'
+import React, { Component, View, TouchableOpacity, Platform } from 'react-native'
 import truncate from 'truncate'
 
 import Colors from "../Colors"
@@ -47,9 +47,9 @@ export default class DemandMiniature extends Component {
           flexDirection: 'column',
           paddingVertical: 10,
         }}>
-          <Sentence style={{
+          <Sentence style={[{
             color: Colors.blue,
-          }}>
+          }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
             { truncate(name, 30) }
           </Sentence>
           <View style={{
@@ -66,11 +66,11 @@ export default class DemandMiniature extends Component {
               fontSize: 10,
             }} />
           </View>
-          <Sentence style={{
-            color: Colors.gray,
+          <Sentence style={[{
+            color: Colors.darkGray,
             fontSize: 10,
             marginTop: 10,
-          }}>
+          }]}>
             { truncate(description, 110) }
           </Sentence>
         </View>

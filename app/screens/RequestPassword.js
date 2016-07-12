@@ -1,4 +1,4 @@
-import React, { Component } from 'react-native'
+import React, { Component, View } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -32,9 +32,13 @@ class RequestPassword extends Component {
   render() {
     const { onRequestPassword, fields: { email }, auth: { requestPasswordError, requestingPassword } } = this.props
     return (
-      <FormScreen navBar={true} navBarTitle="Esqueceu sua senha?">
-        <EmailInput {...email} />
-        { requestPasswordError && <FormError message={UserValidators.errorMessage(requestPasswordError)} /> }
+      <View style={{
+        flex: 1,
+      }}>
+        <FormScreen navBar={true} navBarTitle="Esqueceu sua senha?">
+          <EmailInput {...email} />
+          { requestPasswordError && <FormError message={UserValidators.errorMessage(requestPasswordError)} /> }
+        </FormScreen>
         <FormSubmit
           {...this.props}
           dirty={true}
@@ -43,7 +47,7 @@ class RequestPassword extends Component {
         >
           Enviar instruções por e-mail
         </FormSubmit>
-      </FormScreen>
+      </View>
     )
   }
 }

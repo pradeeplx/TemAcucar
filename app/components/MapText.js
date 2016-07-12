@@ -1,41 +1,27 @@
-import React, { Component, View } from 'react-native'
+import React, { View, Image, Platform } from 'react-native'
 import Colors from "../Colors"
 
-export default class MapText extends Component {
-  constructor(props, context) {
-    super(props, context)
-    this.state = { viewHeight: 0 }
-  }
-
-  handleLayout(event) {
-    this.setState({ viewHeight: event.nativeEvent.layout.height })
-  }
-
-  render() {
-    const { children } = this.props
-    const { viewHeight } = this.state
-    return (
-      <View
-        onLayout={this.handleLayout.bind(this)}
-        style={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          left: 0,
-          right: 0,
-          backgroundColor: 'rgba(0,0,0,0.4)',
-        }}
-      >
-        <Sentence style={{
-          fontSize: 14,
-          color: Colors.white, 
-          textAlign: 'center',
-          paddingVertical: 3,
-          marginTop: viewHeight - 28,
-        }}>
-          { children }
-        </Sentence>
-      </View>
-    )
-  }
-}
+export default MapText = ({ children }) => (
+  <View style={{
+    position: 'absolute',
+    bottom: 6,
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+  }}>
+    <View style={{
+      backgroundColor: Colors.white,
+      paddingVertical: 4,
+      paddingHorizontal: 30,
+      borderRadius: 12,
+    }}>
+      <Sentence style={[{
+        color: Colors.blue, 
+        textAlign: 'center',
+        fontSize: 10,
+      }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
+        { children }
+      </Sentence>
+    </View>
+  </View>
+)

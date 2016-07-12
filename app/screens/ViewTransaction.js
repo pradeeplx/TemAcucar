@@ -136,7 +136,7 @@ class ViewTransaction extends Component {
           </Sentence>
           { [1, 2, 3, 4, 5].map((index) => (
             <TouchableOpacity key={index} onPress={this.newReviewFunction(index)}>
-              <Icon name="star-border" style={{
+              <Icon name="ios-star-outline" style={{
                 color: Colors.yellow,
                 fontSize: 30,
               }} />

@@ -12,16 +12,16 @@ export default TopBar = ({ onMenuOpen }) => (
     justifyContent: 'center',
     flexDirection: 'row',
     borderColor: Colors.pink,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: 1,
   }}>
     <View style={{
       flex: 1, 
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      <Sentence style={{
+      <Sentence style={[{
         fontSize: 14,
-      }}>
+      }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
         Tem Açúcar?
       </Sentence>
     </View>

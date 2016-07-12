@@ -12,8 +12,7 @@ export default BottonButton = (props) => {
         textAlign: 'center',
         color: Colors.white,
         fontSize: 14,
-        fontFamily: (Platform.OS === 'ios' ? 'Avenir' : 'Roboto'),
-      }, textStyle]}
+      }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' }), textStyle]}
       disabledStyle={[{
         opacity: 0.6,
       }, disabledStyle]}

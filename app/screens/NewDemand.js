@@ -71,7 +71,7 @@ class NewDemand extends Component {
     const progressColor = (
       progress < 35 ? Colors.mediumLightBeige : (
         progress < 75 ? Colors.lightPink : (
-          progress < 100 ? Colors.mediumPink : Colors.lightBlue
+          progress < 100 ? Colors.mediumPink : Colors.blue
         )
       )
     )
@@ -117,7 +117,7 @@ class NewDemand extends Component {
                 marginHorizontal: 10,
               }}
               trackStyle={{
-                height: 2,
+                height: 4,
                 backgroundColor: Colors.lightGray,
               }}
               thumbStyle={{

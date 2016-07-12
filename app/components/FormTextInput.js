@@ -21,8 +21,8 @@ class FormTextInput extends Component {
         ref='input'
         { ...this.props }
         style={[{
-          borderColor: Colors.mediumLightBeige,
-          backgroundColor: Colors.lightBeige,
+          borderColor: Colors.lightGray,
+          backgroundColor: Colors.white,
         }, style]}
         titleStyle={[{
           fontFamily: (Platform.OS === 'ios' ? 'Avenir' : 'Roboto'),
@@ -31,7 +31,7 @@ class FormTextInput extends Component {
         }, titleStyle]}
         inputStyle={[{
           color: Colors.pink,
-          backgroundColor: Colors.lightBeige,
+          backgroundColor: Colors.white,
           fontSize: 12,
         }, inputStyle]}
         messageStyle={[{

@@ -9,8 +9,7 @@ export default SetLocationHeader = (props) => (
     alignSelf: 'stretch',
   }}>
     <Headline style={{
-      fontSize: 20,
-      marginTop: (Platform.OS === 'ios' ? 15 : 10),
+      marginTop: (Platform.OS === 'ios' ? 10 : 5),
       marginBottom: 5,
     }}>
       Onde você mora?

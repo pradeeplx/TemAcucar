@@ -16,7 +16,7 @@ export default class NavBar extends Component {
       <View style={{
         backgroundColor: Colors.white,
         borderColor: Colors.pink,
-        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderBottomWidth: 1,
       }}>
         <View style={{
           marginTop: (Platform.OS == 'ios' ? 20 : 0),

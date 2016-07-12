@@ -84,7 +84,7 @@ class NewReview extends Component {
           }}>
             { [1, 2, 3, 4, 5].map((index) => (
               <TouchableOpacity key={index} onPress={this.ratingChangeFunction(index)}>
-                <Icon name={(index > rating ? "star-border" : "star")} style={{
+                <Icon name={(index > rating ? "ios-star-outline" : "ios-star")} style={{
                   color: Colors.yellow,
                   fontSize: 30,
                 }} />
