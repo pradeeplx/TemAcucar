@@ -37,6 +37,7 @@ export default class DemandMiniature extends Component {
           <Sentence style={{
             color: Colors.gray,
             marginTop: 6,
+            fontSize: 10,
           }}>
             A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
           </Sentence>
@@ -56,7 +57,7 @@ export default class DemandMiniature extends Component {
           }}>
             <Sentence style={{
               color: Colors.black,
-              fontSize: 9,
+              fontSize: 10,
             }}>
               Pedido por { currentUser.id === user.id ? 'você ' : user.first_name + ' ' }
             </Sentence>

@@ -1,7 +1,7 @@
 import React, { Component, View } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import Colors from "../Colors"
-import BorderedScreen from "../components/BorderedScreen"
+import BaseScreen from "../components/BaseScreen"
 import SetLocationHeader from "../components/SetLocationHeader"
 import SetLocation from "../components/SetLocation"
 
@@ -12,10 +12,10 @@ export default class ReviewLocation extends Component {
 
   render() {
     return(
-      <BorderedScreen>
+      <BaseScreen>
         <SetLocationHeader />
         <SetLocation {...this.props} />
-      </BorderedScreen>
+      </BaseScreen>
     )
   }
 }

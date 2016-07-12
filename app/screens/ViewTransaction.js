@@ -137,7 +137,7 @@ class ViewTransaction extends Component {
           { [1, 2, 3, 4, 5].map((index) => (
             <TouchableOpacity key={index} onPress={this.newReviewFunction(index)}>
               <Icon name="star-border" style={{
-                color: Colors.darkYellow,
+                color: Colors.yellow,
                 fontSize: 30,
               }} />
             </TouchableOpacity>

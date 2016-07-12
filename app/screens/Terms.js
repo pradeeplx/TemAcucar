@@ -2,7 +2,7 @@ import React, { Component, View, ScrollView, Platform } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 
 import Colors from "../Colors"
-import BorderedScreen from "../components/BorderedScreen"
+import BaseScreen from "../components/BaseScreen"
 import BottomView from "../components/BottomView"
 import BottomButton from "../components/BottomButton"
 import TextBox from "../components/TextBox"
@@ -17,7 +17,7 @@ export default class Terms extends Component {
   render() {
     const { onAcceptTerms, onRejectTerms, onScroll, scrolledToBottom } = this.props
     return(
-      <BorderedScreen>
+      <BaseScreen>
         <View style={{
           flex: 1,
           justifyContent: 'center',
@@ -325,7 +325,7 @@ export default class Terms extends Component {
             { (scrolledToBottom ? 'Para continuar, aceite os termos de uso.' : 'Para continuar, leia os termos de uso até o final.') }
           </TextBox>
         </View>
-      </BorderedScreen>
+      </BaseScreen>
     )
   }
 }

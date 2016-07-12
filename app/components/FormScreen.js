@@ -1,7 +1,7 @@
 import React, { Platform, View, Dimensions } from 'react-native'
 
 import Colors from "../Colors"
-import BorderedScreen from "./BorderedScreen"
+import BaseScreen from "./BaseScreen"
 import LogoBigIcon from "./LogoBigIcon"
 import NavBar from "./NavBar"
 import Form from "./Form"
@@ -11,7 +11,7 @@ export default FormScreen = (props) => {
   const height = dimensions.height * dimensions.scale
   const smallScreen = height <= 320
   return (
-    <BorderedScreen navBar={props.navBar} navBarTitle={props.navBarTitle}>
+    <BaseScreen navBar={props.navBar} navBarTitle={props.navBarTitle}>
       <Form {...props}>
         <View style={{
           alignSelf: 'stretch',
@@ -22,6 +22,6 @@ export default FormScreen = (props) => {
         </View>
         { props.children }
       </Form>
-    </BorderedScreen>
+    </BaseScreen>
   )
 }

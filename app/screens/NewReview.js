@@ -5,7 +5,7 @@ import { reduxForm } from 'redux-form'
 
 import Colors from "../Colors"
 import ReviewValidators from '../validators/ReviewValidators'
-import BorderedScreen from "../components/BorderedScreen"
+import BaseScreen from "../components/BaseScreen"
 import Headline from "../components/Headline"
 import Sentence from "../components/Sentence"
 import Form from "../components/Form"
@@ -51,7 +51,7 @@ class NewReview extends Component {
     const { demand } = transaction
     const user = (transaction.user.id === currentUser.id ? transaction.demand.user : transaction.user)
     return (
-      <BorderedScreen navBar={true} navBarTitle="Como foi sua experiência?">
+      <BaseScreen navBar={true} navBarTitle="Como foi sua experiência?">
         <Form>
           <Headline style={{
             marginTop: 20,
@@ -85,7 +85,7 @@ class NewReview extends Component {
             { [1, 2, 3, 4, 5].map((index) => (
               <TouchableOpacity key={index} onPress={this.ratingChangeFunction(index)}>
                 <Icon name={(index > rating ? "star-border" : "star")} style={{
-                  color: Colors.darkYellow,
+                  color: Colors.yellow,
                   fontSize: 30,
                 }} />
               </TouchableOpacity>
@@ -111,7 +111,7 @@ class NewReview extends Component {
             {`Avaliar ${user.first_name}`}
           </FormSubmit>
         </Form>
-      </BorderedScreen>
+      </BaseScreen>
     )
   }
 }

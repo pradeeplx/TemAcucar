@@ -1,11 +1,11 @@
 import React, { View, Image } from 'react-native'
-import BorderedScreen from "./BorderedScreen"
+import BaseScreen from "./BaseScreen"
 import Logo from "../components/Logo"
 import LogoBigIcon from "./LogoBigIcon"
 import Headline from "./Headline"
 
 export default SimpleScreen = ({ children, headline, navBar, navBarTitle, addTopMargin, logo }) => (
-  <BorderedScreen navBar={navBar} navBarTitle={navBarTitle}>
+  <BaseScreen navBar={navBar} navBarTitle={navBarTitle}>
     <View style={{
       alignItems: 'center',
       justifyContent: 'center',
@@ -22,6 +22,6 @@ export default SimpleScreen = ({ children, headline, navBar, navBarTitle, addTop
       </Headline>
     }
     {children}
-  </BorderedScreen>
+  </BaseScreen>
 )
  

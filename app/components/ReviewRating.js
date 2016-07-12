@@ -9,7 +9,7 @@ export default ReviewRating = ({ rating }) => (
   }}>
     { [1, 2, 3, 4, 5].map((index) => (
       <Icon key={index} name={(index > rating ? "star-border" : "star")} style={{
-        color: Colors.darkYellow,
+        color: Colors.yellow,
       }}/>
     )) }
   </View>
