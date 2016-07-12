@@ -1,8 +1,9 @@
 import React, { Component, View, TouchableOpacity } from 'react-native'
+import truncate from 'truncate'
+
 import Colors from "../Colors"
-import DemandHeader from "./DemandHeader"
-import DemandButtons from "./DemandButtons"
-import DemandUserButtons from "./DemandUserButtons"
+import Sentence from "./Sentence"
+import UserImage from "./UserImage"
 
 export default class DemandMiniature extends Component {
   handleView() {
@@ -10,35 +11,87 @@ export default class DemandMiniature extends Component {
     onView(demand, admin)
   }
 
+  handleRefuse() {
+    const { demand, onRefuse } = this.props
+    onRefuse(demand)
+  }
+
   render() {
-    const { demand, currentUser, admin, index } = this.props
-    const Buttons = (currentUser.id === demand.user.id || (admin && currentUser.admin) ? null : null)
+    const { demand, currentUser, index } = this.props
+    const { user, name, description, distance, created_at, state } = demand
     return (
       <TouchableOpacity onPress={this.handleView.bind(this)} style={{
         backgroundColor: Colors.white,
+        borderTopWidth: (index === 0 ? 0 : 12),
+        borderColor: Colors.lightBeige,
+        flex: 1,
+        flexDirection: 'row',
       }}>
         <View style={{
-          borderTopWidth: (index === 0 ? 0 : 12),
-          borderColor: Colors.lightBeige,
-          paddingVertical: 10,
-          flex: 1,
+          flex: 3,
+          flexDirection: 'column',
+          alignItems: 'center',
+          marginTop: 10,
         }}>
-          <DemandHeader {...this.props} />
+          <UserImage source={{uri: user.image_url}} />
+          <Sentence style={{
+            color: Colors.gray,
+            marginTop: 6,
+          }}>
+            A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
+          </Sentence>
         </View>
-        { Buttons && <Buttons {...this.props} /> }
         <View style={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          right: 10,
+          flex: 8,
+          flexDirection: 'column',
+          paddingVertical: 10,
         }}>
+          <Sentence style={{
+            color: Colors.blue,
+          }}>
+            { truncate(name, 30) }
+          </Sentence>
+          <View style={{
+            flexDirection: 'row',
+          }}>
+            <Sentence style={{
+              color: Colors.black,
+              fontSize: 9,
+            }}>
+              Pedido por { currentUser.id === user.id ? 'você ' : user.first_name + ' ' }
+            </Sentence>
+            <TimeAgo time={created_at} lowerCase={true} style={{
+              color: Colors.black,
+            }} />
+          </View>
+          <Sentence style={{
+            color: Colors.gray,
+            fontSize: 9,
+            marginTop: 10,
+          }}>
+            { truncate(description, 128) }
+          </Sentence>
+        </View>
+        <View style={{
+          flex: 1,
+          alignItems: 'center',
+        }}>
+          { currentUser.id !== user.id && <TouchableOpacity onPress={this.handleRefuse.bind(this)}>
+            <Icon name="ios-close-outline" style={{
+              backgroundColor: 'transparent',
+              color: Colors.gray,
+              paddingTop: 2,
+              paddingBottom: 4,
+              paddingHorizontal: 8,
+            }} />
+          </TouchableOpacity> }
           <Icon name="ios-arrow-forward" style={{
             backgroundColor: 'transparent',
             fontSize: 24,
             color: Colors.gray,
-            marginTop: 52,
+            marginTop: 24,
           }} />
-        </View> 
+        </View>
       </TouchableOpacity>
     )
   }

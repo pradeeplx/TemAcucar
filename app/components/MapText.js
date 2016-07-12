@@ -31,7 +31,7 @@ export default class MapText extends Component {
           color: Colors.white, 
           textAlign: 'center',
           paddingVertical: 3,
-          marginTop: viewHeight - 24,
+          marginTop: viewHeight - 28,
         }}>
           { children }
         </Sentence>
