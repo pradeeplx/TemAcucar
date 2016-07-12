@@ -13,6 +13,5 @@ export default TransactionDemand = (props) => (
   }}>
     <TransactionDemandHeader {...props} />
     <Transactions {...props} />
-    <TransactionDemandFooter {...props} />
   </View>
 )

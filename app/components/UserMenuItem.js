@@ -11,12 +11,17 @@ export default UserMenuItem = ({ onPress, style, icon, iconSet, iconStyle, child
     flexDirection: 'row',
     alignItems: 'center'
   }, style]}>
-    <Icon name={icon} set={iconSet} style={[{ 
-      fontSize: 24,
-      color: (type == "light" ? Colors.white : Colors.white),
-      marginRight: 10,
-    }, iconStyle]} />
+    <View style={{
+      alignItems: 'center',
+      width: 24,
+    }}>
+      <Icon name={icon} set={iconSet} style={[{ 
+        fontSize: 24,
+        color: (type == "light" ? Colors.white : Colors.white),
+      }, iconStyle]} />
+    </View>
     <Sentence style={{
+      marginLeft: 8,
       fontSize: 16,
       color: (type == "light" ? Colors.white : Colors.white),
     }}>

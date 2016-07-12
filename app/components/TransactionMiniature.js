@@ -17,7 +17,7 @@ export default class TransacionMiniature extends Component {
     return (
       <TouchableOpacity onPress={this.handleView.bind(this)} style={{
         borderColor: Colors.gray,
-        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderTopWidth: (index === 0 ? 0 : StyleSheet.hairlineWidth),
         padding: 10,
         flexDirection: 'row',
         alignItems: 'center',

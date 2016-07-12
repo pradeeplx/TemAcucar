@@ -20,6 +20,11 @@ export default ShareTip = ({ title, callToAction, onPress }) => (
         paddingVertical: 0,
         height: 30,
         width: 220,
+        backgroundColor: Colors.facebook,
+        borderColor: Colors.facebook,
+      }}
+      textStyle={{
+        color: Colors.white,
       }}
     >
       { callToAction || 'Compartilhe no Facebook' }

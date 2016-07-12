@@ -21,6 +21,11 @@ export default FacebookTip = ({ onPress, loading, title }) => (
         paddingVertical: 0,
         height: 30,
         width: 220,
+        backgroundColor: Colors.facebook,
+        borderColor: Colors.facebook,
+      }}
+      textStyle={{
+        color: Colors.white,
       }}
     >
       Conecte sua conta do Facebook

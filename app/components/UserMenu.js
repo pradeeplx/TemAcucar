@@ -39,10 +39,7 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
       <UserMenuItem onPress={onUserReviews} icon="ios-star-outline">
         Minhas avaliações
       </UserMenuItem>
-      { !currentUser.facebook_uid && <UserMenuItem onPress={onFacebook} icon="logo-facebook" iconStyle={{
-        fontSize: 22,
-        marginLeft: 4,
-      }}>
+      { !currentUser.facebook_uid && <UserMenuItem onPress={onFacebook} icon="logo-facebook">
         { facebookConnecting ? 'Conectando...' : 'Conectar Facebook' }
       </UserMenuItem> }
       <UserMenuItem onPress={onSetLocation} icon="ios-pin-outline">

@@ -16,11 +16,14 @@ export default TopBar = ({ onMenuOpen }) => (
   }}>
     <View style={{
       flex: 1, 
-      flexDirection: 'row', 
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      {true == true && <LogoIcon />}
+      <Sentence style={{
+        fontSize: 14,
+      }}>
+        Tem Açúcar?
+      </Sentence>
     </View>
     <TouchableOpacity onPress={onMenuOpen} style={{
       paddingHorizontal: 10,

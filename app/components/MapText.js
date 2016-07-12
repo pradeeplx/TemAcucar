@@ -12,7 +12,7 @@ export default MapText = ({ children }) => (
     <Sentence style={{
       color: Colors.white, 
       textAlign: 'center',
-      paddingVertical: 4,
+      paddingVertical: 3,
     }}>
       { children }
     </Sentence>

@@ -3,7 +3,8 @@ import GoogleAnalytics from 'react-native-google-analytics-bridge'
 
 import Colors from "../Colors"
 import BorderedScreen from "../components/BorderedScreen"
-import Button from "../components/Button"
+import BottomView from "../components/BottomView"
+import BottomButton from "../components/BottomButton"
 import TextBox from "../components/TextBox"
 import Headline from "../components/Headline"
 import Paragraph from "../components/Paragraph"
@@ -27,7 +28,6 @@ export default class Terms extends Component {
           <ScrollView
             style={{
               backgroundColor: Colors.lightBeige,
-              padding: 10,
               marginBottom: 20,
               flex: 1,
             }}
@@ -38,6 +38,8 @@ export default class Terms extends Component {
               flex: 1,
               alignItems: 'center',
               justifyContent: 'center',
+              padding: 10,
+              paddingBottom: 80,
             }}>
               <Paragraph>
                 TERMOS E CONDIÇÕES GERAIS
@@ -309,36 +311,17 @@ export default class Terms extends Component {
               <Paragraph>
                 Todos os itens destes Termos e Condições Gerais estão regidos pelas leis vigentes na República Federativa do Brasil. Para todos os assuntos referentes à interpretação e ao cumprimento deste Contrato, as partes se submetem ao Foro Central da Comarca do Rio de Janeiro, estado do Rio de Janeiro.
               </Paragraph>
-              <View style={{
-                paddingBottom: 40,
-                flexDirection: 'row',
-              }}>
-                <Button isDisabled={!scrolledToBottom}
-                  style={{
-                    marginRight: 10,
-                    paddingHorizontal: 10,
-                    height: 36,
-                    width: 100,
-                  }}
-                  onPress={onAcceptTerms}
-                >
-                  Eu aceito
-                </Button>
-                <Button
-                  style={{
-                    paddingHorizontal: 10,
-                    backgroundColor: Colors.beige,
-                    height: 36,
-                    width: 100,
-                  }}
-                  onPress={onRejectTerms}
-                >
-                  Eu não aceito
-                </Button>
-              </View>
             </View>
+            <BottomView>
+              <BottomButton isDisabled={!scrolledToBottom} onPress={onAcceptTerms}>
+                Eu aceito
+              </BottomButton>
+              <BottomButton onPress={onRejectTerms} secondary={true}>
+                Eu não aceito
+              </BottomButton>
+            </BottomView>
           </ScrollView>
-          <TextBox style={{height: 60}}>
+          <TextBox style={{height: 40}}>
             { (scrolledToBottom ? 'Para continuar, aceite os termos de uso.' : 'Para continuar, leia os termos de uso até o final.') }
           </TextBox>
         </View>

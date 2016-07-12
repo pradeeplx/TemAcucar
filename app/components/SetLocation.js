@@ -36,67 +36,68 @@ class SetLocation extends Component {
     const { valid, dirty, fields, location: { startingUp, searching, settingLocation, latitude, longitude } } = this.props
     const { thoroughfare, subThoroughfare, complement, subLocality, locality, administrativeArea, country } = fields
     return (
-      <Form>
-        <UserMap
-          latitude={latitude}
-          longitude={longitude}
-          text="Seu endereço será sempre privado"
-        />
-        <FormTextInput 
-          name='thoroughfare'
-          title='Rua, Av., etc'
-          placeholder='Sua rua, etc'
-          {...thoroughfare}
-        />
-        <FormTextInput 
-          name='subThoroughfare'
-          title='Número'
-          placeholder='Seu número'
-          {...subThoroughfare}
-        />
-        <FormTextInput 
-          name='complement'
-          title='Complemento'
-          placeholder='(opcional)'
-          {...complement}
-        />
-        <FormTextInput 
-          name='subLocality'
-          title='Bairro'
-          placeholder='Seu bairro'
-          {...subLocality}
-        />
-        <FormTextInput 
-          name='locality'
-          title='Cidade'
-          placeholder='Sua cidade'
-          {...locality}
-        />
-        <FormTextInput 
-          name='administrativeArea'
-          title='Estado'
-          placeholder='Seu estado'
-          {...administrativeArea}
-        />
-        <FormTextInput 
-          name='country'
-          title='País'
-          placeholder='Seu país'
-          {...country}
-        />
+      <View style={{
+        flex: 1,
+        alignSelf: 'stretch',
+      }}>
+        <Form>
+          <UserMap
+            latitude={latitude}
+            longitude={longitude}
+            text="Seu endereço será sempre privado"
+          />
+          <FormTextInput 
+            name='thoroughfare'
+            title='Rua, Av., etc'
+            placeholder='Sua rua, etc'
+            {...thoroughfare}
+          />
+          <FormTextInput 
+            name='subThoroughfare'
+            title='Número'
+            placeholder='Seu número'
+            {...subThoroughfare}
+          />
+          <FormTextInput 
+            name='complement'
+            title='Complemento'
+            placeholder='(opcional)'
+            {...complement}
+          />
+          <FormTextInput 
+            name='subLocality'
+            title='Bairro'
+            placeholder='Seu bairro'
+            {...subLocality}
+          />
+          <FormTextInput 
+            name='locality'
+            title='Cidade'
+            placeholder='Sua cidade'
+            {...locality}
+          />
+          <FormTextInput 
+            name='administrativeArea'
+            title='Estado'
+            placeholder='Seu estado'
+            {...administrativeArea}
+          />
+          <FormTextInput 
+            name='country'
+            title='País'
+            placeholder='Seu país'
+            {...country}
+          />
+        </Form>
         <FormSubmit
           {...this.props}
           isDisabled={ !valid }
           isLoading={searching || settingLocation}
           onSubmit={this.handleSubmit.bind(this)}
-          style={{
-            margin: 15,
-            marginBottom: 0,
-          }}
         >
           {dirty || !valid ? 'Buscar endereço' : 'Confirmar endereço'}
         </FormSubmit>
-      </Form>
+      </View>
     )
   }
 }

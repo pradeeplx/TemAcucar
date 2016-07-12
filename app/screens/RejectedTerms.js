@@ -1,8 +1,9 @@
-import React, { Component, View, Text } from 'react-native'
+import React, { Component, Platform, View, Text } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 
 import SimpleScreen from "../components/SimpleScreen"
-import Button from "../components/Button"
+import BottomView from "../components/BottomView"
+import BottomButton from "../components/BottomButton"
 import Sentence from "../components/Sentence"
 
 export default class RejectedTerms extends Component {
@@ -23,9 +24,11 @@ export default class RejectedTerms extends Component {
             Caso você tenha recusado sem querer, clique no botão abaixo para ler uma vez mais.
           </Sentence>
         </View>
-        <Button onPress={onCancelRejectTerms}>
-          Ler novamente os termos
-        </Button>
+        <BottomView>
+          <BottomButton onPress={onCancelRejectTerms}>
+            Ler novamente os termos
+          </BottomButton>
+        </BottomView>
       </SimpleScreen>
     )
   }

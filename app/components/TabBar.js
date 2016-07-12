@@ -31,16 +31,15 @@ export default class TabBar extends Component {
             top: height * 0.015,
             height: 18,
             width: 18,
-            backgroundColor: (isActive ? Colors.lightBeige : Colors.pink),
+            backgroundColor: (isActive ? Colors.white : Colors.pink),
             borderWidth: 1,
-            borderColor: (isActive ? Colors.lightBeige : Colors.pink),
+            borderColor: (isActive ? Colors.white : Colors.pink),
             borderRadius: 9,
           }}>
             <Sentence style={{
               backgroundColor: 'transparent',
-              color: (isActive ? Colors.pink : Colors.lightBeige),
+              color: (isActive ? Colors.pink : Colors.white),
               textAlign: 'center',
-              fontSize: 11,
             }}>
               {notificationsCount}
             </Sentence>
