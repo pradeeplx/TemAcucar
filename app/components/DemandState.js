@@ -1,10 +1,11 @@
-import React, { View } from 'react-native'
+import React, { View, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 
 export default DemandState = ({ state, style }) => (
   <View style={[{
     borderRadius: 4,
-    backgroundColor: (state === 'completed' ? Colors.green : (state === 'canceled' ? Colors.red : Colors.gray)),
+    borderColor: Colors.white,
+    borderWidth: StyleSheet.hairlineWidth,
     paddingVertical: 2,
     paddingHorizontal: 6,
     flexDirection: 'row',

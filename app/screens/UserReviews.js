@@ -20,7 +20,7 @@ export default class UserReviews extends Component {
         <ScrollView style={{
           flex: 1,
         }}>
-          <ReviewsContainer {...this.props} user={currentUser} hideTitle={true} />
+          <ReviewsContainer {...this.props} user={currentUser} />
         </ScrollView>
       </View>
     )

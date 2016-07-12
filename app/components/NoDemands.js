@@ -4,7 +4,7 @@ import Sentence from "./Sentence"
 import Tip from "./Tip"
 
 export default NoDemands = ({ text }) => (
-  <Tip>
+  <Tip style={{borderTopWidth: 0}}>
     <Sentence style={{
       alignSelf: 'stretch',
       marginHorizontal: 10,

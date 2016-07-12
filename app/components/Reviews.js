@@ -9,25 +9,14 @@ import NoReviews from "./NoReviews"
 
 export default class Reviews extends Component {
   render() {
-    const { onList, user, reviews, listing, canList, currentUser, hideTitle } = this.props
+    const { onList, user, reviews, listing, canList, currentUser } = this.props
     return (
       <View style={{
         flex: 1,
         flexDirection: 'column',
+        alignSelf: 'stretch',
         alignItems: 'center',
       }}>
-        { !hideTitle && 
-          <View>
-            <Sentence style={{
-              marginHorizontal: 20,
-              textAlign: 'center',
-              color: Colors.brown,
-              fontSize: 14,
-            }}>
-              { user.id === currentUser.id ? 'Suas avaliações' : `Avaliações de ${user.first_name} ${user.last_name}` }
-            </Sentence>
-          </View>
-        }
         { reviews.map((review, index) => (
           <Review
             key={review.id}

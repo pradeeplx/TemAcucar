@@ -8,9 +8,9 @@ import BottomView from "../components/BottomView"
 import BottomButton from "../components/BottomButton"
 import Sentence from "../components/Sentence"
 import NavBar from "../components/NavBar"
-import DemandHeader from "../components/DemandHeader"
 import DemandState from "../components/DemandState"
 import DemandUserButtons from "../components/DemandUserButtons"
+import UserImage from "../components/UserImage"
 
 export default class ViewDemand extends Component {
   handleAccept() {
@@ -40,42 +40,69 @@ export default class ViewDemand extends Component {
 
   render() {
     const { auth: { currentUser }, demand, transactions, userDemands, adminDemands, onCompleteDemand, onCancelDemand, onReactivateDemand, admin } = this.props
-    const { state, creatingTransaction } = demand
+    const { name, description, distance, created_at, user, state, creatingTransaction } = demand
     const transactionDemands = transactions.list
-    const showUserButtons = (currentUser.id === demand.user.id || (admin && currentUser.admin))
+    const showUserButtons = (currentUser.id === user.id || (admin && currentUser.admin))
     const showButtons = !showUserButtons && (demand.state === 'notifying' || demand.state === 'active') && transactionDemands.map(demand => demand.id).indexOf(demand.id) < 0
     return (
       <View style={{
         flex: 1,
         alignSelf: 'stretch',
       }}>
-        <NavBar title={truncate(demand.name, 30)} />
+        <NavBar title={truncate(demand.name, 30)} style={{borderBottomWidth: 0}} />
         <ScrollView style={{
           flex: 1,
-          backgroundColor: Colors.white,
-          paddingTop: 20,
+          backgroundColor: Colors.lightBeige,
         }}>
           <View style={{
-            alignSelf: 'stretch',
             alignItems: 'center',
-            paddingHorizontal: 10,
-            paddingBottom: 110,
+            paddingBottom: 80,
           }}>
             <View style={{
               flex: 1,
               alignSelf: 'stretch',
-              paddingBottom: 20,
-              marginBottom: 20,
-              borderBottomWidth: StyleSheet.hairlineWidth,
-              borderColor: Colors.beige,
+              alignItems: 'center',
+              paddingHorizontal: 10,
+              paddingVertical: 20,
+              backgroundColor: Colors.blue,
             }}>
-              <DemandHeader
-                demand={demand}
-                currentUser={currentUser}
-                fullHeader={true} />
-              <DemandState state={state} />
+              <UserImage source={{uri: user.image_url}} size={64} />
+              <Sentence style={[{
+                color: Colors.white,
+                fontSize: 14,
+                marginTop: 10,
+              }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
+                { name }
+              </Sentence>
+              <View style={{
+                flexDirection: 'row',
+              }}>
+                <Sentence style={{
+                  color: Colors.black,
+                  fontSize: 12,
+                }}>
+                  Pedido por { currentUser.id === user.id ? 'você ' : user.first_name + ' ' + user.last_name + ' ' }
+                </Sentence>
+                <TimeAgo time={created_at} lowerCase={true} style={{
+                  color: Colors.black,
+                  fontSize: 12,
+                }} />
+              </View>
+              <Sentence style={{
+                color: Colors.white,
+              }}>
+                A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
+              </Sentence>
+              <Sentence style={[{
+                color: Colors.white,
+                fontSize: 10,
+                marginTop: 10,
+              }]}>
+                { description }
+              </Sentence>
+              { showUserButtons && <DemandState state={state} style={{marginTop: 10}} /> }
             </View>
-            <ReviewsContainer {...this.props} user={demand.user} />
+            <ReviewsContainer {...this.props} user={user} />
           </View>
         </ScrollView>
         { showButtons && <BottomView>

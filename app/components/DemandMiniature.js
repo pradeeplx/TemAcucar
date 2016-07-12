@@ -86,6 +86,7 @@ export default class DemandMiniature extends Component {
               paddingBottom: 4,
               paddingHorizontal: 8,
               fontSize: 22,
+              textAlign: 'center',
             }} />
           </TouchableOpacity> }
           <Icon name="ios-arrow-forward" style={{

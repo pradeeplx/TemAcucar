@@ -11,13 +11,13 @@ export default class NavBar extends Component {
   }
 
   render() {
-    const { children, title } = this.props
+    const { children, title, style } = this.props
     return (
-      <View style={{
+      <View style={[{
         backgroundColor: Colors.white,
         borderColor: Colors.pink,
         borderBottomWidth: 1,
-      }}>
+      }, style]}>
         <View style={{
           marginTop: (Platform.OS == 'ios' ? 20 : 0),
           alignItems: 'center',

@@ -1,4 +1,4 @@
-import React, { View } from 'react-native'
+import React, { View, Platform } from 'react-native'
 
 import Colors from "../Colors"
 import Sentence from "./Sentence"
@@ -8,40 +8,43 @@ import ReviewRating from "./ReviewRating"
 export default Review = ({ review: { rating, text, reviewer, created_at } }) => (
   <View style={{
     flex: 1,
+    flexDirection: 'row',
     alignSelf: 'stretch',
-    alignItems: 'center',
     backgroundColor: Colors.white,
     paddingVertical: 10,
     borderBottomWidth: 12,
     borderColor: Colors.lightBeige,
   }}>
-    <ReviewRating rating={rating} />
-    <Sentence style={{
-      fontSize: 10,
-    }}>
-      { `${reviewer.first_name} ${reviewer.last_name}` }
-    </Sentence>
-    <Sentence style={{
-      textAlign: 'center',
-      fontSize: 10,
-    }}>
-      { text || `${reviewer.first_name} não descreveu sua experiência.` }
-    </Sentence>
     <View style={{
-      flexDirection: 'row',
+      flex: 2,
+      flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center',
-      marginTop: 4,
     }}>
-      <Icon name="ios-time-outline" style={{ 
-        color: Colors.gray,
-        marginRight: 4,
-        marginTop: 2,
+      <UserImage source={{uri: reviewer.image_url}} />
+    </View>
+    <View style={{
+      flex: 8,
+      alignItems: 'flex-start',
+      flexDirection: 'column',
+    }}>
+      <Sentence style={[{
         fontSize: 12,
-      }} />
+        color: Colors.blue,
+      }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
+        { `${reviewer.first_name} ${reviewer.last_name}` }
+      </Sentence>
       <TimeAgo time={created_at} style={{
-        color: Colors.gray,
+        fontSize: 12,
+        color: Colors.black,
       }} />
+      <Sentence style={{
+        fontSize: 10,
+        color: Colors.darkGray,
+        marginBottom: 6,
+      }}>
+        { text || `${reviewer.first_name} não descreveu sua experiência.` }
+      </Sentence>
+      <ReviewRating rating={rating} />
     </View>
   </View>
 )

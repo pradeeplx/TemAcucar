@@ -19,12 +19,11 @@ class ReviewsContainer extends Component {
   }
 
   render() {
-    const { auth, reviews, user, hideTitle } = this.props
+    const { auth, reviews, user } = this.props
     const { currentUser } = auth
     return (
       <Reviews
         {...this.props}
-        hideTitle={hideTitle}
         user={user}
         reviews={reviews.list}
         listing={reviews.listing}
