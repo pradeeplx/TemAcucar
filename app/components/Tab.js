@@ -9,7 +9,7 @@ export default class Tab extends Component {
         style={{
           flex: 1, 
           alignSelf: 'stretch', 
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.lightBeige,
         }}
         refreshControl={
           <RefreshControl

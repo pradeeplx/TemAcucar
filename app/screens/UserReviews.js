@@ -14,12 +14,11 @@ export default class UserReviews extends Component {
     return(
       <View style={{
         flex: 1,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.lightBeige,
       }}>
         <NavBar title="Minhas avaliações" />
         <ScrollView style={{
           flex: 1,
-          paddingHorizontal: 10,
         }}>
           <ReviewsContainer {...this.props} user={currentUser} hideTitle={true} />
         </ScrollView>

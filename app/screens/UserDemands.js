@@ -14,7 +14,7 @@ export default class UserDemands extends Component {
     return(
       <View style={{
         flex: 1,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.lightBeige,
       }}>
         <NavBar title="Meus pedidos" />
         <ScrollView style={{

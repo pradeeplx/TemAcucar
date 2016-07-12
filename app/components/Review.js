@@ -7,10 +7,13 @@ import ReviewRating from "./ReviewRating"
 
 export default Review = ({ review: { rating, text, reviewer, created_at } }) => (
   <View style={{
-    marginTop: 10,
     flex: 1,
-    alignSelf: 'center',
+    alignSelf: 'stretch',
     alignItems: 'center',
+    backgroundColor: Colors.white,
+    paddingVertical: 10,
+    borderBottomWidth: 12,
+    borderColor: Colors.lightBeige,
   }}>
     <ReviewRating rating={rating} />
     <Sentence style={{
@@ -31,13 +34,13 @@ export default Review = ({ review: { rating, text, reviewer, created_at } }) => 
       marginTop: 4,
     }}>
       <Icon name="ios-time-outline" style={{ 
-        color: Colors.lightBeige,
+        color: Colors.gray,
         marginRight: 4,
         marginTop: 2,
         fontSize: 12,
       }} />
       <TimeAgo time={created_at} style={{
-        color: Colors.lightBeige,
+        color: Colors.gray,
       }} />
     </View>
   </View>
