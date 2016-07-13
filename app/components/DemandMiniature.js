@@ -60,7 +60,7 @@ export default class DemandMiniature extends Component {
               color: Colors.black,
               fontSize: 10,
             }}>
-              Pedido por { currentUser.id === user.id ? 'você ' : user.first_name + ' ' }
+              { currentUser.id === user.id ? 'Você' : user.first_name } { 'pediu ' }
             </Sentence>
             <TimeAgo time={created_at} lowerCase={true} style={{
               color: Colors.black,

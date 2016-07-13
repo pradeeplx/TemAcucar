@@ -96,6 +96,7 @@ class ViewTransaction extends Component {
     return (
       <View style={{
         flex: 1,
+        backgroundColor: Colors.white,
         paddingBottom: (inputFocused ? focusedHeight : blurredHeight) + (Platform.os === 'ios' ? 0 : 10),
       }}>
         <NavBar>
@@ -125,25 +126,37 @@ class ViewTransaction extends Component {
         { canReview && <View style={{
           flexDirection: 'row',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'flex-start',
           padding: 10,
           backgroundColor: Colors.white,
           borderBottomWidth: StyleSheet.hairlineWidth,
           borderColor: Colors.gray,
         }}>
-          <Sentence style={{
-            marginRight: 6,
+          <View style={{
+            flex: 4,
+            flexDirection: 'row',
+            paddingLeft: 10,
           }}>
-            Avaliar { user.first_name }
-          </Sentence>
-          { [1, 2, 3, 4, 5].map((index) => (
-            <TouchableOpacity key={index} onPress={this.newReviewFunction(index)}>
-              <Icon name="ios-star-outline" style={{
-                color: Colors.darkYellow,
-                fontSize: 30,
-              }} />
-            </TouchableOpacity>
-          )) }
+            <Sentence style={[{
+              marginRight: 6,
+              color: Colors.pink,
+            }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
+              Avaliar { user.first_name }
+            </Sentence>
+          </View>
+          <View style={{
+            flex: 4,
+            flexDirection: 'row',
+          }}>
+            { [1, 2, 3, 4, 5].map((index) => (
+              <TouchableOpacity key={index} onPress={this.newReviewFunction(index)}>
+                <Icon name="ios-star-outline" style={{
+                  color: Colors.darkYellow,
+                  fontSize: 30,
+                }} />
+              </TouchableOpacity>
+            )) }
+          </View>
         </View> }
         <ScrollView ref='scrollView' onContentSizeChange={this.handleSize.bind(this)} style={{
           flex: 1,

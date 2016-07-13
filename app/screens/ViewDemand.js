@@ -82,7 +82,7 @@ export default class ViewDemand extends Component {
                   color: Colors.black,
                   fontSize: 12,
                 }}>
-                  Pedido por { currentUser.id === user.id ? 'você ' : user.first_name + ' ' + user.last_name + ' ' }
+                  { currentUser.id === user.id ? 'Você' : user.first_name + ' ' + user.last_name } { 'pediu '}
                 </Sentence>
                 <TimeAgo time={created_at} lowerCase={true} style={{
                   color: Colors.black,
