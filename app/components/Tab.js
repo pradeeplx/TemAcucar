@@ -22,7 +22,7 @@ export default class Tab extends Component {
           />
         }
       >
-        <View style={{ paddingBottom: 80 }}>
+        <View style={{ paddingBottom: 90 }}>
           {this.props.children}
         </View>
       </ScrollView>

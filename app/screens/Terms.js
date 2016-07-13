@@ -39,7 +39,7 @@ export default class Terms extends Component {
               alignItems: 'center',
               justifyContent: 'center',
               padding: 10,
-              paddingBottom: 80,
+              paddingBottom: 90,
             }}>
               <Paragraph>
                 TERMOS E CONDIÇÕES GERAIS

@@ -57,7 +57,7 @@ export default class ViewDemand extends Component {
         }}>
           <View style={{
             alignItems: 'center',
-            paddingBottom: 80,
+            paddingBottom: 90,
           }}>
             <View style={{
               flex: 1,
