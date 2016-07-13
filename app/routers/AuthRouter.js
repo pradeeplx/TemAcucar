@@ -2,7 +2,7 @@ import React, { Component, Navigator } from 'react-native'
 import { Route, Schema, Actions } from 'react-native-router-flux'
 
 import Router from "../components/Router"
-import Welcome from "../screens/Welcome"
+import SignInOrSignUp from "../screens/SignInOrSignUp"
 import SignInForm from "../screens/SignInForm"
 import SignUpForm from "../screens/SignUpForm"
 import SignInFailed from "../screens/SignInFailed"
@@ -27,7 +27,7 @@ export default class AuthRouter extends Component {
     return (
       <Router {...this.props}>
         <Schema name="default" sceneConfig={Navigator.SceneConfigs.FloatFromRight}/>
-        <Route name="welcome" component={Welcome} schema="default" initial={!signInFailed} />
+        <Route name="signInOrSignUp" component={SignInOrSignUp} schema="default" initial={!signInFailed} />
         <Route name="signInFailed" component={SignInFailed} type="reset" initial={signInFailed} />
         <Route name="signInForm" component={SignInForm} schema="default" />
         <Route name="signUpForm" component={SignUpForm} schema="default" />

@@ -7,9 +7,9 @@ import Button from "../components/Button"
 import BottomView from "../components/BottomView"
 import BottomButton from "../components/BottomButton"
 
-export default class Welcome extends Component {
+export default class SignInOrSignUp extends Component {
   componentDidMount() {
-    GoogleAnalytics.trackScreenView('Welcome')
+    GoogleAnalytics.trackScreenView('SignInOrSignUp')
   }
 
   render() {
