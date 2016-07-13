@@ -1,7 +1,7 @@
 const Colors = {
   brown: '#654C50',
   pink: '#FF7F85',
-  lightPink: '#FFE9E6',
+  lightPink: '#FFF2F3',
   mediumPink: '#FC9CA3',
   white: '#FFFFFF',
   black: '#000000',

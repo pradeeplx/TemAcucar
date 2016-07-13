@@ -4,6 +4,7 @@ const initialState = {
   latitude: null,
   longitude: null,
   address: null,
+  addressChanged: false,
   startingUp: true,
   searching: false,
   searchError: null,
@@ -72,6 +73,7 @@ export default function location(state = initialState, action) {
       return {
         ...state, 
         address: action.address,
+        addressChanged: (state.startingUp ? false : true),
         latitude: action.latitude,
         longitude: action.longitude,
         searching: false,
@@ -101,6 +103,11 @@ export default function location(state = initialState, action) {
         ...state, 
         settingLocation: false,
         setLocationError: action.error,
+      }
+    case 'AFTER_ROUTER_POP':
+      return {
+        ...state, 
+        addressChanged: false,
       }
     case 'STORED_AUTH_RESET_SUCCESS':
       return initialState

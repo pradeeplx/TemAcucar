@@ -7,7 +7,12 @@ import Sentence from "./Sentence"
 
 export default class NavBar extends Component {
   handleBack() {
-    Actions.pop()
+    const { onBack } = this.props
+    if (onBack) {
+      onBack()
+    } else {
+      Actions.pop()
+    }
   }
 
   render() {

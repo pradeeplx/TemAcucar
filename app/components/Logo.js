@@ -18,8 +18,8 @@ export default Logo = ({ style }) => {
   }
   return (
     <Image source={image} style={[{
-      width: 134,
-      height: 86,
+      width: 225,
+      height: 144,
     }, style]}/>
   )
 }
