@@ -64,7 +64,7 @@ Use this if you didn't need to rebuild and just want to publish new JS + assets 
 
 ```
 bin/bundle-ios
-code-push release TemAcucar-iOS ./release/ios-bundle 0.0.1 --description "Release Changelog" --mandatory
+code-push release TemAcucar-iOS ./release/ios-bundle 0.0.1 --description "JS version X.Y.Z" --mandatory
 ```
 
 ### Releasing Android bundle to CodePush
