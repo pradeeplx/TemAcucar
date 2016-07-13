@@ -3,7 +3,7 @@ import { Actions } from 'react-native-router-flux'
 import Link from "./Link"
 
 export default SignInLink = (props) => (
-  <Link onPress={Actions.signIn}>
+  <Link onPress={Actions.signInForm}>
     Já possui cadastro?
   </Link>
 )

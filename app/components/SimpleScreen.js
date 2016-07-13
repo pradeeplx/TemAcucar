@@ -9,8 +9,8 @@ export default SimpleScreen = ({ children, headline, navBar, navBarTitle, addTop
     <View style={{
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: (addTopMargin ? 30 : 0),
-      marginBottom: (headline ? 26 : 30),
+      marginTop: (addTopMargin ? (logo === 'complete' ? 30 : 20) : 0),
+      marginBottom: (headline ? 26 : (logo === 'complete' ? 30 : 20)),
     }}>
       { logo === 'complete' ? <Logo/> : <LogoBigIcon /> }
     </View>

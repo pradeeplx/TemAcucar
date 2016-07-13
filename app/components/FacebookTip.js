@@ -2,7 +2,7 @@ import React from 'react-native'
 import Colors from "../Colors"
 import Tip from "./Tip"
 import Sentence from "./Sentence"
-import Button from "./Button"
+import FacebookButton from "./FacebookButton"
 
 export default FacebookTip = ({ onPress, loading, title }) => (
   <Tip>
@@ -15,21 +15,16 @@ export default FacebookTip = ({ onPress, loading, title }) => (
     }}>
       { title || 'Quer ter acesso a funcionalidades incríveis?' }
     </Sentence>
-    <Button
+    <FacebookButton
       onPress={onPress}
       isLoading={loading}
       style={{
         paddingVertical: 0,
         height: 30,
         width: 220,
-        backgroundColor: Colors.facebook,
-        borderColor: Colors.facebook,
-      }}
-      textStyle={{
-        color: Colors.white,
       }}
     >
       Conecte sua conta do Facebook
-    </Button>
+    </FacebookButton>
   </Tip>
 )

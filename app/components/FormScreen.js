@@ -16,9 +16,9 @@ export default FormScreen = (props) => {
         <View style={{
           alignSelf: 'stretch',
           alignItems: 'center',
-          paddingTop: (smallScreen ? 0 : 40),
+          paddingTop: (smallScreen ? 0 : 20),
         }}>
-          { !smallScreen && <LogoBigIcon style={{ marginBottom: 30 }} /> }
+          { !smallScreen && <LogoBigIcon style={{ marginBottom: 20 }} /> }
         </View>
         { props.children }
       </Form>

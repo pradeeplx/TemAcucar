@@ -18,7 +18,7 @@ export default class SignInFailed extends Component {
         <TextBox style={{marginBottom: 30}}>
           Se você está cadastrado na versão antiga do Tem Açúcar, precisa criar uma nova senha.
         </TextBox>
-        <Button onPress={Actions.signIn}>
+        <Button onPress={Actions.signInForm}>
           Tentar outra vez
         </Button>
         <BottomView>

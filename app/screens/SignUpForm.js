@@ -6,6 +6,8 @@ import { Actions } from 'react-native-router-flux'
 
 import UserValidators from '../validators/UserValidators'
 import FormScreen from "../components/FormScreen"
+import FacebookButton from "../components/FacebookButton"
+import OrSeparator from "../components/OrSeparator"
 import FormTextInput from "../components/FormTextInput"
 import EmailInput from "../components/EmailInput"
 import PasswordInput from "../components/PasswordInput"
@@ -36,13 +38,17 @@ class SignUpForm extends Component {
   }
 
   render() {
-    const { onSignUp, fields, auth: { signingUp, signUpError } } = this.props
+    const { onFacebook, onSignUp, fields, auth: { signingUp, signUpError } } = this.props
     const { first_name, last_name, email, password } = fields
     return (
       <View style={{
         flex: 1,
       }}>
         <FormScreen navBar={true} navBarTitle="Crie sua conta com seu e-mail">
+          <FacebookButton onPress={onFacebook}>
+            Cadastre-se com o Facebook
+          </FacebookButton>
+          <OrSeparator />
           <FormTextInput 
             name='first_name'
             title='Nome'

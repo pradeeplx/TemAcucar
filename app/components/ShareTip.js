@@ -2,7 +2,7 @@ import React from 'react-native'
 import Colors from "../Colors"
 import Tip from "./Tip"
 import Sentence from "./Sentence"
-import Button from "./Button"
+import FacebookButton from "./FacebookButton"
 
 export default ShareTip = ({ title, callToAction, onPress }) => (
   <Tip>
@@ -15,20 +15,15 @@ export default ShareTip = ({ title, callToAction, onPress }) => (
     }}>
       { title || 'Tá muito feliz e quer espalhar o amor? Conte pra todo mundo que o Tem Açúcar existe!' }
     </Sentence>
-    <Button
+    <FacebookButton
       onPress={onPress}
       style={{
         paddingVertical: 0,
         height: 30,
         width: 220,
-        backgroundColor: Colors.facebook,
-        borderColor: Colors.facebook,
-      }}
-      textStyle={{
-        color: Colors.white,
       }}
     >
       { callToAction || 'Compartilhe no Facebook' }
-    </Button>
+    </FacebookButton>
   </Tip>
 )

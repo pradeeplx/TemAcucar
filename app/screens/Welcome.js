@@ -15,11 +15,11 @@ export default class Welcome extends Component {
   render() {
     return(
       <SimpleScreen logo="complete" headline="Compartilhe coisas com seus vizinhos">
-        <Button onPress={Actions.signIn}>
+        <Button onPress={Actions.signInForm}>
           Já tenho cadastro
         </Button>
         <BottomView>
-          <BottomButton onPress={Actions.signUp}>
+          <BottomButton onPress={Actions.signUpForm}>
             Quero me cadastrar
           </BottomButton>
         </BottomView>

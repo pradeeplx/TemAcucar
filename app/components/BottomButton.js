@@ -6,8 +6,8 @@ export default BottonButton = (props) => {
   const { secondary, buttonsCount, viewWidth, children, style, textStyle, disabledStyle } = props
   return (
     <ReactNativeButton 
-      {...props}
       activityIndicatorColor={Colors.white}
+      {...props}
       textStyle={[{
         textAlign: 'center',
         color: Colors.white,
