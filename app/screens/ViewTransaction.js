@@ -91,8 +91,8 @@ class ViewTransaction extends Component {
     const user = (transaction.user.id === currentUser.id ? transaction.demand.user : transaction.user)
     const { inputFocused } = this.state
     const blurredHeight = 44
-    const focusedHeight = (Platform.OS === 'ios' ? 336 : (smallScreen ? 320 : 400))
-    const focusedInputHeight = 88
+    const focusedHeight = (Platform.OS === 'ios' ? 336 : (smallScreen ? 280 : 400))
+    const focusedInputHeight = (smallScreen ? 48 : 88)
     return (
       <View style={{
         flex: 1,

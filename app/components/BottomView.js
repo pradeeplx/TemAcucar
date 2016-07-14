@@ -1,4 +1,5 @@
 import React, { Component, View } from 'react-native'
+import Colors from "../Colors"
 
 export default class BottomView extends Component {
   constructor(props, context) {
@@ -18,6 +19,7 @@ export default class BottomView extends Component {
       <View
         onLayout={this.handleLayout.bind(this)}
         style={[{
+          backgroundColor: Colors.white,
           position: 'absolute',
           bottom: 0,
           left: 0,
