@@ -18,7 +18,7 @@ export default Button = (props) => (
     style={[{
       height: (props.secondary ? 24 : 36),
       alignSelf: 'center',
-      borderRadius: 24,
+      borderRadius: (props.secondary ? 12 : 18),
       paddingHorizontal: (props.secondary ? 20 : 30),
       paddingVertical: 0,
       marginBottom: 0,

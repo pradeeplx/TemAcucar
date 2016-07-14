@@ -18,8 +18,6 @@ export default ShareTip = ({ title, callToAction, onPress }) => (
     <FacebookButton
       onPress={onPress}
       style={{
-        paddingVertical: 0,
-        height: 30,
         width: 220,
       }}
     >

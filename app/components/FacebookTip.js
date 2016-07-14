@@ -19,8 +19,6 @@ export default FacebookTip = ({ onPress, loading, title }) => (
       onPress={onPress}
       isLoading={loading}
       style={{
-        paddingVertical: 0,
-        height: 30,
         width: 220,
       }}
     >
