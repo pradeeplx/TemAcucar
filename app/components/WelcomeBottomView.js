@@ -8,7 +8,7 @@ export default WelcomeBottomView = ({ children, style }) => {
   return (
     <View style={[{
       position: 'absolute',
-      bottom: (smallScreen ? 154 : (Platform.OS === 'ios' ? 40 : 60)),
+      bottom: (smallScreen ? 154 : (Platform.OS === 'ios' ? 32 : 60)),
       left: 0,
       right: 0,
       alignItems: 'center',
