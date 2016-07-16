@@ -3,7 +3,7 @@ if [[ "$ENV" = "" ]]; then
 fi
 ENV=$ENV ./bin/before-ios
 cd ios
-xcodebuild -project TemAcucar.xcodeproj -scheme TemAcucarRelease -destination "generic/platform=iOS" -derivedDataPath build
+xcodebuild -project TemAcucar.xcodeproj -scheme TemAcucarRelease -destination "platform=iOS,name=Daniel's iPhone" -derivedDataPath build
 mkdir -p ../release
 cp -rp ./build/Build/Products/Release-iphoneos/TemAcucar.app ../release/
 cd ..

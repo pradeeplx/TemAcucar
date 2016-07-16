@@ -47,7 +47,7 @@ class VersionsContainer extends Component {
   }
 
   handleUpdate() {
-    const url = (Platform.OS === 'ios' ? "https://itunes.apple.com/app/id567264775?mt=8" : "https://play.google.com/store/apps/details?id=br.com.easytaxi")
+    const url = (Platform.OS === 'ios' ? "http://temacucar.com" : "http://temacucar.com")
     Communications.web(url)
   }
 
