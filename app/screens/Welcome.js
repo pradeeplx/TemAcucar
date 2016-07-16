@@ -45,7 +45,7 @@ export default class Welcome extends Component {
           </WelcomeHeader>
           <WelcomeBullets active={2} />
           <Headline>
-            Busque o item que você está procurando, como furadeira ou barraca de acampamento.
+            Busque o item que você está precisando, como furadeira ou barraca de acampamento.
           </Headline>
           <WelcomeBottomView>
             <SignInOrSignUpLink />

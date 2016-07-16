@@ -65,7 +65,7 @@ export default class TabBar extends Component {
         },
         overflow: 'visible',
         transform: [{'translate': [0,0,1]}],
-        borderColor: Colors.white,
+        borderColor: Colors.gray,
         borderBottomWidth: StyleSheet.hairlineWidth,
       }}>
         {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}

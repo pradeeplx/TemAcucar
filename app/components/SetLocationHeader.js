@@ -4,7 +4,7 @@ import Headline from "./Headline"
 
 export default SetLocationHeader = (props) => (
   <View style={{
-    borderColor: Colors.mediumLightBeige,
+    borderColor: Colors.pink,
     borderBottomWidth: StyleSheet.hairlineWidth,
     alignSelf: 'stretch',
   }}>

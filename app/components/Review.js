@@ -24,7 +24,6 @@ export default Review = ({ review: { rating, text, reviewer, created_at } }) => 
     </View>
     <View style={{
       flex: 8,
-      alignItems: 'flex-start',
       flexDirection: 'column',
     }}>
       <Sentence style={[{

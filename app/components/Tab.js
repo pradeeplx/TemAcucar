@@ -17,7 +17,7 @@ export default class Tab extends Component {
             onRefresh={onRefresh}
             tintColor={Colors.mediumPink}
             title="Carregando..."
-            colors={[Colors.mediumPink, Colors.lightPink, Colors.mediumLightBeige]}
+            colors={[Colors.mediumPink, Colors.mediumLightPink, Colors.lightPink]}
             progressBackgroundColor={Colors.white}
           />
         }

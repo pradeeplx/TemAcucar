@@ -69,8 +69,8 @@ class NewDemand extends Component {
       )
     )
     const progressColor = (
-      progress < 35 ? Colors.lightBeige : (
-        progress < 75 ? Colors.lightPink : (
+      progress < 35 ? Colors.mediumLightBeige : (
+        progress < 75 ? Colors.mediumLightPink : (
           progress < 100 ? Colors.mediumPink : Colors.blue
         )
       )
@@ -137,7 +137,7 @@ class NewDemand extends Component {
           </View>
           <FormTextInput 
             name='name'
-            title='Nome'
+            title='Objeto'
             placeholder='Ex. Furadeira'
             titleStyle={{ flex: 0.35 }}
             {...name}
@@ -185,6 +185,14 @@ class NewDemand extends Component {
               { progressMessage }
             </Sentence>
           </View>
+          <Sentence style={{
+            fontSize: 9,
+            color: Colors.gray,
+            textAlign: 'center',
+            marginTop: 4,
+          }}>
+            {length} letrinhas preenchidas
+          </Sentence>
           { createError && <FormError message={DemandValidators.errorMessage(createError)} /> }
         </Form>
         <FormSubmit
