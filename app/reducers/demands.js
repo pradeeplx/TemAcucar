@@ -95,6 +95,17 @@ export default function demands(state = initialState, action) {
           }
         }),
       }
+    case 'UNREAD_NOTIFICATIONS_LIST_SUCCESS':
+      if (state.startingUp)
+        return state
+      const newDemands = action.list.filter(notification => (
+        notification.demand && notification.demand.state === 'notifying' && state.list.map(demand => demand.id).indexOf(notification.demand.id) < 0
+      )).map(notification => notification.demand)
+      return {
+        ...state,
+        list: newDemands.concat(state.list),
+        offset: state.offset + newDemands.length,
+      }
     case 'DASHBOARD_REFRESH':
       return initialState
     case 'LOCATION_SET_LOCATION_SUCCESS':
