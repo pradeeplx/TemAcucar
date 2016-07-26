@@ -70,22 +70,68 @@
     <key>UILaunchImages</key>
     <array>
         <dict>
+            <key>UILaunchImageMinimumOSVersion</key>
+            <string>8.0</string>
+            <key>UILaunchImageName</key>
+            <string>Default-2208</string>
+            <key>UILaunchImageOrientation</key>
+            <string>Portrait</string>
+            <key>UILaunchImageSize</key>
+            <string>{1242, 2208}</string>
+        </dict>
+        <dict>
+            <key>UILaunchImageMinimumOSVersion</key>
+            <string>8.0</string>
+            <key>UILaunchImageName</key>
+            <string>Default-1335</string>
+            <key>UILaunchImageOrientation</key>
+            <string>Portrait</string>
+            <key>UILaunchImageSize</key>
+            <string>{750, 1334}</string>
+        </dict>
+        <dict>
+            <key>UILaunchImageMinimumOSVersion</key>
+            <string>7.0</string>
+            <key>UILaunchImageName</key>
+            <string>Default-568@2x</string>
+            <key>UILaunchImageOrientation</key>
+            <string>Portrait</string>
+            <key>UILaunchImageSize</key>
+            <string>{320, 568}</string>
+        </dict>
+        <dict>
+            <key>UILaunchImageMinimumOSVersion</key>
+            <string>7.0</string>
             <key>UILaunchImageName</key>
             <string>Default-568</string>
+            <key>UILaunchImageOrientation</key>
+            <string>Portrait</string>
             <key>UILaunchImageSize</key>
             <string>{320, 568}</string>
         </dict>
         <dict>
             <key>UILaunchImageName</key>
-            <string>Default-1335</string>
+            <string>Default-481</string>
+            <key>UILaunchImageOrientation</key>
+            <string>Portrait</string>
             <key>UILaunchImageSize</key>
-            <string>{750, 1334}</string>
+            <string>{320, 480}</string>
         </dict>
         <dict>
             <key>UILaunchImageName</key>
-            <string>Default-2208</string>
+            <string>Default-961</string>
+            <key>UILaunchImageOrientation</key>
+            <string>Portrait</string>
             <key>UILaunchImageSize</key>
-            <string>{1242, 2208}</string>
+            <string>{320, 480}</string>
+        </dict>
+        <dict>
+            <key>UILaunchImageName</key>
+            <string>Default-568@2x-1</string>
+            <key>UILaunchImageOrientation</key>
+            <string>Portrait</string>
+            <key>UILaunchImageSize</key>
+            <string>{320, 568}</string>
         </dict>
     </array>
   </dict>
