@@ -1,4 +1,5 @@
 import React, { View, Dimensions } from 'react-native'
+import { fontFactor } from "../helpers"
 import moment from 'moment'
 import Colors from "../Colors"
 import Sentence from "../components/Sentence"
@@ -30,7 +31,7 @@ export default Message = ({ message: { created_at, text }, fromCurrentUser, date
         {text}
       </Sentence>
       <Sentence style={{
-        fontSize: 10,
+        fontSize: 10 * fontFactor(),
         color: Colors.black,
         alignSelf: 'flex-end',
       }}>

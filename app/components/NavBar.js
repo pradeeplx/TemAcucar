@@ -1,6 +1,6 @@
 import React, { Component, Platform, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Icon from "./Icon"
 import Sentence from "./Sentence"
@@ -28,7 +28,7 @@ export default class NavBar extends Component {
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'row',
-          paddingVertical: 6,
+          paddingVertical: 6 * fontFactor(),
         }}>
           { children }
           { !children &&
@@ -47,7 +47,7 @@ export default class NavBar extends Component {
           }}>
             <Icon name="ios-arrow-back-outline" style={{
               color: Colors.brown,
-              fontSize: 32,
+              fontSize: 32 * fontFactor(),
               marginTop: (Platform.OS === 'ios' ? 3 : 5),
               marginHorizontal: 12,
             }} />

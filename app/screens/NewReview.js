@@ -3,6 +3,7 @@ import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
 
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import ReviewValidators from '../validators/ReviewValidators'
 import BaseScreen from "../components/BaseScreen"
@@ -66,7 +67,7 @@ class NewReview extends Component {
               <TouchableOpacity key={index} onPress={this.ratingChangeFunction(index)}>
                 <Icon name={(index > rating ? "ios-star-outline" : "ios-star")} style={{
                   color: Colors.darkYellow,
-                  fontSize: 30,
+                  fontSize: 30 * fontFactor(),
                 }} />
               </TouchableOpacity>
             )) }
@@ -78,7 +79,7 @@ class NewReview extends Component {
             multiline={true}
             titleStyle={{ flex: 0.38 }}
             inputStyle={{
-              height: 100,
+              height: 100 * fontFactor(),
             }}
             {...text}
           />

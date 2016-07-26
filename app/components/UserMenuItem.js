@@ -1,4 +1,5 @@
 import React, { View, TouchableOpacity } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import Icon from "./Icon"
@@ -13,16 +14,16 @@ export default UserMenuItem = ({ onPress, style, icon, iconSet, iconStyle, child
   }, style]}>
     <View style={{
       alignItems: 'center',
-      width: 24,
+      width: 24 * fontFactor(),
     }}>
       <Icon name={icon} set={iconSet} style={[{ 
-        fontSize: 24,
+        fontSize: 24 * fontFactor(),
         color: (type == "light" ? Colors.white : Colors.white),
       }, iconStyle]} />
     </View>
     <Sentence style={{
       marginLeft: 8,
-      fontSize: 16,
+      fontSize: 16 * fontFactor(),
       color: (type == "light" ? Colors.white : Colors.white),
     }}>
       {children}

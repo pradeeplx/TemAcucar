@@ -1,4 +1,5 @@
 import React, { View, Platform, Dimensions } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Headline from "./Headline"
 
@@ -11,7 +12,7 @@ export default WelcomeHeader = ({ headline, children, style }) => (
     alignItems: 'center',
   }, style]}>
     <Headline style={{
-      fontSize: 18,
+      fontSize: 18 * fontFactor(),
       color: Colors.blue,
       marginBottom: 40,
     }}>

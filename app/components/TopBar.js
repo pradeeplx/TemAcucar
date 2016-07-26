@@ -1,4 +1,5 @@
 import React, { Platform, View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import LogoIcon from "./LogoIcon"
@@ -7,7 +8,7 @@ import Icon from "./Icon"
 export default TopBar = ({ onMenuOpen }) => (
   <View style={{
     marginTop: (Platform.OS == 'ios' ? 20 : 0),
-    height: 40,
+    height: 40 * fontFactor(),
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
@@ -20,7 +21,7 @@ export default TopBar = ({ onMenuOpen }) => (
       justifyContent: 'center',
     }}>
       <Sentence style={[{
-        fontSize: 14,
+        fontSize: 14 * fontFactor(),
       }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
         Tem Açúcar?
       </Sentence>
@@ -35,7 +36,7 @@ export default TopBar = ({ onMenuOpen }) => (
     }}>
       <Icon name="ios-menu" style={{
         color: Colors.brown,
-        fontSize: 28,
+        fontSize: 28 * fontFactor(),
       }} />
     </TouchableOpacity>
   </View>

@@ -1,4 +1,5 @@
 import React, { View } from 'react-native'
+import { fontFactor } from "../helpers"
 import truncate from 'truncate'
 import Colors from "../Colors"
 import Sentence from "./Sentence"
@@ -16,7 +17,7 @@ export default TransactionDemandDescription = ({ index, demand: { user, name }, 
     }}>
       <Sentence style={{
         color: Colors.darkGray,
-        fontSize: 10,
+        fontSize: 10 * fontFactor(),
       }}>
         {currentUser.id === user.id ? 'Você' : user.first_name} pediu um(a)
       </Sentence>

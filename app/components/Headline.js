@@ -1,11 +1,12 @@
 import React, { Platform } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 
 export default Headline = (props) => (
   <Sentence style={[{
     color: Colors.gray,
-    fontSize: 16,
+    fontSize: 16 * fontFactor(),
     textAlign: 'center',
     marginHorizontal: 20,
     marginBottom: 20,

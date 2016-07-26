@@ -5,6 +5,7 @@ import { reduxForm } from 'redux-form'
 import MapView from 'react-native-maps'
 import Slider from 'react-native-slider'
 
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import DemandValidators from '../validators/DemandValidators'
 import NavBar from "../components/NavBar"
@@ -84,7 +85,7 @@ class NewDemand extends Component {
         <Form>
           { radius.value && this.renderMap() }
           <Sentence style={{
-            fontSize: 14,
+            fontSize: 14 * fontFactor(),
             textAlign: 'center',
             marginTop: 15,
             marginBottom: 5,
@@ -149,7 +150,7 @@ class NewDemand extends Component {
             multiline={true}
             titleStyle={{ flex: 0.35 }}
             inputStyle={{
-              height: 100,
+              height: 100 * fontFactor(),
             }}
             {...description}
           />
@@ -159,12 +160,12 @@ class NewDemand extends Component {
             margin: 15,
             marginBottom: 0,
             flexDirection: 'row',
-            height: 24,
+            height: 24 * fontFactor(),
           }}>
             <View style={{
               backgroundColor: progressColor,
-              borderRadius: 12,
-              height: 24,
+              borderRadius: 12 * fontFactor(),
+              height: 24 * fontFactor(),
               flex: progress,
             }}>
             </View>
@@ -176,7 +177,7 @@ class NewDemand extends Component {
               textAlign: 'center',
               backgroundColor: 'transparent',
               position: 'absolute',
-              marginTop: 3,
+              marginTop: 3 * fontFactor(),
               top: 0,
               left: 0,
               right: 0,
@@ -186,7 +187,7 @@ class NewDemand extends Component {
             </Sentence>
           </View>
           <Sentence style={{
-            fontSize: 9,
+            fontSize: 9 * fontFactor(),
             color: Colors.gray,
             textAlign: 'center',
             marginTop: 4,

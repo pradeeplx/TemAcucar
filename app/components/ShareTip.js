@@ -1,4 +1,5 @@
 import React from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Tip from "./Tip"
 import Sentence from "./Sentence"
@@ -8,7 +9,7 @@ export default ShareTip = ({ title, callToAction, onPress }) => (
   <Tip>
     <Sentence style={{
       color: Colors.black,
-      fontSize: 10,
+      fontSize: 10 * fontFactor(),
       marginBottom: 10,
       textAlign: 'center',
       marginHorizontal: 40,
@@ -18,7 +19,7 @@ export default ShareTip = ({ title, callToAction, onPress }) => (
     <FacebookButton
       onPress={onPress}
       style={{
-        width: 220,
+        width: 220 * fontFactor(),
       }}
     >
       { callToAction || 'Compartilhe no Facebook' }

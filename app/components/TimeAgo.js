@@ -1,5 +1,6 @@
 import React from 'react-native'
 import moment from 'moment'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 
@@ -23,7 +24,7 @@ moment.locale('pt-br', {
 
 export default TimeAgo = ({ time, style, lowerCase }) => (
   <Sentence style={[{
-    fontSize: 9,
+    fontSize: 9 * fontFactor(),
   }, style]}>
     { lowerCase ? moment(time).fromNow().toLowerCase() : moment(time).fromNow() }
   </Sentence>

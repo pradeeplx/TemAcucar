@@ -1,6 +1,6 @@
 import React, { Platform, Component, PropTypes } from 'react-native'
 import { InlineTextInput } from 'react-native-stateless-form'
-
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Icon from "./Icon"
 
@@ -27,15 +27,16 @@ class FormTextInput extends Component {
         titleStyle={[{
           fontFamily: (Platform.OS === 'ios' ? 'Avenir' : 'Roboto'),
           color: Colors.brown,
-          fontSize: 12,
+          fontSize: 12 * fontFactor(),
         }, titleStyle]}
         inputStyle={[{
           color: Colors.pink,
           backgroundColor: Colors.white,
-          fontSize: 12,
+          fontSize: 12 * fontFactor(),
         }, inputStyle]}
         messageStyle={[{
           color: Colors.beige,
+          fontSize: 10 * fontFactor(),
         }, messageStyle]}
         icon={ icon && <Icon name={icon} color={Colors.brown} /> }
         validIcon={ <Icon name='md-checkmark' color={Colors.green} /> }

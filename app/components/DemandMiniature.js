@@ -1,6 +1,6 @@
 import React, { Component, View, TouchableOpacity, Platform } from 'react-native'
 import truncate from 'truncate'
-
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import UserImage from "./UserImage"
@@ -38,7 +38,7 @@ export default class DemandMiniature extends Component {
           <Sentence style={{
             color: Colors.gray,
             marginTop: 6,
-            fontSize: 10,
+            fontSize: 10 * fontFactor(),
           }}>
             A { distance > 1 ? `${Math.round(distance)}km` : `${Math.round(distance * 1000)}m` }
           </Sentence>
@@ -58,18 +58,18 @@ export default class DemandMiniature extends Component {
           }}>
             <Sentence style={{
               color: Colors.black,
-              fontSize: 10,
+              fontSize: 10 * fontFactor(),
             }}>
               { currentUser.id === user.id ? 'Você' : user.first_name } { 'pediu ' }
             </Sentence>
             <TimeAgo time={created_at} lowerCase={true} style={{
               color: Colors.black,
-              fontSize: 10,
+              fontSize: 10 * fontFactor(),
             }} />
           </View>
           <Sentence style={[{
             color: Colors.darkGray,
-            fontSize: 10,
+            fontSize: 10 * fontFactor(),
             marginTop: 10,
           }]}>
             { truncate(description, 110) }
@@ -86,13 +86,13 @@ export default class DemandMiniature extends Component {
               paddingTop: 4,
               paddingBottom: 4,
               paddingHorizontal: 8,
-              fontSize: 22,
+              fontSize: 22 * fontFactor(),
               textAlign: 'center',
             }} />
           </TouchableOpacity> }
           <Icon name="ios-arrow-forward" style={{
             backgroundColor: 'transparent',
-            fontSize: 28,
+            fontSize: 28 * fontFactor(),
             color: (showClose ? Colors.lightGray : Colors.gray),
             marginTop: (showClose ? 18 : 6),
           }} />

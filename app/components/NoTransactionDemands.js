@@ -1,4 +1,5 @@
 import React from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 
@@ -7,7 +8,7 @@ export default NoTransactionDemands = () => (
     alignSelf: 'stretch',
     margin: 10,
     textAlign: 'center',
-    fontSize: 10,
+    fontSize: 10 * fontFactor(),
   }}>
     Você ainda não realizou nenhuma transação. Que tal começar agora mesmo fazendo um pedido?
   </Sentence>

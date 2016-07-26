@@ -1,4 +1,5 @@
 import React, { View } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 
 export default Tip = ({ children, style }) => (
@@ -6,7 +7,7 @@ export default Tip = ({ children, style }) => (
     borderTopWidth: 12,
     borderColor: Colors.lightBeige,
     backgroundColor: Colors.white,
-    padding: 10,
+    padding: 10 * fontFactor(),
     alignItems: 'center',
   }, style]}>
     { children }

@@ -1,4 +1,5 @@
 import React, { Platform, Dimensions } from 'react-native'
+import { fontFactor } from "../helpers"
 import ReactNativeButton from 'apsl-react-native-button'
 import Colors from "../Colors"
 
@@ -14,7 +15,7 @@ export default BottonButton = (props) => {
       textStyle={[{
         textAlign: 'center',
         color: Colors.white,
-        fontSize: 14,
+        fontSize: 14 * fontFactor(),
       }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' }), textStyle]}
       disabledStyle={[{
         opacity: 0.6,
@@ -22,7 +23,7 @@ export default BottonButton = (props) => {
       style={[{
         flex: 1,
         alignSelf: 'stretch',
-        height: (smallScreen ? 50 : 70),
+        height: (smallScreen ? 50 : 70) * fontFactor(),
         backgroundColor: (secondary ? Colors.beige : Colors.pink),
         borderWidth: 0,
         borderRadius: 0,

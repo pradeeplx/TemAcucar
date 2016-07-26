@@ -1,4 +1,5 @@
 import React, { Component, View, TouchableOpacity, Platform } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import TransactionDemandDescription from "./TransactionDemandDescription"
 import TransactionDemandTimeAgo from "./TransactionDemandTimeAgo"
@@ -21,7 +22,7 @@ export default class TransactionDemandHeader extends Component {
         <UserImage source={{uri: user.image_url}} size={48} />
         <Sentence style={[{
           color: (currentUser.id === user.id ? Colors.blue : Colors.pink),
-          fontSize: 12,
+          fontSize: 12 * fontFactor(),
           marginTop: 10,
         }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
           { name }
@@ -31,13 +32,13 @@ export default class TransactionDemandHeader extends Component {
         }}>
           <Sentence style={{
             color: Colors.black,
-            fontSize: 10,
+            fontSize: 10 * fontFactor(),
           }}>
             { currentUser.id === user.id ? 'Você' : user.first_name } { 'pediu '}
           </Sentence>
           <TimeAgo time={created_at} lowerCase={true} style={{
             color: Colors.black,
-            fontSize: 10,
+            fontSize: 10 * fontFactor(),
           }} />
         </View>
       </TouchableOpacity>

@@ -1,4 +1,5 @@
 import React, { View, Image, Platform } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 
 export default MapText = ({ children }) => (
@@ -18,7 +19,7 @@ export default MapText = ({ children }) => (
       <Sentence style={[{
         color: Colors.blue, 
         textAlign: 'center',
-        fontSize: 10,
+        fontSize: 10 * fontFactor(),
       }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
         { children }
       </Sentence>

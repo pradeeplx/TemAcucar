@@ -2,6 +2,7 @@ import React, { Component, Text } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { Actions } from 'react-native-router-flux'
 
+import { fontFactor } from "../helpers"
 import SimpleScreen from "../components/SimpleScreen"
 import Headline from "../components/Headline"
 import TextBox from "../components/TextBox"
@@ -19,7 +20,12 @@ export default class ReviewEmail extends Component {
     const { auth: { currentUser: { email } }, onConfirm } = this.props
     return(
       <SimpleScreen>
-        <Headline style={{fontSize: 14, marginBottom: 10}}>{email}</Headline>
+        <Headline style={{
+          fontSize: 14 * fontFactor(),
+          marginBottom: 10
+        }}>
+          {email}
+        </Headline>
         <TextBox style={{marginBottom: 20}}>
           Você usa esse e-mail diariamente? Não vamos te mandar spam mas precisamos do seu e-mail para te conectar com seus vizinhos.
         </TextBox>

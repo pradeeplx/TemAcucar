@@ -1,6 +1,7 @@
 import React, { Component, View, ScrollView, Platform } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import BaseScreen from "../components/BaseScreen"
 import BottomView from "../components/BottomView"
@@ -321,7 +322,7 @@ export default class Terms extends Component {
               </BottomButton>
             </BottomView>
           </ScrollView>
-          <TextBox style={{height: 40}}>
+          <TextBox style={{height: 40 * fontFactor()}}>
             { (scrolledToBottom ? 'Para continuar, aceite os termos de uso.' : 'Para continuar, leia os termos de uso até o final.') }
           </TextBox>
         </View>

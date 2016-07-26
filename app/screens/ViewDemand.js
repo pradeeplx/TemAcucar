@@ -2,6 +2,7 @@ import React, { Component, Alert, ScrollView, View, Platform, StyleSheet } from 
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import truncate from 'truncate'
 
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import ReviewsContainer from "../containers/ReviewsContainer"
 import Button from "../components/Button"
@@ -70,7 +71,7 @@ export default class ViewDemand extends Component {
               <UserImage source={{uri: user.image_url}} size={64} />
               <Sentence style={[{
                 color: Colors.white,
-                fontSize: 14,
+                fontSize: 14 * fontFactor(),
                 marginTop: 10,
               }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
                 { name }
@@ -80,13 +81,13 @@ export default class ViewDemand extends Component {
               }}>
                 <Sentence style={{
                   color: Colors.black,
-                  fontSize: 12,
+                  fontSize: 12 * fontFactor(),
                 }}>
                   { currentUser.id === user.id ? 'Você' : user.first_name + ' ' + user.last_name } { 'pediu '}
                 </Sentence>
                 <TimeAgo time={created_at} lowerCase={true} style={{
                   color: Colors.black,
-                  fontSize: 12,
+                  fontSize: 12 * fontFactor(),
                 }} />
               </View>
               <Sentence style={{
@@ -96,7 +97,7 @@ export default class ViewDemand extends Component {
               </Sentence>
               <Sentence style={[{
                 color: Colors.white,
-                fontSize: 10,
+                fontSize: 10 * fontFactor(),
                 marginTop: 10,
               }]}>
                 { description }

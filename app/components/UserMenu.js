@@ -1,4 +1,5 @@
 import React, { Platform, ScrollView, View, StyleSheet } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import UserMenuItem from "./UserMenuItem"
@@ -24,7 +25,7 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
       }}>
         <Sentence style={{ 
           color: Colors.blue,
-          fontSize: 20,
+          fontSize: 20 * fontFactor(),
         }}>
           { currentUser.first_name } { currentUser.last_name }
         </Sentence>

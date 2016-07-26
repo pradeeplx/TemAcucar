@@ -1,4 +1,5 @@
 import React, { View, StyleSheet } from 'react-native'
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 
 export default WelcomeBullets = ({ active }) => (
@@ -11,10 +12,10 @@ export default WelcomeBullets = ({ active }) => (
         backgroundColor: (active === index ? Colors.blue : Colors.white),
         borderColor: (active === index ? Colors.blue : Colors.gray),
         borderWidth: StyleSheet.hairlineWidth,
-        width: 8,
-        height: 8,
-        borderRadius: 4,
-        marginHorizontal: 4,
+        width: 8 * fontFactor(),
+        height: 8 * fontFactor(),
+        borderRadius: 4 * fontFactor(),
+        marginHorizontal: 4 * fontFactor(),
       }}/>
     )) }
   </View>

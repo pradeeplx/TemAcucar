@@ -1,5 +1,5 @@
 import React, { View, Platform } from 'react-native'
-
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import TimeAgo from "./TimeAgo"
@@ -27,17 +27,17 @@ export default Review = ({ review: { rating, text, reviewer, created_at } }) => 
       flexDirection: 'column',
     }}>
       <Sentence style={[{
-        fontSize: 12,
+        fontSize: 12 * fontFactor(),
         color: Colors.blue,
       }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>
         { `${reviewer.first_name} ${reviewer.last_name}` }
       </Sentence>
       <TimeAgo time={created_at} style={{
-        fontSize: 12,
+        fontSize: 12 * fontFactor(),
         color: Colors.black,
       }} />
       <Sentence style={{
-        fontSize: 10,
+        fontSize: 10 * fontFactor(),
         color: Colors.darkGray,
         marginBottom: 6,
       }}>

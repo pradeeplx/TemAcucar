@@ -5,6 +5,7 @@ import { reduxForm } from 'redux-form'
 import truncate from 'truncate'
 const RCTUIManager = NativeModules.UIManager
 
+import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import MessageValidators from '../validators/MessageValidators'
 import NavBar from "../components/NavBar"
@@ -90,9 +91,9 @@ class ViewTransaction extends Component {
     const canReview = can_review_ids.indexOf(currentUser.id) > -1
     const user = (transaction.user.id === currentUser.id ? transaction.demand.user : transaction.user)
     const { inputFocused } = this.state
-    const blurredHeight = 44
-    const focusedHeight = (Platform.OS === 'ios' ? 336 : (smallScreen ? 280 : 400))
-    const focusedInputHeight = (smallScreen ? 48 : 88)
+    const blurredHeight = 44 * fontFactor()
+    const focusedHeight = (Platform.OS === 'ios' ? 336 : (smallScreen ? 280 : 400)) * fontFactor()
+    const focusedInputHeight = (smallScreen ? 48 : 88) * fontFactor()
     return (
       <View style={{
         flex: 1,
@@ -110,7 +111,7 @@ class ViewTransaction extends Component {
               {user.first_name} {user.last_name}
             </Sentence>
             <Sentence style={{
-              fontSize: 10,
+              fontSize: 10 * fontFactor(),
               color: Colors.brown,
               marginBottom: 2,
             }}>
@@ -152,7 +153,7 @@ class ViewTransaction extends Component {
               <TouchableOpacity key={index} onPress={this.newReviewFunction(index)}>
                 <Icon name="ios-star-outline" style={{
                   color: Colors.darkYellow,
-                  fontSize: 30,
+                  fontSize: 30 * fontFactor(),
                 }} />
               </TouchableOpacity>
             )) }
@@ -179,7 +180,7 @@ class ViewTransaction extends Component {
             placeholder="Escreva sua mensagem"
             style={{
               flex: 10,
-              fontSize: 12, 
+              fontSize: 12 * fontFactor(), 
               height: (inputFocused ? focusedInputHeight : blurredHeight),
               padding: 10,
               color: Colors.white,
@@ -195,7 +196,7 @@ class ViewTransaction extends Component {
             padding: 10,
           }}>
             <Icon name="ios-send" style={{
-              fontSize: 24,
+              fontSize: 24 * fontFactor(),
               color: Colors.white
             }} />
           </TouchableOpacity>
