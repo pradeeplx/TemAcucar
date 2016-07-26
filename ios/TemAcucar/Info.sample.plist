@@ -103,7 +103,7 @@
             <key>UILaunchImageMinimumOSVersion</key>
             <string>7.0</string>
             <key>UILaunchImageName</key>
-            <string>Default-568</string>
+            <string>Default-568@2x</string>
             <key>UILaunchImageOrientation</key>
             <string>Portrait</string>
             <key>UILaunchImageSize</key>
