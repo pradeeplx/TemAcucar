@@ -75,6 +75,18 @@
             <key>UILaunchImageSize</key>
             <string>{320, 568}</string>
         </dict>
+        <dict>
+            <key>UILaunchImageName</key>
+            <string>Default-1335</string>
+            <key>UILaunchImageSize</key>
+            <string>{750, 1334}</string>
+        </dict>
+        <dict>
+            <key>UILaunchImageName</key>
+            <string>Default-2208</string>
+            <key>UILaunchImageSize</key>
+            <string>{1242, 2208}</string>
+        </dict>
     </array>
   </dict>
 </plist>
