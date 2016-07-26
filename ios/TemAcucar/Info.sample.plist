@@ -83,7 +83,7 @@
             <key>UILaunchImageMinimumOSVersion</key>
             <string>8.0</string>
             <key>UILaunchImageName</key>
-            <string>Default-1335</string>
+            <string>Default-1334</string>
             <key>UILaunchImageOrientation</key>
             <string>Portrait</string>
             <key>UILaunchImageSize</key>
@@ -97,7 +97,7 @@
             <key>UILaunchImageOrientation</key>
             <string>Portrait</string>
             <key>UILaunchImageSize</key>
-            <string>{320, 568}</string>
+            <string>{640, 1136}</string>
         </dict>
         <dict>
             <key>UILaunchImageMinimumOSVersion</key>
@@ -111,7 +111,7 @@
         </dict>
         <dict>
             <key>UILaunchImageName</key>
-            <string>Default-481</string>
+            <string>Default</string>
             <key>UILaunchImageOrientation</key>
             <string>Portrait</string>
             <key>UILaunchImageSize</key>
@@ -119,19 +119,19 @@
         </dict>
         <dict>
             <key>UILaunchImageName</key>
-            <string>Default-961</string>
+            <string>Default@2x</string>
             <key>UILaunchImageOrientation</key>
             <string>Portrait</string>
             <key>UILaunchImageSize</key>
-            <string>{320, 480}</string>
+            <string>{480, 960}</string>
         </dict>
         <dict>
             <key>UILaunchImageName</key>
-            <string>Default-568@2x-1</string>
+            <string>Default-Retina4</string>
             <key>UILaunchImageOrientation</key>
             <string>Portrait</string>
             <key>UILaunchImageSize</key>
-            <string>{320, 568}</string>
+            <string>{640, 1136}</string>
         </dict>
     </array>
   </dict>
