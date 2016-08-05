@@ -30,6 +30,7 @@
 		930F7DA51CD9DEDC000580CD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930F7DA41CD9DEDC000580CD /* CoreData.framework */; };
 		930F7DA71CD9DEF6000580CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930F7DA61CD9DEF6000580CD /* SystemConfiguration.framework */; };
 		930F7DA91CD9DF11000580CD /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 930F7DA81CD9DF11000580CD /* libsqlite3.0.tbd */; };
+		933F99661D54F0B400369DBC /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CB8D571D54ECAE00BD7371 /* libCodePush.a */; };
 		937F65C61C4FD77D002D091D /* libRNKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 937F65C51C4FD755002D091D /* libRNKeychain.a */; };
 		937F65D91C513C39002D091D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937F65D61C513C39002D091D /* FBSDKCoreKit.framework */; };
 		937F65DA1C513C39002D091D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937F65D71C513C39002D091D /* FBSDKLoginKit.framework */; };
@@ -270,6 +271,7 @@
 				930F7DA91CD9DF11000580CD /* libsqlite3.0.tbd in Frameworks */,
 				930F7DA71CD9DEF6000580CD /* SystemConfiguration.framework in Frameworks */,
 				930F7DA51CD9DEDC000580CD /* CoreData.framework in Frameworks */,
+				933F99661D54F0B400369DBC /* libCodePush.a in Frameworks */,
 				93D3369A1C7610AD004E5E89 /* libz.tbd in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
