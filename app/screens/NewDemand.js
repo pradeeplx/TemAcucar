@@ -156,7 +156,7 @@ class NewDemand extends Component {
           />
           <View style={{
             backgroundColor: Colors.lightGray,
-            borderRadius: 12,
+            borderRadius: 12 * fontFactor(),
             margin: 15,
             marginBottom: 0,
             flexDirection: 'row',
