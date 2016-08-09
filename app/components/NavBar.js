@@ -28,7 +28,7 @@ export default class NavBar extends Component {
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'row',
-          paddingVertical: (6 * fontFactor()) + (fontFactor() >= 1.5 ? 1 : 0),
+          paddingVertical: (6 * fontFactor()) + (fontFactor() >= 1.5 ? 2 : 0),
         }}>
           { children }
           { !children &&
