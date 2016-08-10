@@ -24,7 +24,7 @@ public class MainActivity extends ReactActivity {
     // bundle location from on each app start
     @Override
     protected String getJSBundleFile() {
-        return CodePush.getBundleUrl("main.jsbundle");
+        return CodePush.getBundleUrl();
     }
 
     /**
