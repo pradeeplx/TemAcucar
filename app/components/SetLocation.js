@@ -82,7 +82,8 @@ class SetLocation extends Component {
             placeholder='Seu estado'
             {...administrativeArea}
           />
-          <FormTextInput 
+          <FormTextInput
+            style={(Platform.OS === 'ios' ? {paddingBottom: 80} : {})}
             name='country'
             title='País'
             placeholder='Seu país'
