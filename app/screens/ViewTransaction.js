@@ -177,7 +177,7 @@ class ViewTransaction extends Component {
           <TextInput
             ref='input'
             multiline={true}
-            placeholder="Escreva sua mensagem"
+            placeholder="Clique aqui para escrever..."
             style={{
               flex: 10,
               fontSize: 12 * fontFactor(), 
