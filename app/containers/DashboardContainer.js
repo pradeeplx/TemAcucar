@@ -227,9 +227,11 @@ class DashboardContainer extends Component {
   }
 
   handleCreateMessage(message) {
-    const { dispatch, auth } = this.props
-    const { credentials, currentUser } = auth
-    dispatch(MessagesActions.create(credentials, currentUser, message))
+    if (message.text) {
+      const { dispatch, auth } = this.props
+      const { credentials, currentUser } = auth
+      dispatch(MessagesActions.create(credentials, currentUser, message))
+    }
   }
 
   handleCreateReview(review) {
