@@ -1,22 +1,40 @@
 import React, { Platform } from 'react-native'
-import RNGeocoder from 'react-native-geocoder'
 import { updateCurrentUser } from './BasicActions'
 
-function processAddress(address) {
-  if (Platform.OS === 'ios') {
-    return address
+function parseTypes(types) {
+  const acceptedTypes = {
+    'route': 'thoroughfare', 
+    'premise': 'thoroughfare',
+    'natural_feature': 'thoroughfare',
+    'airport': 'thoroughfare',
+    'park': 'thoroughfare',
+    'point_of_interest': 'thoroughfare',
+    'intersection': 'thoroughfare', 
+    'street_number': 'subThoroughfare',
+    'sublocality': 'subLocality',
+    'locality': 'locality',
+    'administrative_area_level_2': 'subAdministrativeArea',
+    'administrative_area_level_1': 'administrativeArea',
+    'country': 'country', 
+    'postal_code': 'postalCode',
   }
+  const type = types.filter(type => (
+    Object.keys(acceptedTypes).indexOf(type) > -1
+  ))[0]
+  return acceptedTypes[type]
+}
+
+function parseAddress(address) {
+  let parsedAddress = {}
+  address.forEach(component => {
+    const type = parseTypes(component.types)
+    if (type) {
+      parsedAddress[type] = component.long_name
+    }
+  })
   return {
-    name: `${address.thoroughfare}, ${address.subThoroughfare}`,
-    thoroughfare: address.thoroughfare,
-    subThoroughfare: address.subThoroughfare,
-    complement: address.complement,
-    subLocality: address.subLocality,
-    locality: address.locality,
-    subAdministrativeArea: address.subAdminArea,
-    administrativeArea: address.adminArea,
-    country: address.country,
-    postalCode: address.postalCode,
+    ...parsedAddress,
+    name: `${parsedAddress.thoroughfare}, ${parsedAddress.subThoroughfare}`
   }
 }
 
@@ -66,23 +84,46 @@ export function getAddress(latitude, longitude, complement) {
       })
     }
     dispatch({ type: 'LOCATION_GET_ADDRESS_REQUEST' })
-    RNGeocoder.reverseGeocodeLocation({latitude, longitude}, (error, data) => {
-      const address = data && data[0]
-      if(!error && address) { 
-        dispatch({
-          type: 'LOCATION_GET_ADDRESS_SUCCESS',
-          address: processAddress({
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyCc7bhPwBTBSxYc3QqhgET4ZUo_vS3VEqI&language=pt-BR`
+    fetch(url, {
+      method: 'get',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',        
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        const body = JSON.parse(response._bodyText)
+        const { status, results } = body
+        if (status === "OK" && results && results[0]) {
+          const address = {
             complement,
-            ...address,
-          }),
-        })
+            ...parseAddress(results[0].address_components),
+          }
+          dispatch({
+            type: 'LOCATION_GET_ADDRESS_SUCCESS',
+            address,
+          })
+        } else {
+          dispatch({
+            type: 'LOCATION_GET_ADDRESS_FAILURE',
+            error: {id: status, message: body.error_message},
+          })
+        }
       } else {
         dispatch({
           type: 'LOCATION_GET_ADDRESS_FAILURE',
-          error: {id: 'location_get_address_failure', message: error},
+          error: {id: `${response.status}`, message: response._bodyText},
         })
       }
-    }) 
+    })
+    .catch(error => {
+      dispatch({
+        type: 'LOCATION_GET_ADDRESS_FAILURE',
+        error: {id: 'location_get_address_failure', message: error},
+      })
+    })
   }  
 }
 
@@ -93,26 +134,49 @@ export function search(searchAddress, initializeForm) {
       type: 'LOCATION_SEARCH_REQUEST',
       search,
     })
-    RNGeocoder.geocodeAddress(search, (error, data) => {
-      const address = data && data[0]
-      if(!error && address) { 
-        const processedAddress = processAddress({
-          complement: searchAddress.complement,
-          ...address,
-        })
-        initializeForm && initializeForm(processedAddress)
-        dispatch({
-          type: 'LOCATION_SEARCH_SUCCESS',
-          address: processedAddress,
-          latitude: address.position.lat,
-          longitude: address.position.lng,
-        })
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(search)}&key=AIzaSyCc7bhPwBTBSxYc3QqhgET4ZUo_vS3VEqI&language=pt-BR`
+    fetch(url, {
+      method: 'get',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',        
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        const body = JSON.parse(response._bodyText)
+        const { status, results } = body
+        if (status === "OK" && results && results[0]) {
+          const location = results[0].geometry.location
+          const address = {
+            complement: searchAddress.complement,
+            ...parseAddress(results[0].address_components),
+          }
+          initializeForm && initializeForm(address)
+          dispatch({
+            type: 'LOCATION_SEARCH_SUCCESS',
+            address: address,
+            latitude: location.lat,
+            longitude: location.lng,
+          })
+        } else {
+          dispatch({
+            type: 'LOCATION_SEARCH_FAILURE',
+            error: {id: status, message: body.error_message},
+          })
+        }
       } else {
         dispatch({
           type: 'LOCATION_SEARCH_FAILURE',
-          error: {id: 'location_search_failure', message: error},
+          error: {id: `${response.status}`, message: response._bodyText},
         })
       }
+    })
+    .catch(error => {
+      dispatch({
+        type: 'LOCATION_SEARCH_FAILURE',
+        error: {id: 'location_search_failure', message: error},
+      })
     })
   }  
 }
