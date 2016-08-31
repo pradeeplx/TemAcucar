@@ -40,6 +40,7 @@ export default class TabBar extends Component {
               backgroundColor: 'transparent',
               color: (isActive ? Colors.pink : Colors.white),
               textAlign: 'center',
+              fontSize: 12,
             }}>
               {notificationsCount}
             </Sentence>

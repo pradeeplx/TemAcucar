@@ -92,7 +92,7 @@ class ViewTransaction extends Component {
     const user = (transaction.user.id === currentUser.id ? transaction.demand.user : transaction.user)
     const { inputFocused } = this.state
     const blurredHeight = 44 * fontFactor()
-    const focusedHeight = (Platform.OS === 'ios' ? 336 : (smallScreen ? 280 : 400)) * fontFactor()
+    const focusedHeight = (Platform.OS === 'ios' ? (336 * fontFactor()) : (smallScreen ? 280 : 400))
     const focusedInputHeight = (smallScreen ? 48 : 88) * fontFactor()
     return (
       <View style={{
@@ -153,7 +153,7 @@ class ViewTransaction extends Component {
               <TouchableOpacity key={index} onPress={this.newReviewFunction(index)}>
                 <Icon name="ios-star-outline" style={{
                   color: Colors.darkYellow,
-                  fontSize: 30 * fontFactor(),
+                  fontSize: 30,
                 }} />
               </TouchableOpacity>
             )) }
