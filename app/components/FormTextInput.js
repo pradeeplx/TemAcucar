@@ -33,6 +33,7 @@ class FormTextInput extends Component {
           color: Colors.pink,
           backgroundColor: Colors.white,
           fontSize: 12 * fontFactor(),
+          height: 36 * fontFactor(),
         }, inputStyle]}
         messageStyle={[{
           color: Colors.beige,
