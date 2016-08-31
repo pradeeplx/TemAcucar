@@ -47,7 +47,7 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
         Alterar endereço
       </UserMenuItem>
       <UserMenuItem onPress={onSettings} icon="ios-settings-outline">
-        Configurações
+        Notificações
       </UserMenuItem>
       { currentUser.admin && <UserMenuItem onPress={onAdminDemands} icon="ios-list-box-outline">
         Todos os pedidos
