@@ -43,6 +43,25 @@ export default class DemandUserButtons extends Component {
     const canComplete = (onComplete && (state === 'notifying' || state === 'active'))
     const canCancel = (onCancel && (state === 'notifying' || state === 'active'  || (state === 'flagged' && admin)))
     const canReactivate = (onReactivate && (state === 'completed' || ((state === 'flagged' || state === 'canceled') && admin)))
+    if (canReactivate && canCancel) {
+      return (
+        <BottomView>
+          <BottomButton
+            onPress={this.handleReactivate.bind(this)}
+            isLoading={reactivating}
+          >
+            Reativar pedido
+          </BottomButton>
+          <BottomButton
+            onPress={this.handleCancel.bind(this)}
+            isLoading={canceling}
+            secondary={true}
+          >
+            Cancelar pedido
+          </BottomButton>
+        </BottomView>
+      )
+    }
     if (canReactivate) {
       return (
         <BottomView>
