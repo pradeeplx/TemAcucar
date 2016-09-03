@@ -148,6 +148,7 @@ class NewDemand extends Component {
             title='Descrição'
             placeholder='Convença seus vizinhos: conte para eles porque precisa desse objeto e porque é importante para você.'
             multiline={true}
+            maxLength={255}
             titleStyle={{ flex: 0.35 }}
             inputStyle={{
               height: 100 * fontFactor(),
