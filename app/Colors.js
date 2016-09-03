@@ -7,6 +7,7 @@ const Colors = {
   white: '#FFFFFF',
   black: '#000000',
   beige: '#E6D3B7',
+  darkBeige: '#DBC3A3',
   lightBeige: '#FAF6F1',
   mediumLightBeige: '#FFE9AE',
   yellow: '#FFEA2D',

@@ -113,6 +113,75 @@ export default class ViewDemand extends Component {
                 </Button>
               }
             </View>
+            { !showUserButtons && state === 'completed' &&
+              <View style={{
+                alignItems: 'center',
+                paddingHorizontal: 10,
+                paddingVertical: 20,
+                backgroundColor: Colors.white,
+                borderColor: Colors.gray,
+                borderBottomWidth: StyleSheet.hairlineWidth,
+              }}>
+                <Icon name='ios-checkmark-circle-outline' style={{ 
+                  color: Colors.green,
+                  fontSize: 20 * fontFactor(),
+                  marginBottom: 6,
+                }} />
+                <Sentence style={[{
+                  color: Colors.green,
+                  fontSize: 12 * fontFactor(),
+                  textAlign: 'center',
+                }]}>
+                  Lucas já conseguiu um(a) {name}.
+                </Sentence>
+              </View>
+            }
+            { !showUserButtons && state === 'flagged' &&
+              <View style={{
+                alignItems: 'center',
+                paddingHorizontal: 10,
+                paddingVertical: 20,
+                backgroundColor: Colors.white,
+                borderColor: Colors.gray,
+                borderBottomWidth: StyleSheet.hairlineWidth,
+              }}>
+                <Icon name='ios-warning-outline' style={{ 
+                  color: Colors.darkBeige,
+                  fontSize: 20 * fontFactor(),
+                  marginBottom: 6,
+                }} />
+                <Sentence style={[{
+                  color: Colors.darkBeige,
+                  fontSize: 12 * fontFactor(),
+                  textAlign: 'center',
+                }]}>
+                  Este pedido foi marcado como impróprio e está em pausa enquanto é analisado pelos nossos moderadores.
+                </Sentence>
+              </View>
+            }
+            { !showUserButtons && state === 'canceled' &&
+              <View style={{
+                alignItems: 'center',
+                paddingHorizontal: 10,
+                paddingVertical: 20,
+                backgroundColor: Colors.white,
+                borderColor: Colors.gray,
+                borderBottomWidth: StyleSheet.hairlineWidth,
+              }}>
+                <Icon name='ios-close-circle-outline' style={{ 
+                  color: Colors.red,
+                  fontSize: 20 * fontFactor(),
+                  marginBottom: 6,
+                }} />
+                <Sentence style={[{
+                  color: Colors.red,
+                  fontSize: 12 * fontFactor(),
+                  textAlign: 'center',
+                }]}>
+                  Este pedido foi cancelado e não está mais disponível.
+                </Sentence>
+              </View>
+            }
             <ReviewsContainer {...this.props} user={user} />
           </View>
         </ScrollView>
