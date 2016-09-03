@@ -36,6 +36,18 @@ export default class ViewDemand extends Component {
     )
   }
 
+  handleViewTransaction() {
+    const { transactions, demand, onViewTransaction } = this.props
+    const transactionDemands = transactions.list
+    const transactionIndex = transactionDemands.map(demand => demand.id).indexOf(demand.id)
+    if (transactionIndex > -1) {
+      const transaction = transactionDemands[transactionIndex].transactions[0]
+      if (transaction) {
+        onViewTransaction(transaction)
+      }
+    }
+  }
+
   componentDidMount() {
     GoogleAnalytics.trackScreenView('ViewDemand')
   }
@@ -44,8 +56,9 @@ export default class ViewDemand extends Component {
     const { auth: { currentUser }, demand, transactions, userDemands, adminDemands, onCompleteDemand, onCancelDemand, onReactivateDemand, admin } = this.props
     const { name, description, distance, created_at, user, state, creatingTransaction } = demand
     const transactionDemands = transactions.list
+    const transactionIndex = transactionDemands.map(demand => demand.id).indexOf(demand.id)
     const showUserButtons = (currentUser.id === user.id || (admin && currentUser.admin))
-    const showButtons = !showUserButtons && (demand.state === 'notifying' || demand.state === 'active') && transactionDemands.map(demand => demand.id).indexOf(demand.id) < 0
+    const showButtons = !showUserButtons && (demand.state === 'notifying' || demand.state === 'active') && transactionIndex < 0
     return (
       <View style={{
         flex: 1,
@@ -180,6 +193,37 @@ export default class ViewDemand extends Component {
                 }]}>
                   Este pedido foi cancelado e não está mais disponível.
                 </Sentence>
+              </View>
+            }
+            { !showUserButtons && (state === 'active') && (transactionIndex > -1) &&
+              <View style={{
+                alignItems: 'center',
+                paddingHorizontal: 10,
+                paddingVertical: 20,
+                backgroundColor: Colors.white,
+                borderColor: Colors.gray,
+                borderBottomWidth: StyleSheet.hairlineWidth,
+              }}>
+                <Sentence style={[{
+                  color: Colors.gray,
+                  fontSize: 12 * fontFactor(),
+                  textAlign: 'center',
+                }]}>
+                  Você já está conversando com {user.first_name} sobre este pedido.
+                </Sentence>
+                <Button
+                  secondary={true}
+                  style={{
+                    marginTop: 10,
+                    borderColor: Colors.gray,
+                  }}
+                  textStyle={{
+                    color: Colors.pink,
+                  }}
+                  onPress={this.handleViewTransaction.bind(this)}
+                >
+                  Ver conversa
+                </Button>
               </View>
             }
             <ReviewsContainer {...this.props} user={user} />
