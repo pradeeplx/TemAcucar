@@ -107,7 +107,7 @@ class NewDemand extends Component {
             <Slider
               disabled={false}
               minimumValue={500}
-              maximumValue={10000}
+              maximumValue={5000}
               step={100}
               value={parseInt(radius.value)}
               onValueChange={this.handleSlide.bind(this)}
@@ -133,7 +133,7 @@ class NewDemand extends Component {
             <Sentence style={{
               color: Colors.gray,
             }}>
-              10km
+              5km
             </Sentence>
           </View>
           <FormTextInput 
