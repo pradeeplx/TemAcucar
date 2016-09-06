@@ -145,7 +145,7 @@ export default class ViewDemand extends Component {
                   fontSize: 12 * fontFactor(),
                   textAlign: 'center',
                 }]}>
-                  Lucas já conseguiu um(a) {name}.
+                  {user.first_name} já conseguiu um(a) {name}.
                 </Sentence>
               </View>
             }
