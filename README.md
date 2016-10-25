@@ -21,7 +21,7 @@ Xcode 7.3.1 is required. It can be downloaded from here: https://developer.apple
 
 ### Android Setup
 
-- Follow this guide: https://facebook.github.io/react-native/docs/android-setup.html
+- Follow this guide: http://facebook.github.io/react-native/releases/0.20/docs/android-setup.html
 - Instal Google Play Services SDK package: https://developers.google.com/android/guides/setup and https://developer.android.com/intl/pt-br/sdk/installing/adding-packages.html (Step 3)
 
 ### Running on iOS
