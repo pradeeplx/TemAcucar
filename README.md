@@ -17,7 +17,7 @@
 
 ### iOS Setup
 
-Xcode 7.0 or higher is required. It can be installed from the App Store.
+Xcode 7.3.1 is required. It can be downloaded from here: https://developer.apple.com/download/more/?name=Xcode%207.3.1
 
 ### Android Setup
 
