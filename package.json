@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
     "setup_project": "npm run step1; npm run step2",
     "step1": "rm -rf node_modules/react-native/node_modules/react; rm -rf node_modules/react-native/node_modules/fbjs; rm -rf node_modules/react/node_modules/fbjs",
     "step2": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm"
@@ -45,5 +46,15 @@
     "striptags": "2.1.1",
     "truncate": "2.0.0",
     "validate-model": "0.0.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^16.0.0",
+    "babel-preset-react-native": "^1.9.0",
+    "jest": "^16.0.2",
+    "jest-react-native": "^16.0.0",
+    "react-test-renderer": "^15.3.2"
+  },
+  "jest": {
+    "preset": "jest-react-native"
   }
 }
