@@ -1,32 +1,47 @@
-import React from 'react-native'
+import React, { View } from 'react-native'
 import { fontFactor } from "../helpers"
 import SimpleScreen from "../components/SimpleScreen"
 import Headline from "../components/Headline"
 import TextBox from "../components/TextBox"
 import Button from "../components/Button"
 import BottomView from "../components/BottomView"
-import BottomButton from "../components/BottomButton"
+import Link from "../components/Link"
+import Colors from "../Colors"
 
 export default Offer = ({ onDismiss, onAccept }) => (
   <SimpleScreen>
     <Headline style={{
-      fontSize: 13 * fontFactor()
+      fontSize: 14 * fontFactor()
     }}>
       Precisamos da sua contribuição para fazer um Tem Açúcar ainda mais colaborativo
     </Headline>
     <TextBox style={{
-      fontSize: 10 * fontFactor(),
+      fontSize: 12 * fontFactor(),
       marginBottom: 20,
     }}>
       Quer poder arranjar uma companhia para correr, uma carona para o trabalho ou alguém para te ajudar a trocar a lâmpada queimada da cozinha?
     </TextBox>
-    <Button onPress={onDismiss}>
-      Não, obrigado
+    <Button
+      onPress={onAccept}
+      textStyle={{
+        color: Colors.white,
+      }}
+      style={{
+        backgroundColor: Colors.pink,
+        borderColor: Colors.pink,
+      }}
+    >
+      Conheça o novo Tem Açúcar
     </Button>
     <BottomView>
-      <BottomButton onPress={onAccept}>
-        Conheça o novo Tem Açúcar
-      </BottomButton>
+      <View style={{flex: 1}}>
+        <Link onPress={onDismiss} style={{
+          textAlign: 'center',
+          paddingBottom: 20,
+        }}>
+          Não, obrigado
+        </Link>
+      </View>
     </BottomView>
   </SimpleScreen>
 )
