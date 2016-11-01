@@ -1,6 +1,7 @@
 import React, { Component } from 'react-native'
 import { connect } from 'react-redux'
 import Communications from 'react-native-communications'
+import moment from 'moment'
 
 import * as TermsActions from '../actions/TermsActions'
 import * as ConfigActions from '../actions/ConfigActions'
@@ -10,6 +11,7 @@ import Loading from "../screens/Loading"
 import RejectedTerms from "../screens/RejectedTerms"
 import Terms from "../screens/Terms"
 import ReviewEmailRouter from "../routers/ReviewEmailRouter"
+import OfferContainer from "../containers/OfferContainer"
 import DashboardContainer from "./DashboardContainer"
 
 class ConfigContainer extends Component {
@@ -61,10 +63,11 @@ class ConfigContainer extends Component {
   }
 
   render() {
-    const { auth, terms, config } = this.props
+    const { auth, terms, config, offer } = this.props
     const { currentUser } = auth
     const { acceptingTerms, rejectedTerms, scrolledToBottom } = terms
     const { confirmingEmail } = config
+    const displayOffer = (!offer.dismissed && moment(Date.parse(currentUser.created_at)).add(2, 'days').valueOf() < moment().valueOf())
     if (acceptingTerms || confirmingEmail)
       return (<Loading />)
     if (rejectedTerms)
@@ -75,6 +78,8 @@ class ConfigContainer extends Component {
       return (<ReviewEmailRouter {...this.props} onConfirm={this.handleConfirmEmail.bind(this)} onUpdateEmail={this.handleUpdateEmail.bind(this)} onShowToast={this.handleShowToast.bind(this)} />)
     if (!currentUser.latitude || !currentUser.longitude || !currentUser.reviewed_location)
       return (<LocationContainer {...this.props} />)
+    if (displayOffer)
+      return (<OfferContainer {...this.props} />)
     return (<DashboardContainer {...this.props} />)
   }
 }
@@ -82,4 +87,5 @@ class ConfigContainer extends Component {
 export default connect(state => ({
   config: state.config,
   terms: state.terms,
+  offer: state.offer,
 }))(ConfigContainer)
