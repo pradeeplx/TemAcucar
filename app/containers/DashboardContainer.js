@@ -244,8 +244,10 @@ class DashboardContainer extends Component {
     const { dispatch, auth } = this.props
     const { credentials, currentUser } = auth
     dispatch(UnreadNotificationsActions.read(credentials, currentUser, notification))
-    const { transaction, demand, review, admin } = notification
-    if (review) {
+    const { transaction, demand, review, admin, subject } = notification
+    if (subject === "#matchfunding") {
+      Communications.web("https://benfeitoria.com/temacucar")
+    } else if (review) {
       this.handleUserReviews()
     } else if (transaction) {
       Actions.viewTransaction({ transaction })
