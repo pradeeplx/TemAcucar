@@ -13,7 +13,7 @@
     "fbjs": "^0.6.0",
     "moment": "2.11.1",
     "object-key-filter": "0.0.4",
-    "react-native": "0.20.0",
+    "react-native": "0.21.0",
     "react-native-code-push": "1.12.2-beta",
     "react-native-communications": "anarchicknight/react-native-communications#bcba294b5564d78f63c7fb6e74a5a9ff2dabf710",
     "react-native-config": "0.0.3",
