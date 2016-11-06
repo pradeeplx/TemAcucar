@@ -13,6 +13,7 @@ class GcmContainer extends Component {
       dispatch(GcmActions.register(token))
     })   
     GcmAndroid.addEventListener('notification', ({ data }) => {
+      const subject = (data.subject == "#matchfunding" ? "Apoie o Tem Açucar" : data.subject)
       const notification = {
         id: data.id,
         triggering_user: JSON.parse(data.triggering_user || "null"),
@@ -20,7 +21,7 @@ class GcmContainer extends Component {
         transaction: JSON.parse(data.transaction || "null"),
         message: JSON.parse(data.message || "null"),
         review: JSON.parse(data.review || "null"),
-        subject: data.subject,
+        subject: subject,
         text: data.text,
         read: JSON.parse(data.read),
         admin: JSON.parse(data.admin),

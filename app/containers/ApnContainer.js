@@ -12,6 +12,7 @@ class ApnContainer extends Component {
     })   
     PushNotificationIOS.addEventListener('notification', (pushNotification) => {
       const data = pushNotification._data
+      const subject = (data.subject == "#matchfunding" ? "Apoie o Tem Açucar" : data.subject)
       const notification = {
         id: data.id,
         triggering_user: data.triggering_user,
@@ -19,7 +20,7 @@ class ApnContainer extends Component {
         transaction: data.transaction,
         message: data.message,
         review: data.review,
-        subject: data.subject,
+        subject: subject,
         text: data.text,
         read: data.read,
         admin: data.admin,
