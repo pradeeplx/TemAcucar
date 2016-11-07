@@ -32,7 +32,7 @@ class GcmContainer extends Component {
       const createNotification = JSON.parse(data.app_notifications)
       if (createNotification) {
         Notification.create({
-          subject: data.subject,
+          subject: subject,
           message: data.sanitized_text,
         })
       }
