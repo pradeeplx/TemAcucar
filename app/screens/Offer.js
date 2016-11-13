@@ -21,7 +21,7 @@ export default Offer = ({ onDismiss, onAccept }) => (
       textAlign: 'center',
       marginHorizontal: 20,
     }}>
-      {`Temos só <b>${Math.round(((new Date("2016-11-14T21:00:00+00:00")).getTime() - Date.now()) / 1000 / 60 / 60 / 24)} dias</b> para fazer acontecer um Tem Açúcar que é mais do que empréstimos: doações, caronas, ajudinhas e muito mais! Mas sem o seu apoio o projeto não sai do papel ;)`}
+      {`Temos só <b>${Math.round(((new Date("2016-11-18T21:00:00+00:00")).getTime() - Date.now()) / 1000 / 60 / 60 / 24)} dias</b> para fazer acontecer um Tem Açúcar que é mais do que empréstimos: doações, caronas, ajudinhas e muito mais! Mas sem o seu apoio o projeto não sai do papel ;)`}
     </HtmlSentence>
     <Button
       onPress={onAccept}
