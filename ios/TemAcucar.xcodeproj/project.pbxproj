@@ -1056,7 +1056,10 @@
 				);
 				INFOPLIST_FILE = TemAcucar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+          "-ObjC",
+          "-lc++",
+        );
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.temacucar.TemAcucar;
 				PRODUCT_NAME = TemAcucar;
 				PROVISIONING_PROFILE = "";
@@ -1088,7 +1091,10 @@
 				);
 				INFOPLIST_FILE = TemAcucar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+          "-ObjC",
+          "-lc++",
+        );
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.temacucar.TemAcucar;
 				PRODUCT_NAME = TemAcucar;
 				PROVISIONING_PROFILE = "";
