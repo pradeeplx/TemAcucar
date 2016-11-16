@@ -33,14 +33,16 @@ export function parseError(error) {
   }
   const response = error
   const contentType = response.headers.get('content-type')
-  if (contentType && contentType.match(/application\/json/)) {
-    return JSON.parse(response._bodyText)
-  } else {
-    return {
-      id: `${response.status}`,
-      message: response._bodyText,
+  response.json().then(json => {
+    if (contentType && contentType.match(/application\/json/)) {
+      return json
+    } else {
+      return {
+        id: `${response.status}`,
+        message: json,
+      }
     }
-  }
+  })
 }
 
 export function updateCurrentUser(prefix, credentials, attributes) {
@@ -51,11 +53,9 @@ export function updateCurrentUser(prefix, credentials, attributes) {
     params: attributes,
     credentials,
     requestAttributes: { attributes },
-    currentUser: (response) => {
-      return JSON.parse(response._bodyText)
-    },
-    processResponse: (response) => {
-      return { currentUser: JSON.parse(response._bodyText) }
+    currentUser: (response, json) => json,
+    processResponse: (response, json) => {
+      return { currentUser: json }
     },
   })
 }
@@ -77,7 +77,7 @@ export function apiDispatchAction(dispatch, options) {
     fetchOptions.headers = {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-    }      
+    }
   }
   if (params) {
     fetchOptions.body = JSON.stringify(params)
@@ -85,14 +85,16 @@ export function apiDispatchAction(dispatch, options) {
   fetch(`${Config.API_URL}${path}`, fetchOptions)
   .then(response => {
     if(response.ok) {
-      const newCredentials = responseCredentials(response)
-      if (newCredentials.accessToken) {
-        StoredAuthActions.set(dispatch, newCredentials, keyFilter(currentUser(response), ['password', 'facebook']))
-      }
-      dispatch({
-        type: `${prefix}_SUCCESS`,
-        ...(newCredentials.accessToken && { credentials: newCredentials }),
-        ...(processResponse && processResponse(response)),
+      response.json().then(json => {
+        const newCredentials = responseCredentials(response)
+        if (newCredentials.accessToken) {
+          StoredAuthActions.set(dispatch, newCredentials, keyFilter(currentUser(response, json), ['password', 'facebook']))
+        }
+        dispatch({
+          type: `${prefix}_SUCCESS`,
+          ...(newCredentials.accessToken && { credentials: newCredentials }),
+          ...(processResponse && processResponse(response, json)),
+        })
       })
     } else {
       dispatch({
