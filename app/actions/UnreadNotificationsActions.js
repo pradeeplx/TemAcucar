@@ -9,8 +9,8 @@ export function list(credentials, currentUser) {
     path: '/notifications?filter=unread',
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { list: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { list: json }
     },
   })
 }

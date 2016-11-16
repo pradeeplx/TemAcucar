@@ -6,8 +6,8 @@ export function list(credentials, currentUser, offset = 0) {
     path: '/demands?filter=admin&offset=' + offset,
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { list: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { list: json }
     },
   })
 }

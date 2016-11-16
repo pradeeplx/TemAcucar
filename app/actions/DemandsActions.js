@@ -6,8 +6,8 @@ export function list(credentials, currentUser, offset = 0) {
     path: '/demands?filter=neighborhood&offset=' + offset,
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { list: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { list: json }
     },
   })
 }
@@ -53,8 +53,8 @@ export function create(credentials, currentUser, demand) {
     requestAttributes: { demand },
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { demand: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { demand: json }
     },
   })
 }
@@ -67,8 +67,8 @@ export function complete(credentials, currentUser, demand) {
     requestAttributes: { demand },
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { demand: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { demand: json }
     },
   })
 }
@@ -81,8 +81,8 @@ export function cancel(credentials, currentUser, demand) {
     requestAttributes: { demand },
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { demand: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { demand: json }
     },
   })
 }
@@ -95,8 +95,8 @@ export function reactivate(credentials, currentUser, demand) {
     requestAttributes: { demand },
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { demand: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { demand: json }
     },
   })
 }

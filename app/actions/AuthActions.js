@@ -9,11 +9,9 @@ export function refreshUser(credentials) {
     prefix: 'AUTH_REFRESH_USER',
     path: `/me`,
     credentials,
-    currentUser: (response) => {
-      return JSON.parse(response._bodyText)
-    },
-    processResponse: (response) => {
-      return { currentUser: JSON.parse(response._bodyText) }
+    currentUser: (response, json) => json,
+    processResponse: (response, json) => {
+      return { currentUser: json }
     },
     afterAction: (dispatch, response) => {
       if (response.status === 401) {
@@ -43,11 +41,9 @@ export function signUp(currentUser) {
       password: currentUser.password,
     },
     requestAttributes: { currentUser },
-    currentUser: (response) => {
-      return JSON.parse(response._bodyText)
-    },
-    processResponse: (response) => {
-      return { currentUser: JSON.parse(response._bodyText) }
+    currentUser: (response, json) => json,
+    processResponse: (response, json) => {
+      return { currentUser: json }
     },
   })
 }
@@ -91,11 +87,9 @@ function facebookConnect(credentials, currentUser) {
               facebook,
             },
           },
-          currentUser: (response) => {
-            return JSON.parse(response._bodyText)
-          },
-          processResponse: (response) => {
-            return { currentUser: JSON.parse(response._bodyText) }
+          currentUser: (response, json) => json,
+          processResponse: (response, json) => {
+            return { currentUser: json }
           },
         })
       } else {
@@ -105,7 +99,7 @@ function facebookConnect(credentials, currentUser) {
         })
       }
     })
-  }  
+  }
 }
 
 function facebookSignIn() {
@@ -123,11 +117,9 @@ function facebookSignIn() {
           requestAttributes: {
             currentUser: { facebook },
           },
-          currentUser: (response) => {
-            return JSON.parse(response._bodyText)
-          },
-          processResponse: (response) => {
-            return { currentUser: JSON.parse(response._bodyText) }
+          currentUser: (response, json) => json,
+          processResponse: (response, json) => {
+            return { currentUser: json }
           },
         })
       } else {
@@ -137,7 +129,7 @@ function facebookSignIn() {
         })
       }
     })
-  }  
+  }
 }
 
 function email(currentUser) {
@@ -150,11 +142,9 @@ function email(currentUser) {
       password: currentUser.password,
     },
     requestAttributes: { currentUser },
-    currentUser: (response) => {
-      return JSON.parse(response._bodyText)
-    },
-    processResponse: (response) => {
-      return { currentUser: JSON.parse(response._bodyText) }
+    currentUser: (response, json) => json,
+    processResponse: (response, json) => {
+      return { currentUser: json }
     },
   })
 }
@@ -165,9 +155,7 @@ export function signOut(credentials) {
     path: '/authentications',
     method: 'delete',
     credentials: credentials,
-    currentUser: (response) => {
-      return JSON.parse(response._bodyText)
-    },
+    currentUser: (response, json) => json,
     afterAction: (dispatch) => StoredAuthActions.reset(dispatch),
   })
 }
@@ -196,11 +184,9 @@ export function resetPassword(currentUser) {
       token: currentUser.reset_password_token,
     },
     requestAttributes: { currentUser },
-    currentUser: (response) => {
-      return JSON.parse(response._bodyText)
-    },
-    processResponse: (response) => {
-      return { currentUser: JSON.parse(response._bodyText) }
+    currentUser: (response, json) => json,
+    processResponse: (response, json) => {
+      return { currentUser: json }
     },
   })
 }

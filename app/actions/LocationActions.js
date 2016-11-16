@@ -3,13 +3,13 @@ import { updateCurrentUser } from './BasicActions'
 
 function parseTypes(types) {
   const acceptedTypes = {
-    'route': 'thoroughfare', 
+    'route': 'thoroughfare',
     'premise': 'thoroughfare',
     'natural_feature': 'thoroughfare',
     'airport': 'thoroughfare',
     'park': 'thoroughfare',
     'point_of_interest': 'thoroughfare',
-    'intersection': 'thoroughfare', 
+    'intersection': 'thoroughfare',
     'sublocality_level_2': 'thoroughfare',
     'street_number': 'subThoroughfare',
     'sublocality_level_3': 'subThoroughfare',
@@ -17,7 +17,7 @@ function parseTypes(types) {
     'locality': 'locality',
     'administrative_area_level_2': 'subAdministrativeArea',
     'administrative_area_level_1': 'administrativeArea',
-    'country': 'country', 
+    'country': 'country',
     'postal_code': 'postalCode',
   }
   const type = types.filter(type => (
@@ -71,7 +71,7 @@ export function getCoordinates() {
       },
       {enableHighAccuracy: false, timeout: 5000, maximumAge: 20000}
     )
-  }  
+  }
 }
 
 export function setCoordinates(latitude, longitude) {
@@ -98,32 +98,36 @@ export function getAddress(latitude, longitude, complement) {
       method: 'get',
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json',        
+        'Content-Type': 'application/json',
       }
     })
     .then(response => {
       if (response.ok) {
-        const body = JSON.parse(response._bodyText)
-        const { status, results } = body
-        if (status === "OK" && results && results[0]) {
-          const address = {
-            complement,
-            ...parseAddress(results[0].address_components),
+        response.json().then(json => {
+          const body = json
+          const { status, results } = body
+          if (status === "OK" && results && results[0]) {
+            const address = {
+              complement,
+              ...parseAddress(results[0].address_components),
+            }
+            dispatch({
+              type: 'LOCATION_GET_ADDRESS_SUCCESS',
+              address,
+            })
+          } else {
+            dispatch({
+              type: 'LOCATION_GET_ADDRESS_FAILURE',
+              error: {id: status, message: body.error_message},
+            })
           }
-          dispatch({
-            type: 'LOCATION_GET_ADDRESS_SUCCESS',
-            address,
-          })
-        } else {
+        })
+      } else {
+        response.json().then(json => {
           dispatch({
             type: 'LOCATION_GET_ADDRESS_FAILURE',
-            error: {id: status, message: body.error_message},
+            error: {id: `${response.status}`, message: json},
           })
-        }
-      } else {
-        dispatch({
-          type: 'LOCATION_GET_ADDRESS_FAILURE',
-          error: {id: `${response.status}`, message: response._bodyText},
         })
       }
     })
@@ -133,7 +137,7 @@ export function getAddress(latitude, longitude, complement) {
         error: {id: 'location_get_address_failure', message: error},
       })
     })
-  }  
+  }
 }
 
 export function search(searchAddress, initializeForm) {
@@ -148,36 +152,40 @@ export function search(searchAddress, initializeForm) {
       method: 'get',
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json',        
+        'Content-Type': 'application/json',
       }
     })
     .then(response => {
       if (response.ok) {
-        const body = JSON.parse(response._bodyText)
-        const { status, results } = body
-        if (status === "OK" && results && results[0]) {
-          const location = results[0].geometry.location
-          const address = {
-            complement: searchAddress.complement,
-            ...parseAddress(results[0].address_components),
+        response.json().then(json => {
+          const body = json
+          const { status, results } = body
+          if (status === "OK" && results && results[0]) {
+            const location = results[0].geometry.location
+            const address = {
+              complement: searchAddress.complement,
+              ...parseAddress(results[0].address_components),
+            }
+            initializeForm && initializeForm(address)
+            dispatch({
+              type: 'LOCATION_SEARCH_SUCCESS',
+              address: address,
+              latitude: location.lat,
+              longitude: location.lng,
+            })
+          } else {
+            dispatch({
+              type: 'LOCATION_SEARCH_FAILURE',
+              error: {id: status, message: body.error_message},
+            })
           }
-          initializeForm && initializeForm(address)
-          dispatch({
-            type: 'LOCATION_SEARCH_SUCCESS',
-            address: address,
-            latitude: location.lat,
-            longitude: location.lng,
-          })
-        } else {
+        })
+      } else {
+        response.json().then(json => {
           dispatch({
             type: 'LOCATION_SEARCH_FAILURE',
-            error: {id: status, message: body.error_message},
+            error: {id: `${response.status}`, message: json},
           })
-        }
-      } else {
-        dispatch({
-          type: 'LOCATION_SEARCH_FAILURE',
-          error: {id: `${response.status}`, message: response._bodyText},
         })
       }
     })
@@ -187,7 +195,7 @@ export function search(searchAddress, initializeForm) {
         error: {id: 'location_search_failure', message: error},
       })
     })
-  }  
+  }
 }
 
 export function setLocation(location, credentials) {

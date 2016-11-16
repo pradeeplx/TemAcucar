@@ -12,8 +12,8 @@ export function create(credentials, currentUser, message) {
     requestAttributes: { message, currentUser },
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { message: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { message: json }
     },
   })
 }
@@ -25,8 +25,8 @@ export function list(credentials, currentUser, transaction, offset = 0) {
     credentials,
     requestAttributes: { transaction, offset },
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { list: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { list: json }
     },
   })
 }
