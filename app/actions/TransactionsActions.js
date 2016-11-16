@@ -6,8 +6,8 @@ export function list(credentials, currentUser, offset = 0) {
     path: '/demands?filter=transactions&offset=' + offset,
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { list: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { list: json }
     },
   })
 }
@@ -23,8 +23,8 @@ export function create(credentials, currentUser, demand) {
     requestAttributes: { demand },
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { transaction: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { transaction: json }
     },
   })
 }

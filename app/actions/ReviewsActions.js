@@ -13,8 +13,8 @@ export function create(credentials, currentUser, review) {
     requestAttributes: { review },
     credentials,
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { review: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { review: json }
     },
   })
 }
@@ -26,8 +26,8 @@ export function list(credentials, currentUser, user, offset = 0) {
     credentials,
     requestAttributes: { user, offset },
     currentUser: () => currentUser,
-    processResponse: (response) => {
-      return { list: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { list: json }
     },
   })
 }

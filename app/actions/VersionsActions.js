@@ -6,8 +6,8 @@ export function list() {
     prefix: 'VERSIONS_LIST',
     path: `/versions?platform=${Platform.OS}`,
     currentUser: () => null,
-    processResponse: (response) => {
-      return { list: JSON.parse(response._bodyText) }
+    processResponse: (response, json) => {
+      return { list: json }
     },
   })
 }
