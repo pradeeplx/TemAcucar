@@ -1,4 +1,5 @@
-import React, { Component, View } from 'react-native'
+import React, { Component } from 'react'
+import { View } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import Colors from "../Colors"
 import BaseScreen from "../components/BaseScreen"

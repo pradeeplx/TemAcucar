@@ -1,4 +1,5 @@
-import React, { Platform, ScrollView, View, StyleSheet } from 'react-native'
+import React from 'react'
+import { Platform, ScrollView, View, StyleSheet } from 'react-native'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
@@ -23,7 +24,7 @@ export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSig
         flexDirection: 'column',
         flex: 1,
       }}>
-        <Sentence style={{ 
+        <Sentence style={{
           color: Colors.blue,
           fontSize: 20 * fontFactor(),
         }}>

@@ -1,4 +1,5 @@
-import React, { Platform, Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
+import { Platform } from 'react-native'
 import { InlineTextInput } from 'react-native-stateless-form'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"

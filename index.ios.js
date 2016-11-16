@@ -1,3 +1,4 @@
+import React from 'react'
 import { AppRegistry } from 'react-native'
 import Config from 'react-native-config'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'

@@ -1,4 +1,5 @@
-import React, { Component, Dimensions, View, PanResponder, InteractionManager } from 'react-native'
+import React, { Component } from 'react'
+import { Dimensions, View, PanResponder, InteractionManager } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import ScrollableTabView from 'react-native-scrollable-tab-view'
 import DrawerLayout from 'react-native-drawer-layout'
@@ -63,7 +64,7 @@ export default class Dashboard extends Component {
     const { drawerOpen, signingOut } = this.props.dashboard
     const { currentUser, facebookConnecting } = this.props.auth
     const { latitude, longitude, neighbors_count, neighbors_image_url } = currentUser
-    const userMenu = (<UserMenu 
+    const userMenu = (<UserMenu
       currentUser={currentUser}
       onSettings={onSettings}
       onFeedback={onFeedback}
@@ -89,7 +90,7 @@ export default class Dashboard extends Component {
         onDrawerClose={onDrawerClose}
       >
         <View {...this.panResponder.panHandlers} style={{
-          flex: 1, 
+          flex: 1,
           alignSelf: 'stretch',
           backgroundColor: Colors.white,
         }} >
@@ -101,10 +102,10 @@ export default class Dashboard extends Component {
               onChangeTab={this.handleChangeTab.bind(this)}
             >
               <Tab tabLabel="ios-home-outline" onRefresh={onRefresh}>
-                <NeighborsMap 
+                <NeighborsMap
                   url={neighbors_image_url}
                   count={neighbors_count}
-                /> 
+                />
                 <Demands
                   currentUser={currentUser}
                   demands={demands.list}

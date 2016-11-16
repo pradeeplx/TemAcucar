@@ -1,4 +1,5 @@
-import React, { Platform, Dimensions } from 'react-native'
+import React from 'react'
+import { Platform, Dimensions } from 'react-native'
 import { fontFactor } from "../helpers"
 import ReactNativeButton from 'apsl-react-native-button'
 import Colors from "../Colors"
@@ -9,7 +10,7 @@ export default BottonButton = (props) => {
   const smallScreen = height <= 320
   const { secondary, buttonsCount, viewWidth, children, style, textStyle, disabledStyle } = props
   return (
-    <ReactNativeButton 
+    <ReactNativeButton
       activityIndicatorColor={Colors.white}
       {...props}
       textStyle={[{

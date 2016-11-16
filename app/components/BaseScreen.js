@@ -1,4 +1,5 @@
-import React, { Platform, View } from 'react-native'
+import React from 'react'
+import { Platform, View } from 'react-native'
 import Colors from "../Colors"
 import NavBar from "./NavBar"
 
@@ -19,4 +20,3 @@ export default BaseScreen = ({ children, navBar, navBarTitle }) => (
     </View>
   </View>
 )
- 

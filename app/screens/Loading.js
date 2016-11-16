@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React from 'react'
 import GiftedSpinner from 'react-native-gifted-spinner'
 import { fontFactor } from "../helpers"
 import SimpleScreen from "../components/SimpleScreen"

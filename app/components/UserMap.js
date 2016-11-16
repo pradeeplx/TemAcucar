@@ -1,4 +1,5 @@
-import React, { View, Image, PixelRatio, Dimensions } from 'react-native'
+import React from 'react'
+import { View, Image, PixelRatio, Dimensions } from 'react-native'
 import MapView from 'react-native-maps'
 import Colors from "../Colors"
 import MapText from "./MapText"
@@ -21,7 +22,7 @@ export default UserMap = ({ latitude, longitude, delta, text }) => {
           alignSelf: 'stretch',
         }}
         region={{
-          latitude: parseFloat(latitude || -13.5412631), 
+          latitude: parseFloat(latitude || -13.5412631),
           longitude: parseFloat(longitude || -71.5518237),
           latitudeDelta: parseFloat(delta ? delta : (latitude ? defaultDelta : 50)),
           longitudeDelta: parseFloat(delta ? delta : (longitude ? defaultDelta : 50)),

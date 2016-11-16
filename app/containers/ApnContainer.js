@@ -1,4 +1,5 @@
-import React, { Component, PushNotificationIOS } from 'react-native'
+import React, { Component } from 'react'
+import { PushNotificationIOS } from 'react-native'
 import { connect } from 'react-redux'
 
 import * as ApnActions from '../actions/ApnActions'
@@ -9,7 +10,7 @@ class ApnContainer extends Component {
     PushNotificationIOS.addEventListener('register', (token) => {
       const { dispatch } = this.props
       dispatch(ApnActions.register(token))
-    })   
+    })
     PushNotificationIOS.addEventListener('notification', (pushNotification) => {
       const data = pushNotification._data
       const subject = (data.subject == "#matchfunding" ? "Apoie o Tem Açucar" : data.subject)

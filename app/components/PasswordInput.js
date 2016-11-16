@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
 import FormTextInput from "./FormTextInput"
 
 class PasswordInput extends Component {
@@ -12,7 +12,7 @@ class PasswordInput extends Component {
 
   render() {
     return (
-      <FormTextInput 
+      <FormTextInput
         ref='input'
         name='password'
         title='Senha'

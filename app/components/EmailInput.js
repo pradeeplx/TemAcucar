@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
 import FormTextInput from "./FormTextInput"
 
 class EmailInput extends Component {
@@ -12,7 +12,7 @@ class EmailInput extends Component {
 
   render() {
     return (
-      <FormTextInput 
+      <FormTextInput
         ref='input'
         name='email'
         title='E-mail'

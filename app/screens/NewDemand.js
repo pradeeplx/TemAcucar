@@ -1,4 +1,5 @@
-import React, { Component, View, Image, Platform, StyleSheet } from 'react-native'
+import React, { Component } from 'react'
+import { View, Image, Platform, StyleSheet } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -136,14 +137,14 @@ class NewDemand extends Component {
               5km
             </Sentence>
           </View>
-          <FormTextInput 
+          <FormTextInput
             name='name'
             title='Objeto'
             placeholder='Ex. Furadeira'
             titleStyle={{ flex: 0.35 }}
             {...name}
           />
-          <FormTextInput 
+          <FormTextInput
             name='description'
             title='Descrição'
             placeholder='Convença seus vizinhos: conte para eles porque precisa desse objeto e porque é importante para você.'

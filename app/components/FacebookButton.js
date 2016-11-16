@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React from 'react'
 import Colors from "../Colors"
 import Button from "./Button"
 

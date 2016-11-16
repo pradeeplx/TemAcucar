@@ -1,4 +1,5 @@
-import React, { Component, View, ScrollView, Platform } from 'react-native'
+import React, { Component } from 'react'
+import { View, ScrollView, Platform } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 
 import { fontFactor } from "../helpers"

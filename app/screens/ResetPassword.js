@@ -1,4 +1,5 @@
-import React, { Component, View } from 'react-native'
+import React, { Component } from 'react'
+import { View } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -30,12 +31,12 @@ class ResetPassword extends Component {
       }}>
         <FormScreen navBar={true} navBarTitle="Confira seu e-mail">
           <Headline style={{
-            fontSize: 14 * fontFactor(), 
+            fontSize: 14 * fontFactor(),
             marginBottom: 10
           }}>
             Confira seu e-mail: enviamos seu código para {email} ;)
           </Headline>
-          <FormTextInput 
+          <FormTextInput
             name='reset_password_token'
             title='Código'
             placeholder='Digite o código recebido'

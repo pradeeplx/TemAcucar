@@ -1,4 +1,5 @@
-import React, { View, Dimensions } from 'react-native'
+import React from 'react'
+import { View, Dimensions } from 'react-native'
 import { fontFactor } from "../helpers"
 import moment from 'moment'
 import Colors from "../Colors"

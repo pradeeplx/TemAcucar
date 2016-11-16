@@ -1,4 +1,5 @@
-import React, { Component, View, TouchableOpacity, Platform } from 'react-native'
+import React, { Component } from 'react'
+import { View, TouchableOpacity, Platform } from 'react-native'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import TransactionDemandDescription from "./TransactionDemandDescription"

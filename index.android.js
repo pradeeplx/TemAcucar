@@ -1,3 +1,4 @@
+import React from 'react'
 import { AppRegistry } from 'react-native'
 import Config from 'react-native-config'
 import Notification from 'react-native-system-notification'

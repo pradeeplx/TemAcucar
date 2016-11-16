@@ -1,4 +1,5 @@
-import React, { Platform } from 'react-native'
+import React from 'react'
+import { Platform } from 'react-native'
 
 const initialState = {
   latitude: null,
@@ -20,12 +21,12 @@ export default function location(state = initialState, action) {
   switch (action.type) {
     case 'LOCATION_GET_COORDINATES_REQUEST':
       return {
-        ...state, 
+        ...state,
         gettingCoordinates: true,
       }
     case 'LOCATION_GET_COORDINATES_SUCCESS':
       return {
-        ...state, 
+        ...state,
         latitude: action.latitude,
         longitude: action.longitude,
         gettingCoordinates: false,
@@ -33,25 +34,25 @@ export default function location(state = initialState, action) {
       }
     case 'LOCATION_GET_COORDINATES_FAILURE':
       return {
-        ...state, 
+        ...state,
         gettingCoordinates: false,
         getCoordinatesError: action.error,
       }
     case 'LOCATION_SET_COORDINATES':
       return {
-        ...state, 
+        ...state,
         latitude: action.latitude,
         longitude: action.longitude,
         getCoordinatesError: null,
       }
     case 'LOCATION_GET_ADDRESS_REQUEST':
       return {
-        ...state, 
+        ...state,
         gettingAddress: true,
       }
     case 'LOCATION_GET_ADDRESS_SUCCESS':
       return {
-        ...state, 
+        ...state,
         address: action.address,
         startingUp: false,
         gettingAddress: false,
@@ -59,19 +60,19 @@ export default function location(state = initialState, action) {
       }
     case 'LOCATION_GET_ADDRESS_FAILURE':
       return {
-        ...state, 
+        ...state,
         startingUp: false,
         gettingAddress: false,
         getAddressError: action.error,
       }
     case 'LOCATION_SEARCH_REQUEST':
       return {
-        ...state, 
+        ...state,
         searching: true,
       }
     case 'LOCATION_SEARCH_SUCCESS':
       return {
-        ...state, 
+        ...state,
         address: action.address,
         addressChanged: (state.startingUp ? false : true),
         latitude: action.latitude,
@@ -82,31 +83,31 @@ export default function location(state = initialState, action) {
       }
     case 'LOCATION_SEARCH_FAILURE':
       return {
-        ...state, 
+        ...state,
         searching: false,
         startingUp: false,
         searchError: action.error,
       }
     case 'LOCATION_SET_LOCATION_REQUEST':
       return {
-        ...state, 
+        ...state,
         settingLocation: true,
       }
     case 'LOCATION_SET_LOCATION_SUCCESS':
       return {
-        ...state, 
+        ...state,
         settingLocation: false,
         setLocationError: null,
       }
     case 'LOCATION_SET_LOCATION_FAILURE':
       return {
-        ...state, 
+        ...state,
         settingLocation: false,
         setLocationError: action.error,
       }
     case 'AFTER_ROUTER_POP':
       return {
-        ...state, 
+        ...state,
         addressChanged: false,
       }
     case 'STORED_AUTH_RESET_SUCCESS':

@@ -1,4 +1,5 @@
-import React, { Component, View } from 'react-native'
+import React, { Component } from 'react'
+import { View } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -49,7 +50,7 @@ class SignUpForm extends Component {
             Cadastre-se com o Facebook
           </FacebookButton>
           <OrSeparator />
-          <FormTextInput 
+          <FormTextInput
             name='first_name'
             title='Nome'
             placeholder='Digite seu nome'
@@ -57,7 +58,7 @@ class SignUpForm extends Component {
             autoCapitalize='words'
             {...first_name}
           />
-          <FormTextInput 
+          <FormTextInput
             name='last_name'
             title='Sobrenome'
             placeholder='Digite seu sobrenome'

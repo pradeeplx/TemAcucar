@@ -1,4 +1,4 @@
-import React, { Component } from 'react-native'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Notification from 'react-native-system-notification'
 import GcmAndroid from 'react-native-gcm-android'
@@ -11,7 +11,7 @@ class GcmContainer extends Component {
     GcmAndroid.addEventListener('register', (token) => {
       const { dispatch } = this.props
       dispatch(GcmActions.register(token))
-    })   
+    })
     GcmAndroid.addEventListener('notification', ({ data }) => {
       const subject = (data.subject == "#matchfunding" ? "Apoie o Tem Açucar" : data.subject)
       const notification = {

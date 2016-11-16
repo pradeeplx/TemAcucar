@@ -1,4 +1,5 @@
-import React, { Component, Navigator } from 'react-native'
+import React, { Component } from 'react'
+import { Navigator } from 'react-native'
 import { Route, Schema, Actions } from 'react-native-router-flux'
 
 import Router from "../components/Router"

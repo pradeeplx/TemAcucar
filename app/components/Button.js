@@ -1,10 +1,11 @@
-import React, { Platform, StyleSheet } from 'react-native'
+import React from 'react'
+import { Platform, StyleSheet } from 'react-native'
 import { fontFactor } from "../helpers"
 import ReactNativeButton from 'apsl-react-native-button'
 import Colors from "../Colors"
 
 export default Button = (props) => (
-  <ReactNativeButton 
+  <ReactNativeButton
     activityIndicatorColor={props.secondary ? Colors.white : Colors.pink}
     {...props}
     textStyle={[{

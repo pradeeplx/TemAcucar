@@ -1,4 +1,5 @@
-import React, { View, Platform, Dimensions } from 'react-native'
+import React from 'react'
+import { View, Platform, Dimensions } from 'react-native'
 import Colors from "../Colors"
 
 export default WelcomeBottomView = ({ children, style }) => {

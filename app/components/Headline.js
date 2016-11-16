@@ -1,4 +1,5 @@
-import React, { Platform } from 'react-native'
+import React from 'react'
+import { Platform } from 'react-native'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"

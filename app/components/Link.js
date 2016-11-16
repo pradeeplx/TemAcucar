@@ -1,4 +1,5 @@
-import React, { TouchableOpacity } from 'react-native'
+import React from 'react'
+import { TouchableOpacity } from 'react-native'
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 

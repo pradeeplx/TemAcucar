@@ -1,4 +1,5 @@
-import React, { Component, View, ScrollView, Platform, NativeModules, TouchableOpacity, TextInput, Dimensions, StyleSheet } from 'react-native'
+import React, { Component } from 'react'
+import { View, ScrollView, Platform, NativeModules, TouchableOpacity, TextInput, Dimensions, StyleSheet } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -180,7 +181,7 @@ class ViewTransaction extends Component {
             placeholder="Clique aqui para escrever..."
             style={{
               flex: 10,
-              fontSize: 12 * fontFactor(), 
+              fontSize: 12 * fontFactor(),
               height: (inputFocused ? focusedInputHeight : blurredHeight),
               padding: 10,
               color: Colors.white,

@@ -1,4 +1,5 @@
-import React, { Component, Platform, PushNotificationIOS } from 'react-native'
+import React, { Component } from 'react'
+import { Platform, PushNotificationIOS } from 'react-native'
 import Communications from 'react-native-communications'
 import { connect } from 'react-redux'
 import codePush from "react-native-code-push"

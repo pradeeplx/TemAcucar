@@ -1,4 +1,5 @@
-import React, { Component, ScrollView, RefreshControl, View } from 'react-native'
+import React, { Component } from 'react'
+import { ScrollView, RefreshControl, View } from 'react-native'
 import Colors from '../Colors'
 
 export default class Tab extends Component {
@@ -7,8 +8,8 @@ export default class Tab extends Component {
     return (
       <ScrollView
         style={{
-          flex: 1, 
-          alignSelf: 'stretch', 
+          flex: 1,
+          alignSelf: 'stretch',
           backgroundColor: Colors.lightBeige,
         }}
         refreshControl={

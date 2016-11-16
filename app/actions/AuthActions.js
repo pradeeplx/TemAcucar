@@ -1,4 +1,5 @@
-import React, { Platform, NativeModules } from 'react-native'
+import React from 'react'
+import { Platform, NativeModules } from 'react-native'
 const FBLoginManager = NativeModules.FBLoginManager
 
 import { apiAction, apiDispatchAction } from './BasicActions'

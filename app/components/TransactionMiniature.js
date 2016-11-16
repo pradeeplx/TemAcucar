@@ -1,4 +1,5 @@
-import React, { Component, View, TouchableOpacity, Platform, StyleSheet } from 'react-native'
+import React, { Component } from 'react'
+import { View, TouchableOpacity, Platform, StyleSheet } from 'react-native'
 import truncate from 'truncate'
 import Colors from "../Colors"
 import Icon from "./Icon"

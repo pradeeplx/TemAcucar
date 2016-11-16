@@ -1,4 +1,5 @@
-import React, { Component, Platform } from 'react-native'
+import React, { Component } from 'react'
+import { Platform } from 'react-native'
 import { connect } from 'react-redux'
 import * as AuthActions from '../actions/AuthActions'
 import * as StoredAuthActions from '../actions/StoredAuthActions'
@@ -47,15 +48,15 @@ class AuthContainer extends Component {
     const { requestPasswordError, resetPasswordError, refreshingUser, refreshUserError } = props.auth
     return (
       // We're not getting user info
-      !gettingStoredAuth && 
+      !gettingStoredAuth &&
       // We're not in the middle of any kind of sign in/up/out
-      !facebookSigningIn && !signingIn && !signingUp && !signingOut && 
+      !facebookSigningIn && !signingIn && !signingUp && !signingOut &&
       // We're not in the middle of reset password flow
       !requestingPassword && !resetingPassword && !resetPassword &&
       // We don't have any error of the kinds that AuthRouter router will render SignInFailed
-      !facebookError && !signInError && 
+      !facebookError && !signInError &&
       // We don't have a sign up error, so SignUpForm can manage errors by itself
-      !signUpError && 
+      !signUpError &&
       // We don't have a request/reset password errors, so RequestPassword and ResetPassword can manage errors by themselves
       !requestPasswordError && !resetPasswordError &&
       // We're not in the middle of refreshing user

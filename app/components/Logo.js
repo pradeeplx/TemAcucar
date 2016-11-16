@@ -1,4 +1,5 @@
-import React, { Image, PixelRatio } from 'react-native'
+import React from 'react'
+import { Image, PixelRatio } from 'react-native'
 
 export default Logo = ({ style }) => {
   const ratio = PixelRatio.get()

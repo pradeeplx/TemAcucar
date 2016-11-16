@@ -1,4 +1,5 @@
-import React, { Platform } from 'react-native'
+import React from 'react'
+import { Platform } from 'react-native'
 import { apiAction } from './BasicActions'
 
 export function list() {

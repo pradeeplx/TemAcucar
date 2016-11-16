@@ -1,4 +1,5 @@
-import React, { Component, Text, Platform } from 'react-native'
+import React, { Component } from 'react'
+import { Text, Platform } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import Package from '../../package.json'
 import Config from 'react-native-config'

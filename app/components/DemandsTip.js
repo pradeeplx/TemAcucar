@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React from 'react'
 import FacebookTip from "../components/FacebookTip"
 import ShareTip from "../components/ShareTip"
 

@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React from 'react'
 import Ionicon from 'react-native-vector-icons/Ionicons'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"

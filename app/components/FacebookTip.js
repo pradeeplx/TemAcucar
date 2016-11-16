@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React from 'react'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Tip from "./Tip"

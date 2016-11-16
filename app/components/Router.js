@@ -1,4 +1,5 @@
-import React, { Component, BackAndroid } from 'react-native'
+import React, { Component } from 'react'
+import { BackAndroid } from 'react-native'
 import { Actions, Router as ReactNativeRouter } from 'react-native-router-flux'
 import Colors from "../Colors"
 
@@ -23,7 +24,7 @@ export default class Router extends Component {
 
   render() {
     return (
-      <ReactNativeRouter 
+      <ReactNativeRouter
         ref="router"
         hideNavBar={true}
         { ...this.props }

@@ -1,4 +1,5 @@
-import React, { Platform } from 'react-native'
+import React from 'react'
+import { Platform } from 'react-native'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'

@@ -1,4 +1,4 @@
-import React, { Component } from 'react-native'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Communications from 'react-native-communications'
 import moment from 'moment'

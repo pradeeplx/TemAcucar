@@ -1,4 +1,5 @@
-import React, { Component, View } from 'react-native'
+import React, { Component } from 'react'
+import { View } from 'react-native'
 import { connect } from 'react-redux'
 
 import * as LocationActions from '../actions/LocationActions'

@@ -1,4 +1,5 @@
-import React, { Platform, Component } from 'react-native'
+import React, { Component } from 'react'
+import { Platform } from 'react-native'
 import { connect } from 'react-redux'
 import Communications from 'react-native-communications'
 import codePush from "react-native-code-push"

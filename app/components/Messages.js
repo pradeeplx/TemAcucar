@@ -1,4 +1,5 @@
-import React, { Component, View } from 'react-native'
+import React, { Component } from 'react'
+import { View } from 'react-native'
 import moment from 'moment'
 import GiftedSpinner from 'react-native-gifted-spinner'
 import Colors from "../Colors"

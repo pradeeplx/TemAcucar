@@ -1,4 +1,5 @@
-import React, { Component, View } from 'react-native'
+import React, { Component } from 'react'
+import { View } from 'react-native'
 import GiftedSpinner from 'react-native-gifted-spinner'
 import LoadMore from "../components/LoadMore"
 import TransactionDemand from "../components/TransactionDemand"

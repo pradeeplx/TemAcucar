@@ -1,4 +1,5 @@
-import React, { Component, TouchableOpacity, View, StyleSheet } from 'react-native'
+import React, { Component } from 'react'
+import { TouchableOpacity, View, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import HtmlSentence from "./HtmlSentence"
 import TimeAgo from "./TimeAgo"

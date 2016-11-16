@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React from 'react'
 import BottomView from "./BottomView"
 import BottomButton from "./BottomButton"
 

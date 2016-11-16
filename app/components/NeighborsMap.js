@@ -1,4 +1,5 @@
-import React, { View, Image, Dimensions } from 'react-native'
+import React from 'react'
+import { View, Image, Dimensions } from 'react-native'
 import MapText from "./MapText"
 import Colors from "../Colors"
 

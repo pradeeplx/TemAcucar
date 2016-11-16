@@ -1,4 +1,5 @@
-import React, { View, Platform, StyleSheet } from 'react-native'
+import React from 'react'
+import { View, Platform, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import Headline from "./Headline"
 

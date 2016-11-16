@@ -1,4 +1,5 @@
-import React, { View, Image } from 'react-native'
+import React from 'react'
+import { View, Image } from 'react-native'
 import BaseScreen from "./BaseScreen"
 import Logo from "../components/Logo"
 import LogoBigIcon from "./LogoBigIcon"
@@ -24,4 +25,3 @@ export default SimpleScreen = ({ children, headline, navBar, navBarTitle, addTop
     {children}
   </BaseScreen>
 )
- 

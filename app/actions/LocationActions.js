@@ -1,4 +1,5 @@
-import React, { Platform } from 'react-native'
+import React from 'react'
+import { Platform } from 'react-native'
 import { updateCurrentUser } from './BasicActions'
 
 function parseTypes(types) {

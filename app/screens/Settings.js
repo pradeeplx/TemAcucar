@@ -1,4 +1,5 @@
-import React, { Component, View, Switch } from 'react-native'
+import React, { Component } from 'react'
+import { View, Switch } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import Colors from "../Colors"
 import NavBar from "../components/NavBar"

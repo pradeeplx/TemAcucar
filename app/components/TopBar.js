@@ -1,4 +1,5 @@
-import React, { Platform, View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import React from 'react'
+import { Platform, View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
@@ -16,7 +17,7 @@ export default TopBar = ({ onMenuOpen }) => (
     borderBottomWidth: 1,
   }}>
     <View style={{
-      flex: 1, 
+      flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
     }}>

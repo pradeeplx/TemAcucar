@@ -1,4 +1,5 @@
-import React, { Component, Platform, View, Text } from 'react-native'
+import React, { Component } from 'react'
+import { Platform, View, Text } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 
 import SimpleScreen from "../components/SimpleScreen"

@@ -1,4 +1,5 @@
-import React, { Dimensions } from 'react-native'
+import React from 'react'
+import { Dimensions } from 'react-native'
 
 export function fontFactor() {
   const dimensions = Dimensions.get('window')

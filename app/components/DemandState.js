@@ -1,4 +1,5 @@
-import React, { View, StyleSheet } from 'react-native'
+import React from 'react'
+import { View, StyleSheet } from 'react-native'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 
@@ -14,7 +15,7 @@ export default DemandState = ({ state, style }) => (
     justifyContent: 'center',
     alignSelf: 'center',
   }, style]}>
-    <Icon name={(state === 'completed' ? 'ios-checkmark-circle-outline' : (state === 'canceled' ? 'ios-close-circle-outline' : (state === 'flagged' ? 'ios-warning-outline' : 'ios-time-outline')))} style={{ 
+    <Icon name={(state === 'completed' ? 'ios-checkmark-circle-outline' : (state === 'canceled' ? 'ios-close-circle-outline' : (state === 'flagged' ? 'ios-warning-outline' : 'ios-time-outline')))} style={{
       color: Colors.white,
       fontSize: 14 * fontFactor(),
       marginRight: 6,

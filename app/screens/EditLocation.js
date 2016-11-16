@@ -1,4 +1,5 @@
-import React, { Component, View, Alert } from 'react-native'
+import React, { Component } from 'react'
+import { View, Alert } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import GiftedSpinner from 'react-native-gifted-spinner'

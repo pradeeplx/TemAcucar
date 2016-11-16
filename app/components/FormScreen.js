@@ -1,4 +1,5 @@
-import React, { Platform, View, Dimensions } from 'react-native'
+import React from 'react'
+import { Platform, View, Dimensions } from 'react-native'
 
 import Colors from "../Colors"
 import BaseScreen from "./BaseScreen"

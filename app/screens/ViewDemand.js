@@ -1,4 +1,5 @@
-import React, { Component, Alert, ScrollView, View, Platform, StyleSheet } from 'react-native'
+import React, { Component } from 'react'
+import { Alert, ScrollView, View, Platform, StyleSheet } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import truncate from 'truncate'
 
@@ -135,7 +136,7 @@ export default class ViewDemand extends Component {
                 borderColor: Colors.gray,
                 borderBottomWidth: StyleSheet.hairlineWidth,
               }}>
-                <Icon name='ios-checkmark-circle-outline' style={{ 
+                <Icon name='ios-checkmark-circle-outline' style={{
                   color: Colors.green,
                   fontSize: 20 * fontFactor(),
                   marginBottom: 6,
@@ -158,7 +159,7 @@ export default class ViewDemand extends Component {
                 borderColor: Colors.gray,
                 borderBottomWidth: StyleSheet.hairlineWidth,
               }}>
-                <Icon name='ios-warning-outline' style={{ 
+                <Icon name='ios-warning-outline' style={{
                   color: Colors.darkBeige,
                   fontSize: 20 * fontFactor(),
                   marginBottom: 6,
@@ -181,7 +182,7 @@ export default class ViewDemand extends Component {
                 borderColor: Colors.gray,
                 borderBottomWidth: StyleSheet.hairlineWidth,
               }}>
-                <Icon name='ios-close-circle-outline' style={{ 
+                <Icon name='ios-close-circle-outline' style={{
                   color: Colors.red,
                   fontSize: 20 * fontFactor(),
                   marginBottom: 6,

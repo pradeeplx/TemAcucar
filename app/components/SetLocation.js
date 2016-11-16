@@ -1,4 +1,5 @@
-import React, { Platform, Component, View, Image } from 'react-native'
+import React, { Component } from 'react'
+import { Platform, View, Image } from 'react-native'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
 
@@ -46,37 +47,37 @@ class SetLocation extends Component {
             longitude={longitude}
             text="Seu endereço será sempre privado"
           />
-          <FormTextInput 
+          <FormTextInput
             name='thoroughfare'
             title='Rua, Av., etc'
             placeholder='Sua rua, etc'
             {...thoroughfare}
           />
-          <FormTextInput 
+          <FormTextInput
             name='subThoroughfare'
             title='Número'
             placeholder='Seu número'
             {...subThoroughfare}
           />
-          <FormTextInput 
+          <FormTextInput
             name='complement'
             title='Complemento'
             placeholder='(opcional)'
             {...complement}
           />
-          <FormTextInput 
+          <FormTextInput
             name='subLocality'
             title='Bairro'
             placeholder='Seu bairro'
             {...subLocality}
           />
-          <FormTextInput 
+          <FormTextInput
             name='locality'
             title='Cidade'
             placeholder='Sua cidade'
             {...locality}
           />
-          <FormTextInput 
+          <FormTextInput
             name='administrativeArea'
             title='Estado'
             placeholder='Seu estado'

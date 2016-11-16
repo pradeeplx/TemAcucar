@@ -1,4 +1,5 @@
-import React, { Component, View, Platform, TouchableOpacity } from 'react-native'
+import React, { Component } from 'react'
+import { View, Platform, TouchableOpacity } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { validateFunction } from 'validate-model'
 import { reduxForm } from 'redux-form'
@@ -72,7 +73,7 @@ class NewReview extends Component {
               </TouchableOpacity>
             )) }
           </View>
-          <FormTextInput 
+          <FormTextInput
             name='text'
             title='Como foi?'
             placeholder={`Deu tudo certo? Conte para a vizinhança sua experiência com ${user.first_name}!`}

@@ -1,4 +1,4 @@
-import React from 'react-native'
+import React from 'react'
 import moment from 'moment'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"

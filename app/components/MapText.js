@@ -1,4 +1,5 @@
-import React, { View, Image, Platform } from 'react-native'
+import React from 'react'
+import { View, Image, Platform } from 'react-native'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 
@@ -17,7 +18,7 @@ export default MapText = ({ children }) => (
       borderRadius: 12,
     }}>
       <Sentence style={[{
-        color: Colors.blue, 
+        color: Colors.blue,
         textAlign: 'center',
         fontSize: 10 * fontFactor(),
       }, (Platform.OS === 'ios' ? { fontFamily: 'Avenir-Black' } : { fontWeight: 'bold' })]}>

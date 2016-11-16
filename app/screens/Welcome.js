@@ -1,4 +1,5 @@
-import React, { Component, View, Image, Text } from 'react-native'
+import React, { Component } from 'react'
+import { View, Image, Text } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import Swiper from 'react-native-swiper'

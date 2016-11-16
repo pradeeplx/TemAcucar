@@ -1,4 +1,5 @@
-import React, { Image, PixelRatio, Dimensions } from 'react-native'
+import React from 'react'
+import { Image, PixelRatio, Dimensions } from 'react-native'
 
 export default WelcomeNotebookIcon = ({ name, style }) => {
   const ratio = PixelRatio.get()

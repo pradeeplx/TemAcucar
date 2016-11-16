@@ -1,4 +1,5 @@
-import React, { View, ScrollView } from 'react-native'
+import React from 'react'
+import { View, ScrollView } from 'react-native'
 import Colors from "../Colors"
 import NavBar from "../components/NavBar"
 import Demands from "../components/Demands"
