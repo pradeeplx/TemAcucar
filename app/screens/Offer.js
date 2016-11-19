@@ -13,7 +13,7 @@ export default Offer = ({ onDismiss, onAccept }) => (
     <Headline style={{
       fontSize: 14 * fontFactor(),
     }}>
-      O Tem Açúcar precisa de você!
+      Batemos nossa meta!
     </Headline>
     <HtmlSentence style={{
       fontSize: 12 * fontFactor(),
@@ -21,7 +21,7 @@ export default Offer = ({ onDismiss, onAccept }) => (
       textAlign: 'center',
       marginHorizontal: 20,
     }}>
-      {`Temos só <b>${Math.round(((new Date("2016-11-18T21:00:00+00:00")).getTime() - Date.now()) / 1000 / 60 / 60 / 24)} dias</b> para fazer acontecer um Tem Açúcar que é mais do que empréstimos: doações, caronas, ajudinhas e muito mais! Mas sem o seu apoio o projeto não sai do papel ;)`}
+      Graças a você o Tem Açúcar 2.0 vai acontecer!!! Muito obrigada pela colaboração :D
     </HtmlSentence>
     <Button
       onPress={onAccept}
@@ -33,7 +33,7 @@ export default Offer = ({ onDismiss, onAccept }) => (
         borderColor: Colors.pink,
       }}
     >
-      Apoie o novo Tem Açúcar
+      Conheça o novo Tem Açúcar
     </Button>
     <BottomView>
       <View style={{flex: 1}}>
@@ -41,7 +41,7 @@ export default Offer = ({ onDismiss, onAccept }) => (
           textAlign: 'center',
           paddingBottom: 20,
         }}>
-          Não, obrigado
+          Entrar no app
         </Link>
       </View>
     </BottomView>
