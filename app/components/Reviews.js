@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Platform, View, Text } from 'react-native'
-import GiftedSpinner from 'react-native-gifted-spinner'
+import { Platform, View, Text, ActivityIndicator } from 'react-native'
 
 import Colors from "../Colors"
 import Sentence from "./Sentence"
@@ -26,7 +25,7 @@ export default class Reviews extends Component {
             currentUser={currentUser}
           />
         )) }
-        { listing && <GiftedSpinner style={{ marginTop: 20 }} /> }
+        { listing && <ActivityIndicator style={{ marginTop: 20 }} /> }
         { reviews.length === 0 && !listing && <NoReviews user={user} currentUser={currentUser} /> }
         { canList && !listing &&
           <LoadMore onPress={onList} style={{

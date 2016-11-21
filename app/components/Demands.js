@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
-import GiftedSpinner from 'react-native-gifted-spinner'
+import { View, ActivityIndicator } from 'react-native'
 
 import LoadMore from "./LoadMore"
 import DemandMiniature from "./DemandMiniature"
@@ -34,7 +33,7 @@ export default class Demands extends Component {
           </View>
         )) }
         { demands.length === 1 && showTip && <DemandsTip {...tipProps} /> }
-        { listing && <GiftedSpinner style={{ marginTop: 10 }} /> }
+        { listing && <ActivityIndicator style={{ marginTop: 10 }} /> }
         { canList && !listing &&
           <LoadMore onPress={onList} />
         }

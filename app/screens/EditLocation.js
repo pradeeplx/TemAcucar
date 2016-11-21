@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { View, Alert } from 'react-native'
+import { View, Alert, ActivityIndicator } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
-import GiftedSpinner from 'react-native-gifted-spinner'
 
 import Colors from "../Colors"
 import NavBar from "../components/NavBar"
@@ -36,7 +35,7 @@ export default class EditLocation extends Component {
         backgroundColor: Colors.white,
       }}>
         <NavBar title="Alterar endereço" onBack={this.handleBack.bind(this)} />
-        { startingUp ? <GiftedSpinner style={{ marginTop: 20 }} /> : <SetLocation {...this.props} /> }
+        { startingUp ? <ActivityIndicator style={{ marginTop: 20 }} /> : <SetLocation {...this.props} /> }
       </View>
     )
   }

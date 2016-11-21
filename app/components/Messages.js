@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, ActivityIndicator } from 'react-native'
 import moment from 'moment'
-import GiftedSpinner from 'react-native-gifted-spinner'
 import Colors from "../Colors"
 import Sentence from "../components/Sentence"
 import LoadMore from "../components/LoadMore"
@@ -30,7 +29,7 @@ export default class Messages extends Component {
         { canList && !listing &&
           <LoadMore onPress={onList} />
         }
-        { listing && <GiftedSpinner style={{ marginTop: 10, marginBottom: 20 }} /> }
+        { listing && <ActivityIndicator style={{ marginTop: 10, marginBottom: 20 }} /> }
         { messages.map((message) => {
           const compareDate = moment(message.created_at).format("DD/MM/YYYY")
           date = null

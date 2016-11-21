@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
-import GiftedSpinner from 'react-native-gifted-spinner'
+import { View, ActivityIndicator } from 'react-native'
 import LoadMore from "../components/LoadMore"
 import TransactionDemand from "../components/TransactionDemand"
 import NoTransactionDemands from "../components/NoTransactionDemands"
@@ -22,7 +21,7 @@ export default class TransactionDemands extends Component {
             onCancel={onCancel}
           />
         )) }
-        { listing && <GiftedSpinner style={{ marginTop: 10 }} /> }
+        { listing && <ActivityIndicator style={{ marginTop: 10 }} /> }
         { demands.length === 0 && !listing && <NoTransactionDemands /> }
         { canList && !listing &&
           <LoadMore onPress={onList} />

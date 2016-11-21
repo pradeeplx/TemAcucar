@@ -1,6 +1,5 @@
 import React from 'react'
 import { View } from 'react-native'
-import GiftedSpinner from 'react-native-gifted-spinner'
 import Colors from "../Colors"
 import TransactionMiniature from "./TransactionMiniature"
 
