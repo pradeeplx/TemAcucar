@@ -1,5 +1,5 @@
 import 'react-native'
-import React from 'react-native'
+import React from 'react'
 import FormError from '../FormError'
 import renderer from 'react-test-renderer'
 
