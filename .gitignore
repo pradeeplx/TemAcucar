@@ -37,6 +37,8 @@ npm-debug.log
 *.sublime-project
 *.sublime-workspace
 
+**/__tests__/__snapshots__
+
 .env
 .env.debug
 .env.staging
