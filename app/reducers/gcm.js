@@ -6,7 +6,7 @@ export default function gcm(state = initialState, action) {
   switch (action.type) {
     case 'GCM_REGISTER':
       return {
-        ...state, 
+        ...state,
         token: action.token,
       }
     default:

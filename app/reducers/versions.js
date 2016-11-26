@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   startingUp: true,
   list: [],
   listing: false,
@@ -10,7 +10,7 @@ export default function versions(state = initialState, action) {
   switch (action.type) {
     case 'VERSIONS_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         listing: true,
         listError: null,
       }
@@ -23,14 +23,14 @@ export default function versions(state = initialState, action) {
       }
     case 'VERSIONS_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
         startingUp: false,
         listError: action.error,
       }
     case 'VERSIONS_IGNORE_UPDATE':
       return {
-        ...state, 
+        ...state,
         ignoreUpdate: true,
       }
     default:

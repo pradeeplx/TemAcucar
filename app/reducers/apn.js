@@ -6,7 +6,7 @@ export default function apn(state = initialState, action) {
   switch (action.type) {
     case 'APN_REGISTER':
       return {
-        ...state, 
+        ...state,
         token: action.token,
       }
     default:

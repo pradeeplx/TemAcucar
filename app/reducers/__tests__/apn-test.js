@@ -1,10 +1,10 @@
-import reducer from '../gcm'
+import reducer from '../apn'
 
-test('gcm reducer', () => {
+test('apn reducer', () => {
   const initialState = { token: null, foo: 'bar' }
 
-  describe('GCM_REGISTER', () => {
-    const action = { type: 'GCM_REGISTER', token: 'XYZ' }
+  describe('APN_REGISTER', () => {
+    const action = { type: 'APN_REGISTER', token: 'XYZ' }
 
     expect(
       reducer(initialState, action)
