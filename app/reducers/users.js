@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
   startingUp: true,
   listing: false,
@@ -9,13 +9,13 @@ export default function users(state = initialState, action) {
   switch (action.type) {
     case 'USERS_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         listing: true,
         listError: null,
       }
     case 'USERS_LIST_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: action.list,
         listing: false,
         startingUp: false,
@@ -23,7 +23,7 @@ export default function users(state = initialState, action) {
       }
     case 'USERS_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
         startingUp: false,
         listError: action.error,
