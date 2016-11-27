@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
   listing: false,
   offset: 0,
@@ -10,13 +10,13 @@ export default function adminDemands(state = initialState, action) {
   switch (action.type) {
     case 'ADMIN_DEMANDS_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         listing: true,
         listError: null,
       }
     case 'ADMIN_DEMANDS_LIST_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.concat(action.list),
         listing: false,
         offset: state.offset + action.list.length,
@@ -25,19 +25,19 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'ADMIN_DEMANDS_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
         listError: action.error,
       }
     case 'DEMANDS_CREATE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: [action.demand].concat(state.list),
         offset: state.offset + 1,
       }
     case 'DEMANDS_COMPLETE_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, completing: true}
@@ -48,7 +48,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_COMPLETE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return action.demand
@@ -59,7 +59,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_COMPLETE_FAILURE':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, completing: false}
@@ -70,7 +70,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_CANCEL_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, canceling: true}
@@ -81,7 +81,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_CANCEL_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return action.demand
@@ -92,7 +92,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_CANCEL_FAILURE':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, canceling: false}
@@ -103,7 +103,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_REACTIVATE_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, reactivating: true}
@@ -114,7 +114,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_REACTIVATE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return action.demand
@@ -125,7 +125,7 @@ export default function adminDemands(state = initialState, action) {
       }
     case 'DEMANDS_REACTIVATE_FAILURE':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, reactivating: false}
