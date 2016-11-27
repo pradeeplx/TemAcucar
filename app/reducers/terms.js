@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   acceptingTerms: false,
   acceptTermsError: null,
   rejectedTerms: false,
@@ -9,34 +9,34 @@ export default function terms(state = initialState, action) {
   switch (action.type) {
     case 'TERMS_ACCEPT_REQUEST':
       return {
-        ...state, 
+        ...state,
         acceptingTerms: true,
       }
     case 'TERMS_ACCEPT_SUCCESS':
       return {
-        ...state, 
+        ...state,
         acceptingTerms: false,
       }
     case 'TERMS_ACCEPT_FAILURE':
       return {
-        ...state, 
+        ...state,
         acceptingTerms: false,
         acceptTermsError: action.error,
       }
     case 'TERMS_REJECT':
       return {
-        ...state, 
+        ...state,
         rejectedTerms: true,
       }
     case 'TERMS_CANCEL_REJECT':
       return {
-        ...state, 
+        ...state,
         rejectedTerms: false,
         scrolledToBottom: false,
       }
     case 'TERMS_SCROLL_TO_BOTTOM':
       return {
-        ...state, 
+        ...state,
         scrolledToBottom: true,
       }
     case 'STORED_AUTH_RESET_SUCCESS':

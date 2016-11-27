@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   confirmingEmail: false,
   confirmEmailError: null,
   updatingEmail: false,
@@ -9,41 +9,41 @@ export default function config(state = initialState, action) {
   switch (action.type) {
     case 'CONFIG_CONFIRM_EMAIL_REQUEST':
       return {
-        ...state, 
+        ...state,
         confirmingEmail: true,
         confirmEmailError: null,
         updateEmailError: null,
       }
     case 'CONFIG_CONFIRM_EMAIL_SUCCESS':
       return {
-        ...state, 
+        ...state,
         confirmingEmail: false,
         confirmEmailError: null,
         updateEmailError: null,
       }
     case 'CONFIG_CONFIRM_EMAIL_FAILURE':
       return {
-        ...state, 
+        ...state,
         confirmingEmail: false,
         confirmEmailError: action.error,
       }
     case 'CONFIG_UPDATE_EMAIL_REQUEST':
       return {
-        ...state, 
+        ...state,
         updatingEmail: true,
         confirmEmailError: null,
         updateEmailError: null,
       }
     case 'CONFIG_UPDATE_EMAIL_SUCCESS':
       return {
-        ...state, 
+        ...state,
         updatingEmail: false,
         confirmEmailError: null,
         updateEmailError: null,
       }
     case 'CONFIG_UPDATE_EMAIL_FAILURE':
       return {
-        ...state, 
+        ...state,
         updatingEmail: false,
         updateEmailError: action.error,
       }

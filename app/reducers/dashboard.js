@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   startingUp: true,
   drawerOpen: false,
   signingOut: false,
@@ -8,22 +8,22 @@ export default function dashboard(state = initialState, action) {
   switch (action.type) {
     case 'DASHBOARD_OPEN_DRAWER':
       return {
-        ...state, 
+        ...state,
         drawerOpen: true,
       }
     case 'DASHBOARD_CLOSE_DRAWER':
       return {
-        ...state, 
+        ...state,
         drawerOpen: false,
       }
     case 'DASHBOARD_SIGN_OUT':
       return {
-        ...state, 
+        ...state,
         signingOut: true,
       }
     case 'DASHBOARD_START_UP':
       return {
-        ...state, 
+        ...state,
         startingUp: false,
       }
     case 'DASHBOARD_REFRESH':
