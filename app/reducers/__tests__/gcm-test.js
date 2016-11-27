@@ -1,19 +1,13 @@
-import reducer from '../gcm'
+import reducer, { initialState } from '../gcm'
 
-test('gcm reducer', () => {
-  const initialState = { token: null, foo: 'bar' }
+test('initialState', () => {
+  expect(initialState).toEqual({ token: null })
+})
 
-  describe('GCM_REGISTER', () => {
-    const action = { type: 'GCM_REGISTER', token: 'XYZ' }
+it('GCM_REGISTER action', () => {
+  const action = { type: 'GCM_REGISTER', token: 'XYZ' }
 
-    expect(
-      reducer(initialState, action)
-    ).toEqual({ token: 'XYZ', foo: 'bar' })
-  })
-
-  describe('Any other action', () => {
-    const action = { type: 'FOO' }
-
-    expect(reducer(initialState, action)).toEqual(initialState)
-  })
+  expect(
+    reducer(initialState, action)
+  ).toEqual({ token: 'XYZ' })
 })

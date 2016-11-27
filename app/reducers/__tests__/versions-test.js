@@ -1,41 +1,64 @@
 import reducer, { initialState } from '../versions'
 
-test('versions reducer', () => {
-  describe('VERSIONS_LIST_REQUEST', () => {
-    const newState = reducer({ ...initialState, listError: 'foo' }, { type: 'VERSIONS_LIST_REQUEST' })
+test('initialState', () => {
+  expect(initialState).toEqual({
+    startingUp: true,
+    list: [],
+    listing: false,
+    listError: null,
+    ignoreUpdate: false,
+  })
+})
 
-    expect(initialState.listing).toBeFalsy()
+describe('VERSIONS_LIST_REQUEST action', () => {
+  const action = { type: 'VERSIONS_LIST_REQUEST' }
+  const newState = reducer({ ...initialState, listError: 'foo' }, action)
 
+  it('sets listing to true', () => {
     expect(newState.listing).toBeTruthy()
+  })
+  it('clears listError', () => {
     expect(newState.listError).toBeNull()
   })
+})
 
-  describe('VERSIONS_LIST_SUCCESS', () => {
-    const action = {
-      type: 'VERSIONS_LIST_SUCCESS',
-      list: ['lemon'],
-    }
-    const newState = reducer({ ...initialState, listing: true }, action)
+describe('VERSIONS_LIST_SUCCESS action', () => {
+  const action = {
+    type: 'VERSIONS_LIST_SUCCESS',
+    list: ['lemon'],
+  }
+  const newState = reducer({ ...initialState, listing: true }, action)
 
+  it('sets startingUp to false', () => {
     expect(newState.startingUp).toBeFalsy()
-    expect(newState.listing).toBeFalsy()
-    expect(newState.list).toInclude('lemon')
   })
-
-  describe('VERSIONS_LIST_FAILURE', () => {
-    const action = {
-      type: 'VERSIONS_LIST_FAILURE',
-      error: 'Bug!',
-    }
-    const newState = reducer({ ...initialState, listing: true }, action)
-
+  it('sets listing to false', () => {
     expect(newState.listing).toBeFalsy()
+  })
+  it('sets the list from action.list', () => {
+    expect(newState.list).toContain('lemon')
+  })
+})
+
+describe('VERSIONS_LIST_FAILURE action', () => {
+  const action = {
+    type: 'VERSIONS_LIST_FAILURE',
+    error: 'Bug!',
+  }
+  const newState = reducer({ ...initialState, listing: true }, action)
+
+  it('sets listing to false', () => {
+    expect(newState.listing).toBeFalsy()
+  })
+  it('sets startingUp to false', () => {
     expect(newState.startingUp).toBeFalsy()
+  })
+  it('sets listError from action.error', () => {
     expect(newState.listError).toBe('Bug!')
   })
+})
 
-  describe('VERSIONS_IGNORE_UPDATE', () => {
-    const newState = reducer(initialState, { type: 'VERSIONS_IGNORE_UPDATE' })
-    expect(newState.ignoreUpdate).toBeTruthy()
-  })
+it('VERSIONS_IGNORE_UPDATE action', () => {
+  const newState = reducer(initialState, { type: 'VERSIONS_IGNORE_UPDATE' })
+  expect(newState.ignoreUpdate).toBeTruthy()
 })

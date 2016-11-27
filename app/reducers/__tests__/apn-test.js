@@ -1,19 +1,13 @@
-import reducer from '../apn'
+import reducer, { initialState } from '../apn'
 
-test('apn reducer', () => {
-  const initialState = { token: null, foo: 'bar' }
+test('initialState', () => {
+  expect(initialState).toEqual({ token: null })
+})
 
-  describe('APN_REGISTER', () => {
-    const action = { type: 'APN_REGISTER', token: 'XYZ' }
+it('APN_REGISTER action', () => {
+  const action = { type: 'APN_REGISTER', token: 'XYZ' }
 
-    expect(
-      reducer(initialState, action)
-    ).toEqual({ token: 'XYZ', foo: 'bar' })
-  })
-
-  describe('Any other action', () => {
-    const action = { type: 'FOO' }
-
-    expect(reducer(initialState, action)).toEqual(initialState)
-  })
+  expect(
+    reducer(initialState, action)
+  ).toEqual({ token: 'XYZ' })
 })
