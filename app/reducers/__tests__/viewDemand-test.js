@@ -16,11 +16,8 @@ describe('VIEW_DEMAND_MOUNT action', () => {
 })
 
 describe('VIEW_DEMAND_MOUNT action', () => {
-  const prevState = { demand: 'foo', shouldGoToDashboard: true }
-  const newState = reducer(prevState, { type: 'VIEW_DEMAND_UNMOUNT' })
-
   it('resets state to initialState', () => {
-    expect(newState).toEqual(initialState)
+    expect(reducer({}, { type: 'VIEW_DEMAND_UNMOUNT' })).toEqual(initialState)
   })
 })
 

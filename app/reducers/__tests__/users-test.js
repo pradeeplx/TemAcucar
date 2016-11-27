@@ -53,34 +53,20 @@ describe('USERS_LIST_FAILURE action', () => {
   })
 })
 
-describe('reset actions', () => {
-  const prevState = {
-    list: ['foo'],
-    startingUp: false,
-    listing: true,
-    listError: 'bar',
-  }
-  describe('DASHBOARD_REFRESH action', () => {
-    const newState = reducer(prevState, { type: 'DASHBOARD_REFRESH' })
-
-    it('resets the state', () => {
-      expect(newState).toEqual(initialState)
-    })
+describe('DASHBOARD_REFRESH action', () => {
+  it('resets the state', () => {
+    expect(reducer({}, { type: 'DASHBOARD_REFRESH' })).toEqual(initialState)
   })
+})
 
-  describe('LOCATION_SET_LOCATION_SUCCESS action', () => {
-    const newState = reducer(prevState, { type: 'LOCATION_SET_LOCATION_SUCCESS' })
-
-    it('resets the state', () => {
-      expect(newState).toEqual(initialState)
-    })
+describe('LOCATION_SET_LOCATION_SUCCESS action', () => {
+  it('resets the state', () => {
+    expect(reducer({}, { type: 'LOCATION_SET_LOCATION_SUCCESS' })).toEqual(initialState)
   })
+})
 
-  describe('STORED_AUTH_RESET_SUCCESS action', () => {
-    const newState = reducer(prevState, { type: 'STORED_AUTH_RESET_SUCCESS' })
-
-    it('resets the state', () => {
-      expect(newState).toEqual(initialState)
-    })
+describe('STORED_AUTH_RESET_SUCCESS action', () => {
+  it('resets the state', () => {
+    expect(reducer({}, { type: 'STORED_AUTH_RESET_SUCCESS' })).toEqual(initialState)
   })
 })

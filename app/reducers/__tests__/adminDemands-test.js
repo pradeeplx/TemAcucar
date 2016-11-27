@@ -232,23 +232,14 @@ describe('DEMANDS_REACTIVATE_FAILURE action', () => {
   })
 })
 
-describe('reset actions', () => {
-  const fooState = {
-    list: ['foo', 'bar'],
-    listing: true,
-    offset: 10,
-    canList: true,
-    listError: 'foo',
-  }
-
-  describe('DASHBOARD_REFRESH action', () => {
-    it('resets the initial configuration', () => {
-      expect(reducer(fooState, { type: 'DASHBOARD_REFRESH' })).toEqual(initialState)
-    })
+describe('DASHBOARD_REFRESH action', () => {
+  it('resets the initial configuration', () => {
+    expect(reducer({}, { type: 'DASHBOARD_REFRESH' })).toEqual(initialState)
   })
-  describe('STORED_AUTH_RESET_SUCCESS action', () => {
-    it('resets the initial configuration', () => {
-      expect(reducer(fooState, { type: 'STORED_AUTH_RESET_SUCCESS' })).toEqual(initialState)
-    })
+})
+
+describe('STORED_AUTH_RESET_SUCCESS action', () => {
+  it('resets the initial configuration', () => {
+    expect(reducer({}, { type: 'STORED_AUTH_RESET_SUCCESS' })).toEqual(initialState)
   })
 })
