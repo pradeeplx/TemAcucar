@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
   listing: true,
   offset: 0,
@@ -9,12 +9,12 @@ export default function readNotifications(state = initialState, action) {
   switch (action.type) {
     case 'READ_NOTIFICATIONS_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         listing: true,
       }
     case 'READ_NOTIFICATIONS_LIST_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.concat(action.list),
         listing: false,
         offset: state.offset + action.list.length,
@@ -22,7 +22,7 @@ export default function readNotifications(state = initialState, action) {
       }
     case 'READ_NOTIFICATIONS_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
       }
     case 'UNREAD_NOTIFICATIONS_READ_ALL_REQUEST':
@@ -30,13 +30,13 @@ export default function readNotifications(state = initialState, action) {
         state.list.map(notification => notification.id).indexOf(notification.id) < 0
       ))
       return {
-        ...state, 
+        ...state,
         list: newNotifications.concat(state.list),
         offset: state.offset + newNotifications.length,
       }
     case 'UNREAD_NOTIFICATIONS_READ_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(notification => {
           if (notification.id === action.notification.id) {
             return { ...action.notification, read: true }
