@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-const initialState = {
+export const initialState = {
   transaction: null,
   list: [],
   listing: true,
@@ -14,14 +14,14 @@ export default function messages(state = initialState, action) {
   switch (action.type) {
     case 'MESSAGES_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: (action.offset === 0 ? [] : state.list),
         listing: true,
         transaction: action.transaction,
       }
     case 'MESSAGES_LIST_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: action.list.reverse().concat(state.list),
         listing: false,
         offset: state.offset + action.list.length,
@@ -29,7 +29,7 @@ export default function messages(state = initialState, action) {
       }
     case 'MESSAGES_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
       }
     case 'MESSAGES_CREATE_REQUEST':
@@ -48,7 +48,7 @@ export default function messages(state = initialState, action) {
       }
     case 'MESSAGES_CREATE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         creating: false,
         createError: null,
       }
@@ -62,7 +62,7 @@ export default function messages(state = initialState, action) {
       if (!state.transaction || state.listing)
         return state
       const newMessages = action.list.filter(notification => (
-        notification.message && 
+        notification.message &&
         notification.transaction.id === state.transaction.id &&
         state.list.map(message => message.id).indexOf(notification.message.id) < 0
       )).map(notification => notification.message)

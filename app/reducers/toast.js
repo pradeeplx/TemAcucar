@@ -1,13 +1,13 @@
-const initialState = {
+export const initialState = {
   show: false,
   type: null,
   message: null,
   duration: 3500,
 }
 
-const success = (message) => ({ show: true, type: "success", message })
-const failure = (message) => ({ show: true, type: "failure", message: `Oops! ${message}. Por favor, tente novamente.` })
-const tip = (message) => ({ show: true, type: "tip", message })
+export const success = (message) => ({ show: true, type: "success", message })
+export const failure = (message) => ({ show: true, type: "failure", message: `Oops! ${message}. Por favor, tente novamente.` })
+export const tip = (message) => ({ show: true, type: "tip", message })
 const networkError = failure("Ocorreu um erro ao acessar nosso servidor")
 
 export default function toast(state = initialState, action) {
