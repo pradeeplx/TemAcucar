@@ -10,8 +10,10 @@ function parseTypes(types) {
     'park': 'thoroughfare',
     'point_of_interest': 'thoroughfare',
     'intersection': 'thoroughfare', 
+    'sublocality_level_2': 'thoroughfare',
     'street_number': 'subThoroughfare',
-    'sublocality': 'subLocality',
+    'sublocality_level_3': 'subThoroughfare',
+    'sublocality_level_1': 'subLocality',
     'locality': 'locality',
     'administrative_area_level_2': 'subAdministrativeArea',
     'administrative_area_level_1': 'administrativeArea',
@@ -26,12 +28,19 @@ function parseTypes(types) {
 
 function parseAddress(address) {
   let parsedAddress = {}
+  let shortThoroughfare = ""
   address.forEach(component => {
     const type = parseTypes(component.types)
     if (type) {
       parsedAddress[type] = component.long_name
+      if (type === 'thoroughfare')
+        shortThoroughfare = component.short_name
     }
   })
+  if (parsedAddress.subAdministrativeArea && !parsedAddress.locality)
+    parsedAddress.locality = parsedAddress.subAdministrativeArea
+  if (parsedAddress.locality === 'Brasília' && shortThoroughfare !== "")
+    parsedAddress.thoroughfare = shortThoroughfare
   return {
     ...parsedAddress,
     name: `${parsedAddress.thoroughfare}, ${parsedAddress.subThoroughfare}`
