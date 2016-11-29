@@ -1,0 +1,27 @@
+exports[`test renders correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#654C50",
+        "fontFamily": "Avenir",
+        "fontSize": 15.6328125,
+      },
+      Array [
+        Object {
+          "marginHorizontal": 16,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "#E9122B",
+          "marginTop": 24,
+        },
+      ],
+    ]
+  }>
+  Bug!
+</Text>
+`;
