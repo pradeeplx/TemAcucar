@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
   startingUp: true,
   listing: false,
@@ -14,13 +14,13 @@ export default function demands(state = initialState, action) {
   switch (action.type) {
     case 'DEMANDS_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         listing: true,
         listError: null,
       }
     case 'DEMANDS_LIST_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.concat(action.list),
         listing: false,
         offset: state.offset + action.list.length,
@@ -30,46 +30,46 @@ export default function demands(state = initialState, action) {
       }
     case 'DEMANDS_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
         startingUp: false,
         listError: action.error,
       }
     case 'DEMANDS_REFUSE_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.filter(demand => action.demand.id !== demand.id),
         offset: state.offset - 1,
       }
     case 'DEMANDS_FLAG_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.filter(demand => action.demand.id !== demand.id),
         offset: state.offset - 1,
       }
     case 'DEMANDS_CREATE_REQUEST':
       return {
-        ...state, 
+        ...state,
         lastCreated: null,
         creating: true,
         createError: null,
       }
     case 'DEMANDS_CREATE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         lastCreated: action.demand,
         creating: false,
         createError: null,
       }
     case 'DEMANDS_CREATE_FAILURE':
       return {
-        ...state, 
+        ...state,
         creating: false,
         createError: action.error,
       }
     case 'TRANSACTIONS_CREATE_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, creatingTransaction: true}
@@ -80,13 +80,13 @@ export default function demands(state = initialState, action) {
       }
     case 'TRANSACTIONS_CREATE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.filter(demand => action.transaction.demand.id !== demand.id),
         offset: state.offset - 1,
       }
     case 'TRANSACTIONS_CREATE_FAILURE':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, creatingTransaction: false}

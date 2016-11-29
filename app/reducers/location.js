@@ -1,7 +1,4 @@
-import React from 'react'
-import { Platform } from 'react-native'
-
-const initialState = {
+export const initialState = {
   latitude: null,
   longitude: null,
   address: null,
