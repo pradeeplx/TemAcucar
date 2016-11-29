@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
   count: 0,
   listing: false,
@@ -9,7 +9,7 @@ export default function unreadNotifications(state = initialState, action) {
   switch (action.type) {
     case 'UNREAD_NOTIFICATIONS_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         listing: true,
       }
     case 'UNREAD_NOTIFICATIONS_LIST_SUCCESS':
@@ -20,36 +20,36 @@ export default function unreadNotifications(state = initialState, action) {
       ))
       const notifications = newNotifications.concat(state.list)
       return {
-        ...state, 
+        ...state,
         list: notifications,
         count: notifications.filter(notification => !notification.read).length,
         listing: false,
       }
     case 'UNREAD_NOTIFICATIONS_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
       }
     case 'UNREAD_NOTIFICATIONS_READ_ALL_REQUEST':
       return {
-        ...state, 
+        ...state,
         count: 0,
         list: [],
         readingAll: true,
       }
     case 'UNREAD_NOTIFICATIONS_READ_ALL_SUCCESS':
       return {
-        ...state, 
+        ...state,
         readingAll: false,
       }
     case 'UNREAD_NOTIFICATIONS_READ_ALL_FAILURE':
       return {
-        ...state, 
+        ...state,
         readingAll: false,
       }
     case 'UNREAD_NOTIFICATIONS_READ_REQUEST':
       return {
-        ...state, 
+        ...state,
         count: (state.count > 0 ? state.count - 1 : state.count),
         list: state.list.map(notification => {
           if (notification.id === action.notification.id) {
@@ -61,13 +61,13 @@ export default function unreadNotifications(state = initialState, action) {
       }
     case 'APN_NOTIFY':
       return {
-        ...state, 
+        ...state,
         list: [action.notification].concat(state.list),
         count: state.count + 1,
       }
     case 'GCM_NOTIFY':
       return {
-        ...state, 
+        ...state,
         list: [action.notification].concat(state.list),
         count: state.count + 1,
       }

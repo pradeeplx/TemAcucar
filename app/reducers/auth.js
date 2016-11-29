@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   currentUser: null,
   credentials: null,
   startingUp: true,
@@ -23,42 +23,42 @@ export default function auth(state = initialState, action) {
   switch (action.type) {
     case 'STORED_AUTH_GET_REQUEST':
       return {
-        ...state, 
+        ...state,
         gettingStoredAuth: true,
       }
     case 'STORED_AUTH_GET_SUCCESS':
       return {
-        ...state, 
+        ...state,
         credentials: action.credentials,
         currentUser: action.currentUser,
         gettingStoredAuth: false,
       }
     case 'STORED_AUTH_GET_FAILURE':
       return {
-        ...state, 
+        ...state,
         gettingStoredAuth: false,
         startingUp: false,
       }
     case 'STORED_AUTH_RESET_SUCCESS':
       return {
-        ...state, 
+        ...state,
         credentials: null,
         currentUser: null,
       }
     case 'AUTH_REFRESH_USER_REQUEST':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         refreshingUser: true,
       }
     case 'AUTH_REFRESH_USER_SUCCESS':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         credentials: action.credentials,
@@ -68,16 +68,16 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_REFRESH_USER_FAILURE':
       return {
-        ...state, 
+        ...state,
         refreshingUser: false,
         refreshUserError: action.error,
         startingUp: false,
       }
     case 'AUTH_SIGN_IN_REQUEST':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         signInError: null,
@@ -87,9 +87,9 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_SIGN_IN_SUCCESS':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         credentials: action.credentials,
@@ -102,16 +102,16 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_SIGN_IN_FAILURE':
       return {
-        ...state, 
+        ...state,
         signingIn: false,
         signInError: action.error,
         startingUp: false,
       }
     case 'AUTH_SIGN_UP_REQUEST':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         signInError: null,
@@ -121,9 +121,9 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_SIGN_UP_SUCCESS':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         credentials: action.credentials,
@@ -135,19 +135,19 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_SIGN_UP_FAILURE':
       return {
-        ...state, 
+        ...state,
         currentUser: null,
         signingUp: false,
         signUpError: action.error,
       }
     case 'AUTH_SIGN_OUT_REQUEST':
       return {
-        ...state, 
+        ...state,
         signingOut: true,
       }
     case 'AUTH_SIGN_OUT_SUCCESS':
       return {
-        ...state, 
+        ...state,
         currentUser: null,
         credentials: null,
         signingOut: false,
@@ -155,7 +155,7 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_SIGN_OUT_FAILURE':
       return {
-        ...state, 
+        ...state,
         currentUser: null,
         credentials: null,
         signingOut: false,
@@ -174,9 +174,9 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_FACEBOOK_SUCCESS':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         credentials: action.credentials,
@@ -189,7 +189,7 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_FACEBOOK_FAILURE':
       return {
-        ...state, 
+        ...state,
         facebookSigningIn: false,
         facebookError: action.error,
         startingUp: false,
@@ -206,9 +206,9 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_FACEBOOK_CONNECT_SUCCESS':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         credentials: action.credentials,
@@ -217,15 +217,15 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_FACEBOOK_CONNECT_FAILURE':
       return {
-        ...state, 
+        ...state,
         facebookConnecting: false,
         facebookError: action.error,
       }
     case 'AUTH_REQUEST_PASSWORD_REQUEST':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         requestingPassword: true,
@@ -237,7 +237,7 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_REQUEST_PASSWORD_SUCCESS':
       return {
-        ...state, 
+        ...state,
         requestingPassword: false,
         resetPassword: true,
         requestPasswordError: null,
@@ -247,16 +247,16 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_REQUEST_PASSWORD_FAILURE':
       return {
-        ...state, 
+        ...state,
         requestingPassword: false,
         resetPassword: false,
         requestPasswordError: action.error,
       }
     case 'AUTH_RESET_PASSWORD_REQUEST':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         resetingPassword: true,
@@ -264,9 +264,9 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_RESET_PASSWORD_SUCCESS':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.currentUser,
         },
         credentials: action.credentials,
@@ -277,23 +277,23 @@ export default function auth(state = initialState, action) {
       }
     case 'AUTH_RESET_PASSWORD_FAILURE':
       return {
-        ...state, 
+        ...state,
         resetingPassword: false,
         resetPasswordError: action.error,
       }
     case 'CONFIG_UPDATE_EMAIL_NOTIFICATIONS_REQUEST':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.attributes,
         }
       }
     case 'CONFIG_UPDATE_APP_NOTIFICATIONS_REQUEST':
       return {
-        ...state, 
+        ...state,
         currentUser: {
-          ...state.currentUser, 
+          ...state.currentUser,
           ...action.attributes,
         }
       }
@@ -303,9 +303,9 @@ export default function auth(state = initialState, action) {
       // WARNING: do not pass action.currentUser object to any action unless it contains updated information of the current user.
       if ( action.credentials ) {
         return {
-          ...state, 
+          ...state,
           currentUser: {
-            ...state.currentUser, 
+            ...state.currentUser,
             ...action.currentUser,
           },
           credentials: action.credentials,
