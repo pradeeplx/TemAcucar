@@ -78,8 +78,9 @@ class ConfigContainer extends Component {
       return (<ReviewEmailRouter {...this.props} onConfirm={this.handleConfirmEmail.bind(this)} onUpdateEmail={this.handleUpdateEmail.bind(this)} onShowToast={this.handleShowToast.bind(this)} />)
     if (!currentUser.latitude || !currentUser.longitude || !currentUser.reviewed_location)
       return (<LocationContainer {...this.props} />)
-    if (displayOffer)
-      return (<OfferContainer {...this.props} />)
+    // Uncomment the next 2 lines if you want to display the offer for people who've been using the app for at least 2 days
+    // if (displayOffer)
+    //   return (<OfferContainer {...this.props} />)
     return (<DashboardContainer {...this.props} />)
   }
 }
