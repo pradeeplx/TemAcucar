@@ -350,57 +350,26 @@ describe('UNREAD_NOTIFICATIONS_LIST_SUCCESS action', () => {
     {
       ...initialState,
       list: [
-        { foo: 'bar', transactions: [{ id: 1 }, { id: 2 }] },
-        { foo: 'bar2', transactions: [{ id: 2 }, { id: 3 }] }
+        { id: 'd1', foo: 'bar', transactions: [{ id: 1 }, { id: 2 }] },
+        { id: 'd2', foo: 'bar2', transactions: [{ id: 2 }, { id: 3 }] }
       ],
     },
     {
       type: 'UNREAD_NOTIFICATIONS_LIST_SUCCESS',
       list: [
-        { message: { transaction_id: 2, text: 'foobar' }, transaction: { id: 2 } }
+        { message: 'foobar', transaction: { id: 2, demand: { id: 'd2' } } },
       ],
     }
   )
-  console.log(newState.list)
 
-  it('returns the state if listing is true', () => {
-    expect(reducer({ listing: true }, { type: 'UNREAD_NOTIFICATIONS_LIST_SUCCESS' }))
-      .toEqual({ listing: true })
+  it('concats new demands to beginning of list and updates old ones', () => {
+    expect(newState.list).toEqual([
+      { id: 'd4', transactions: [{ demand: { id: 'd4' }, id: 4 }] },
+      { foo: 'bar', id: 'd1', transactions: [{ id: 1 }, { demand: { id: 'd2' }, id: 2 }] },
+      { foo: 'bar2', id: 'd2', transactions: [{ demand: { id: 'd2' }, id: 2 }, { id: 3 }] },
+    ])
   })
 })
-// case 'UNREAD_NOTIFICATIONS_LIST_SUCCESS':
-//   const newTransactions = action.list.filter(notification => (
-//     notification.message &&
-//     notification.transaction &&
-//     [].concat(...state.list.map(demand => demand.transactions)).map(transaction => transaction.id).indexOf(notification.transaction.id) < 0
-//   )).map(notification => notification.transaction)
-//   const newDemands = newTransactions.map(transaction => {
-//     let transactions = []
-//     const index = state.list.map(demand => demand.id).indexOf(transaction.demand.id)
-//     if (index > -1)
-//       transactions = state.list[index].transactions
-//     return { ...transaction.demand, transactions: [transaction].concat(transactions) }
-//   })
-//   const oldDemands = state.list.filter(demand => (
-//     newDemands.map(newDemand => newDemand.id).indexOf(demand.id) < 0
-//   ))
-//   return {
-//     ...state,
-//     list: newDemands.concat(oldDemands.map(demand => {
-//       return {
-//         ...demand,
-//         transactions: demand.transactions.map(transaction => {
-//           const notifications = action.list.filter(notification => (notification.message && notification.transaction))
-//           const index = notifications.map(notification => notification.transaction.id).indexOf(transaction.id)
-//           if (index > -1) {
-//             return notifications[index].transaction
-//           } else {
-//             return transaction
-//           }
-//         })
-//       }
-//     }))
-//   }
 
 describe('DASHBOARD_REFRESH action', () => {
   it('resets the state', () => {
