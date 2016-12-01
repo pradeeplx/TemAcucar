@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
   listing: false,
   offset: 0,
@@ -13,13 +13,13 @@ export default function transactions(state = initialState, action) {
   switch (action.type) {
     case 'TRANSACTIONS_LIST_REQUEST':
       return {
-        ...state, 
+        ...state,
         listing: true,
         listError: null,
       }
     case 'TRANSACTIONS_LIST_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.concat(action.list),
         listing: false,
         offset: state.offset + action.list.length,
@@ -28,13 +28,13 @@ export default function transactions(state = initialState, action) {
       }
     case 'TRANSACTIONS_LIST_FAILURE':
       return {
-        ...state, 
+        ...state,
         listing: false,
         listError: action.error,
       }
     case 'TRANSACTIONS_CREATE_REQUEST':
       return {
-        ...state, 
+        ...state,
         lastCreated: null,
         creating: true,
         createError: null,
@@ -42,7 +42,7 @@ export default function transactions(state = initialState, action) {
     case 'TRANSACTIONS_CREATE_SUCCESS':
       const { transaction } = action
       return {
-        ...state, 
+        ...state,
         list: [{
           ...transaction.demand,
           transactions: [transaction],
@@ -54,13 +54,13 @@ export default function transactions(state = initialState, action) {
       }
     case 'TRANSACTIONS_CREATE_FAILURE':
       return {
-        ...state, 
+        ...state,
         creating: false,
         createError: action.error,
       }
     case 'DEMANDS_COMPLETE_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, completing: true}
@@ -71,7 +71,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_COMPLETE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return { ...action.demand, transactions: demand.transactions }
@@ -82,7 +82,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_COMPLETE_FAILURE':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, completing: false}
@@ -93,7 +93,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_CANCEL_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, canceling: true}
@@ -104,7 +104,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_CANCEL_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return { ...action.demand, transactions: demand.transactions }
@@ -115,7 +115,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_CANCEL_FAILURE':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, canceling: false}
@@ -126,7 +126,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_REACTIVATE_REQUEST':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, reactivating: true}
@@ -137,7 +137,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_REACTIVATE_SUCCESS':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return { ...action.demand, transactions: demand.transactions }
@@ -148,7 +148,7 @@ export default function transactions(state = initialState, action) {
       }
     case 'DEMANDS_REACTIVATE_FAILURE':
       return {
-        ...state, 
+        ...state,
         list: state.list.map(demand => {
           if (demand.id === action.demand.id) {
             return {...demand, reactivating: false}
@@ -177,7 +177,7 @@ export default function transactions(state = initialState, action) {
       if (state.listing)
         return state
       const newTransactions = action.list.filter(notification => (
-        notification.message && 
+        notification.message &&
         notification.transaction &&
         [].concat(...state.list.map(demand => demand.transactions)).map(transaction => transaction.id).indexOf(notification.transaction.id) < 0
       )).map(notification => notification.transaction)

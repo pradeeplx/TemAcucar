@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
   listing: true,
   offset: 0,
