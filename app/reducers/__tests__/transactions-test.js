@@ -358,6 +358,7 @@ describe('UNREAD_NOTIFICATIONS_LIST_SUCCESS action', () => {
       type: 'UNREAD_NOTIFICATIONS_LIST_SUCCESS',
       list: [
         { message: 'foobar', transaction: { id: 2, demand: { id: 'd2' } } },
+        { message: 'foobar2', transaction: { id: 4, demand: { id: 'd4' } } },
       ],
     }
   )
