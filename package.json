@@ -10,12 +10,12 @@
     "step2": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm"
   },
   "dependencies": {
-    "apsl-react-native-button": "2.5.0",
+    "apsl-react-native-button": "3.0.2",
     "lodash": "4.17.2",
     "moment": "2.11.1",
     "object-key-filter": "0.0.4",
-    "react": "15.3.2",
-    "react-native": "0.32.0",
+    "react": "15.4.1",
+    "react-native": "0.39.0",
     "react-native-code-push": "1.12.2-beta",
     "react-native-communications": "anarchicknight/react-native-communications#8b66f1b9196dab9601ef2432074e1e71612fa433",
     "react-native-config": "0.0.7",
@@ -27,7 +27,7 @@
     "react-native-html-render": "gustavoguichard/react-native-html-render#74500de14909fe1d652fde18be5e862c0a2e6f02",
     "react-native-keychain": "oblador/react-native-keychain#e507c99b9914a97332f98284ac0c153a07450de1",
     "react-native-linear-gradient": "1.5.5",
-    "react-native-maps": "0.8.0",
+    "react-native-maps": "0.11.0",
     "react-native-root-siblings": "magicismight/react-native-root-siblings#9bf3761c94231c15658b3e0d5a76a06f43647808",
     "react-native-root-toast": "gustavoguichard/react-native-root-toast#5d0a297ea72eb7a3cda9e1570815ed39da8b7238",
     "react-native-router-flux": "gustavoguichard/react-native-router-flux#96d48cc952ffa1b34a31f1eb559dc9786820ef07",
@@ -49,13 +49,21 @@
     "validate-model": "0.0.2"
   },
   "devDependencies": {
-    "babel-jest": "^16.0.0",
+    "babel-jest": "^17.0.2",
     "babel-preset-react-native": "^1.9.0",
-    "jest": "^16.0.2",
-    "jest-react-native": "^16.0.0",
-    "react-test-renderer": "^15.3.2"
+    "jest": "^17.0.3",
+    "react-test-renderer": "^15.4.1"
   },
   "jest": {
-    "preset": "jest-react-native"
+    "preset": "react-native",
+    "testPathIgnorePatterns": ["/node_modules/"],
+    "testFileExtensions": ["js"],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react-native/",
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/react-dom/",
+      "<rootDir>/node_modules/react-addons-test-utils/"
+    ],
+    "verbose": true
   }
 }
