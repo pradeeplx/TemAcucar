@@ -42,7 +42,14 @@ function parseAddress(address) {
   if (parsedAddress.locality === 'Brasília' && shortThoroughfare !== "")
     parsedAddress.thoroughfare = shortThoroughfare
   return {
-    ...parsedAddress,
+    thoroughfare: (parsedAddress.thoroughfare ? parsedAddress.thoroughfare : null),
+    subThoroughfare: (parsedAddress.subThoroughfare ? parsedAddress.subThoroughfare : null),
+    subLocality: (parsedAddress.subLocality ? parsedAddress.subLocality : null),
+    locality: (parsedAddress.locality ? parsedAddress.locality : null),
+    subAdministrativeArea: (parsedAddress.subAdministrativeArea ? parsedAddress.subAdministrativeArea : null),
+    administrativeArea: (parsedAddress.administrativeArea ? parsedAddress.administrativeArea : null),
+    country: (parsedAddress.country ? parsedAddress.country : null),
+    postalCode: (parsedAddress.postalCode ? parsedAddress.postalCode : null),
     name: `${parsedAddress.thoroughfare}, ${parsedAddress.subThoroughfare}`
   }
 }
