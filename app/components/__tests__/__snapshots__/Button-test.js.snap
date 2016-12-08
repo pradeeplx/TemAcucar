@@ -19,7 +19,6 @@ exports[`test renders correctly 1`] = `
       "borderColor": "#FFFFFF",
       "borderRadius": 18,
       "borderWidth": 0.5,
-      "display": "flex",
       "flexDirection": "row",
       "height": 36,
       "justifyContent": "center",
@@ -27,6 +26,7 @@ exports[`test renders correctly 1`] = `
       "opacity": 1,
       "paddingHorizontal": 20,
       "paddingVertical": 0,
+      "top": 0,
     }
   }
   testID={undefined}>

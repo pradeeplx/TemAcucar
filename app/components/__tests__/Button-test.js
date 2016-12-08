@@ -9,7 +9,7 @@ it('renders correctly', () => {
       href="#"
       textStyle={{color: 'red'}}
       disabledStyle={{color: 'green'}}
-      style={{display: 'flex'}}
+      style={{top: 0}}
       secondary>
       FooBar
     </Button>
