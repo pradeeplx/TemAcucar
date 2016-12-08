@@ -361,7 +361,7 @@ babel-helpers@^6.16.0:
     babel-runtime "^6.0.0"
     babel-template "^6.16.0"
 
-babel-jest@^17.0.2:
+babel-jest@17.0.2, babel-jest@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-17.0.2.tgz#8d51e0d03759713c331f108eb0b2eaa4c6efff74"
   dependencies:
@@ -729,7 +729,7 @@ babel-preset-jest@^17.0.2:
   dependencies:
     babel-plugin-jest-hoist "^17.0.2"
 
-babel-preset-react-native@^1.9.0:
+babel-preset-react-native@1.9.0, babel-preset-react-native@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/babel-preset-react-native/-/babel-preset-react-native-1.9.0.tgz#035fc06c65f4f2a02d0336a100b2da142f36dab1"
   dependencies:
@@ -2839,7 +2839,7 @@ jest-util@^17.0.2:
     jest-mock "^17.0.2"
     mkdirp "^0.5.1"
 
-jest@^17.0.3:
+jest@17.0.3:
   version "17.0.3"
   resolved "https://registry.yarnpkg.com/jest/-/jest-17.0.3.tgz#89c43b30b0aaad42462e9ea701352dacbad4a354"
   dependencies:
@@ -4022,7 +4022,7 @@ react-redux@4.3.0:
     lodash "^4.2.0"
     loose-envify "^1.1.0"
 
-react-test-renderer@^15.4.1:
+react-test-renderer@15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.4.1.tgz#e38cd7057868d4a655d3764689735b4b97260706"
 
