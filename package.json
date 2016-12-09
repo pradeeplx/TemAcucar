@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test:verbose": "jest --verbose",
     "test": "jest"
   },
   "dependencies": {
@@ -63,7 +64,6 @@
       "<rootDir>/node_modules/react/",
       "<rootDir>/node_modules/react-dom/",
       "<rootDir>/node_modules/react-addons-test-utils/"
-    ],
-    "verbose": true
+    ]
   }
 }
