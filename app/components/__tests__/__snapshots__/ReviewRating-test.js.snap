@@ -1,0 +1,125 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "marginBottom": 4,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFBA00",
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFBA00",
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFBA00",
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFBA00",
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFBA00",
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+</View>
+`;

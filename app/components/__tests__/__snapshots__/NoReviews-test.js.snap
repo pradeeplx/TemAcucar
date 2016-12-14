@@ -1,0 +1,49 @@
+exports[`test renders correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#654C50",
+        "fontFamily": "Avenir",
+        "fontSize": 18,
+      },
+      Object {
+        "alignSelf": "stretch",
+        "fontSize": 15,
+        "margin": 10,
+        "textAlign": "center",
+      },
+    ]
+  }>
+  Você
+   ainda não recebeu nenhuma avaliação.
+</Text>
+`;
+
+exports[`test renders correctly when different user 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#654C50",
+        "fontFamily": "Avenir",
+        "fontSize": 18,
+      },
+      Object {
+        "alignSelf": "stretch",
+        "fontSize": 15,
+        "margin": 10,
+        "textAlign": "center",
+      },
+    ]
+  }>
+  Foo
+   ainda não recebeu nenhuma avaliação.
+</Text>
+`;

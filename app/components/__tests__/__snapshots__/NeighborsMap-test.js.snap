@@ -1,0 +1,125 @@
+exports[`test renders correctly 1`] = `
+<View>
+  <Image
+    source={
+      Object {
+        "uri": "#",
+      }
+    }
+    style={
+      Object {
+        "height": 300,
+        "width": 750,
+      }
+    } />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 6,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 12,
+          "paddingHorizontal": 30,
+          "paddingVertical": 3,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#654C50",
+              "fontFamily": "Avenir",
+              "fontSize": 18,
+            },
+            Array [
+              Object {
+                "color": "#44B5B1",
+                "fontSize": 15,
+                "textAlign": "center",
+              },
+              Object {
+                "fontFamily": "Avenir-Black",
+              },
+            ],
+          ]
+        }>
+        1 vizinho
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`test renders correctly with pluralize 1`] = `
+<View>
+  <Image
+    source={
+      Object {
+        "uri": "#",
+      }
+    }
+    style={
+      Object {
+        "height": 300,
+        "width": 750,
+      }
+    } />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 6,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 12,
+          "paddingHorizontal": 30,
+          "paddingVertical": 3,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#654C50",
+              "fontFamily": "Avenir",
+              "fontSize": 18,
+            },
+            Array [
+              Object {
+                "color": "#44B5B1",
+                "fontSize": 15,
+                "textAlign": "center",
+              },
+              Object {
+                "fontFamily": "Avenir-Black",
+              },
+            ],
+          ]
+        }>
+        2 vizinhos
+      </Text>
+    </View>
+  </View>
+</View>
+`;

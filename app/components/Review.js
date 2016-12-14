@@ -5,6 +5,7 @@ import Colors from "../Colors"
 import Sentence from "./Sentence"
 import TimeAgo from "./TimeAgo"
 import ReviewRating from "./ReviewRating"
+import UserImage from "./UserImage"
 
 export default Review = ({ review: { rating, text, reviewer, created_at } }) => (
   <View style={{

@@ -1,0 +1,48 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 6,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+    }
+  }>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 12,
+        "paddingHorizontal": 30,
+        "paddingVertical": 3,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Array [
+            Object {
+              "color": "#44B5B1",
+              "fontSize": 15,
+              "textAlign": "center",
+            },
+            Object {
+              "fontFamily": "Avenir-Black",
+            },
+          ],
+        ]
+      }>
+      Foo
+    </Text>
+  </View>
+</View>
+`;
