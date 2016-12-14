@@ -1,0 +1,21 @@
+exports[`test renders correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#654C50",
+        "fontFamily": "Avenir",
+        "fontSize": 18,
+      },
+      Object {
+        "alignSelf": "stretch",
+        "marginBottom": 20,
+      },
+    ]
+  }>
+  FooBar
+</Text>
+`;

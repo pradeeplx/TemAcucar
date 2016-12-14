@@ -1,0 +1,15 @@
+exports[`test renders correctly 1`] = `
+<Image
+  source={1}
+  style={
+    Array [
+      Object {
+        "height": 667.5,
+        "width": 750,
+      },
+      Object {
+        "top": 0,
+      },
+    ]
+  } />
+`;

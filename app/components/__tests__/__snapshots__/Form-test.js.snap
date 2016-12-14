@@ -1,0 +1,24 @@
+exports[`test renders correctly 1`] = `
+<ScrollView
+  keyboardShouldPersistTaps={false}
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "flex": 1,
+      },
+      Object {
+        "top": 0,
+      },
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "bottom": 0,
+      }
+    }>
+    Foobar
+  </View>
+</ScrollView>
+`;

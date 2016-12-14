@@ -1,0 +1,16 @@
+exports[`test renders correctly 1`] = `
+<Image
+  size={20}
+  style={
+    Array [
+      Object {
+        "borderRadius": 15,
+        "height": 30,
+        "width": 30,
+      },
+      Object {
+        "top": 0,
+      },
+    ]
+  } />
+`;

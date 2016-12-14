@@ -1,0 +1,23 @@
+exports[`test renders correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#654C50",
+        "fontFamily": "Avenir",
+        "fontSize": 18,
+      },
+      Object {
+        "alignSelf": "stretch",
+        "fontSize": 15,
+        "margin": 10,
+        "textAlign": "center",
+      },
+    ]
+  }>
+  Você ainda não realizou nenhuma transação. Que tal começar agora mesmo fazendo um pedido?
+</Text>
+`;

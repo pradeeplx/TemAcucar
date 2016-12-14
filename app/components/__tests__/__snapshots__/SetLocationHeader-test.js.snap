@@ -1,0 +1,42 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "borderBottomWidth": 0.5,
+      "borderColor": "#FF7F85",
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Array [
+          Object {
+            "color": "#CECED2",
+            "fontSize": 24,
+            "marginBottom": 20,
+            "marginHorizontal": 20,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "Avenir-Medium",
+          },
+          Object {
+            "marginBottom": 5,
+            "marginTop": 10,
+          },
+        ],
+      ]
+    }>
+    Onde você mora?
+  </Text>
+</View>
+`;

@@ -49,16 +49,19 @@
   "devDependencies": {
     "babel-jest": "17.0.2",
     "babel-preset-react-native": "1.9.0",
+    "enzyme": "2.6.0",
     "jest": "17.0.3",
+    "react-addons-test-utils": "15.4.1",
     "react-test-renderer": "15.4.1"
   },
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|apsl-react-native-button)"
+      "node_modules/(?!react-native|apsl-react-native-button|@exponent/react-native-navigator)"
     ],
-    "testPathIgnorePatterns": ["/node_modules/"],
-    "testFileExtensions": ["js"],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react-native/",
       "<rootDir>/node_modules/react/",

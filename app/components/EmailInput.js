@@ -1,7 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 import FormTextInput from "./FormTextInput"
 
-class EmailInput extends Component {
+export default class EmailInput extends Component {
+  static propTypes = {
+    value: PropTypes.string,
+    valid: PropTypes.bool,
+  }
+
   focus() {
     this.refs.input.focus()
   }
@@ -25,10 +30,3 @@ class EmailInput extends Component {
     )
   }
 }
-
-EmailInput.propTypes = {
-  value: PropTypes.string,
-  valid: PropTypes.bool,
-}
-
-export default EmailInput

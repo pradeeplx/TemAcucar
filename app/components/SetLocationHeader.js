@@ -3,7 +3,7 @@ import { View, Platform, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import Headline from "./Headline"
 
-export default SetLocationHeader = (props) => (
+export default SetLocationHeader = () => (
   <View style={{
     borderColor: Colors.pink,
     borderBottomWidth: StyleSheet.hairlineWidth,

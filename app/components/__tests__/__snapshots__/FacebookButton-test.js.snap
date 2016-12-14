@@ -1,0 +1,66 @@
+exports[`test renders correctly 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "backgroundColor": "#557BD3",
+      "borderColor": "#557BD3",
+      "borderRadius": 27,
+      "borderWidth": 0.5,
+      "flexDirection": "row",
+      "height": 54,
+      "justifyContent": "center",
+      "marginBottom": 0,
+      "opacity": 1,
+      "paddingHorizontal": 30,
+      "paddingVertical": 0,
+    }
+  }
+  testID={undefined}>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "fontSize": 18,
+          "textAlign": "center",
+        },
+        Array [
+          Object {
+            "color": "#FF7F85",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+          Array [
+            Object {
+              "color": "#FFFFFF",
+            },
+            Object {
+              "color": "red",
+            },
+          ],
+        ],
+      ]
+    }>
+    FooBar
+  </Text>
+</View>
+`;

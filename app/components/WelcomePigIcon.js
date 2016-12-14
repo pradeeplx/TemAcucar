@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, PixelRatio, Dimensions } from 'react-native'
 
-export default WelcomePigIcon = ({ name, style }) => {
+export default WelcomePigIcon = ({ style }) => {
   const ratio = PixelRatio.get()
   let image
   if (ratio <= 1) {

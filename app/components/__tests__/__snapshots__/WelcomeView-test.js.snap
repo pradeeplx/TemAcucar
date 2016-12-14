@@ -1,0 +1,17 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+      Object {
+        "top": 0,
+      },
+    ]
+  }>
+  FooBar
+</View>
+`;

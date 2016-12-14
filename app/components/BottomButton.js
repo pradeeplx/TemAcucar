@@ -4,7 +4,7 @@ import { fontFactor } from "../helpers"
 import ReactNativeButton from 'apsl-react-native-button'
 import Colors from "../Colors"
 
-export default BottonButton = (props) => {
+export default BottomButton = (props) => {
   const dimensions = Dimensions.get('window')
   const height = dimensions.height * dimensions.scale
   const smallScreen = height <= 320
