@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Platform } from 'react-native'
 import HtmlRender from 'react-native-html-render'
+import { uniqueId } from 'lodash'
 
 import Colors from "../Colors"
 import Sentence from "./Sentence"
@@ -22,7 +23,7 @@ export default class HtmlSentence extends Component {
       style = italicStyle
     }
     return (
-      <Sentence {...this.props} style={[style, this.props.style]}>
+      <Sentence {...this.props} key={uniqueId('node')} style={[style, this.props.style]}>
         { text }
       </Sentence>
     )

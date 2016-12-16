@@ -1,0 +1,717 @@
+exports[`test renders NoDemands text if there is no demands and no listing 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FAF6F1",
+          "borderTopWidth": 12,
+          "padding": 15,
+        },
+        Object {
+          "borderTopWidth": 0,
+        },
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "alignSelf": "stretch",
+            "fontSize": 15,
+            "marginHorizontal": 10,
+            "textAlign": "center",
+          },
+        ]
+      }>
+      FooBar. Que tal agitar sua vizinhança pedindo algo que você precisa?
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`test renders correctly 1`] = `
+<View>
+  <View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FAF6F1",
+          "borderTopWidth": 0,
+          "flex": 1,
+          "flexDirection": "row",
+          "opacity": 1,
+        }
+      }
+      testID={undefined}>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 3,
+            "flexDirection": "column",
+            "marginTop": 10,
+          }
+        }>
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 27,
+                "height": 54,
+                "width": 54,
+              },
+              undefined,
+            ]
+          } />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Object {
+                "color": "#CECED2",
+                "fontSize": 15,
+                "marginTop": 6,
+              },
+            ]
+          }>
+          A 
+          20km
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 8,
+            "flexDirection": "column",
+            "paddingVertical": 10,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Array [
+                Object {
+                  "color": "#44B5B1",
+                },
+                Object {
+                  "fontFamily": "Avenir-Black",
+                },
+              ],
+            ]
+          }>
+          Foo
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#654C50",
+                  "fontFamily": "Avenir",
+                  "fontSize": 18,
+                },
+                Object {
+                  "color": "#000000",
+                  "fontSize": 15,
+                },
+              ]
+            }>
+             
+            pediu 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#654C50",
+                  "fontFamily": "Avenir",
+                  "fontSize": 18,
+                },
+                Array [
+                  Object {
+                    "fontSize": 13.5,
+                  },
+                  Object {
+                    "color": "#000000",
+                    "fontSize": 15,
+                  },
+                ],
+              ]
+            }>
+            há segundos
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Array [
+                Object {
+                  "color": "#807F7F",
+                  "fontSize": 15,
+                  "marginTop": 10,
+                },
+              ],
+            ]
+          }>
+          Foo Bar
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Ionicons",
+                "fontSize": 27,
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Array [
+                Object {},
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#CECED2",
+                  "fontSize": 42,
+                  "marginTop": 6,
+                },
+              ],
+            ]
+          }>
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`test renders tip when there is demands 1`] = `
+<View>
+  <View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FAF6F1",
+          "borderTopWidth": 0,
+          "flex": 1,
+          "flexDirection": "row",
+          "opacity": 1,
+        }
+      }
+      testID={undefined}>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 3,
+            "flexDirection": "column",
+            "marginTop": 10,
+          }
+        }>
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 27,
+                "height": 54,
+                "width": 54,
+              },
+              undefined,
+            ]
+          } />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Object {
+                "color": "#CECED2",
+                "fontSize": 15,
+                "marginTop": 6,
+              },
+            ]
+          }>
+          A 
+          20km
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 8,
+            "flexDirection": "column",
+            "paddingVertical": 10,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Array [
+                Object {
+                  "color": "#44B5B1",
+                },
+                Object {
+                  "fontFamily": "Avenir-Black",
+                },
+              ],
+            ]
+          }>
+          Foo
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#654C50",
+                  "fontFamily": "Avenir",
+                  "fontSize": 18,
+                },
+                Object {
+                  "color": "#000000",
+                  "fontSize": 15,
+                },
+              ]
+            }>
+             
+            pediu 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#654C50",
+                  "fontFamily": "Avenir",
+                  "fontSize": 18,
+                },
+                Array [
+                  Object {
+                    "fontSize": 13.5,
+                  },
+                  Object {
+                    "color": "#000000",
+                    "fontSize": 15,
+                  },
+                ],
+              ]
+            }>
+            há segundos
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Array [
+                Object {
+                  "color": "#807F7F",
+                  "fontSize": 15,
+                  "marginTop": 10,
+                },
+              ],
+            ]
+          }>
+          Foo Bar
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#654C50",
+                "fontFamily": "Ionicons",
+                "fontSize": 27,
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Array [
+                Object {},
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#CECED2",
+                  "fontSize": 42,
+                  "marginTop": 6,
+                },
+              ],
+            ]
+          }>
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FAF6F1",
+          "borderTopWidth": 12,
+          "padding": 15,
+        },
+        undefined,
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#000000",
+            "fontSize": 15,
+            "marginBottom": 10,
+            "marginHorizontal": 40,
+            "textAlign": "center",
+          },
+        ]
+      }>
+      Quanto mais vizinhos, mais trocas! Compartilhe no Facebook, marcando amigos que moram perto de você.
+    </Text>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#557BD3",
+          "borderColor": "#557BD3",
+          "borderRadius": 27,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "height": 54,
+          "justifyContent": "center",
+          "marginBottom": 0,
+          "opacity": 1,
+          "paddingHorizontal": 30,
+          "paddingVertical": 0,
+          "width": 330,
+        }
+      }
+      testID={undefined}>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "flex": 1,
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "color": "#FF7F85",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "color": "#FFFFFF",
+                },
+                undefined,
+              ],
+            ],
+          ]
+        }>
+        Chame seus vizinhos
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`test renders tip when there is no demands 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FAF6F1",
+          "borderTopWidth": 12,
+          "padding": 15,
+        },
+        Object {
+          "borderTopWidth": 0,
+        },
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "alignSelf": "stretch",
+            "fontSize": 15,
+            "marginHorizontal": 10,
+            "textAlign": "center",
+          },
+        ]
+      }>
+      FooBar. Que tal agitar sua vizinhança pedindo algo que você precisa?
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FAF6F1",
+          "borderTopWidth": 12,
+          "padding": 15,
+        },
+        undefined,
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#000000",
+            "fontSize": 15,
+            "marginBottom": 10,
+            "marginHorizontal": 40,
+            "textAlign": "center",
+          },
+        ]
+      }>
+      Quanto mais vizinhos, mais trocas! Compartilhe no Facebook, marcando amigos que moram perto de você.
+    </Text>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#557BD3",
+          "borderColor": "#557BD3",
+          "borderRadius": 27,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "height": 54,
+          "justifyContent": "center",
+          "marginBottom": 0,
+          "opacity": 1,
+          "paddingHorizontal": 30,
+          "paddingVertical": 0,
+          "width": 330,
+        }
+      }
+      testID={undefined}>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "flex": 1,
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "color": "#FF7F85",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "color": "#FFFFFF",
+                },
+                undefined,
+              ],
+            ],
+          ]
+        }>
+        Chame seus vizinhos
+      </Text>
+    </View>
+  </View>
+</View>
+`;

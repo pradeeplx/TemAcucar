@@ -9,9 +9,7 @@ export default Icon = ({name, size, color, style}) => {
       name={name || 'account-circle'}
       size={size || (18 * fontFactor())}
       color={color || Colors.brown}
-      style={[{
-        // marginHorizontal: 10,
-      }, style]}
+      style={style}
     />
   )
 }

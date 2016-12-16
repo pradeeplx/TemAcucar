@@ -1,0 +1,161 @@
+exports[`test has enabled button 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "#FF7F85",
+        "borderRadius": 0,
+        "borderWidth": 0,
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 105,
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "opacity": 1,
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+        "width": 0,
+      }
+    }
+    testID={undefined}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 21,
+              "textAlign": "center",
+            },
+            Object {
+              "fontFamily": "Avenir-Black",
+            },
+            undefined,
+          ],
+        ]
+      }>
+      Foo
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`test renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 44,
+          "justifyContent": "center",
+          "marginBottom": 10,
+        },
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#FF7F85",
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "flex": 1,
+            "height": 105,
+            "marginBottom": 0,
+            "paddingHorizontal": 0,
+            "paddingVertical": 0,
+            "width": 0,
+          },
+          undefined,
+        ],
+        Array [
+          Object {
+            "opacity": 0.6,
+          },
+          undefined,
+        ],
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 21,
+              "textAlign": "center",
+            },
+            Object {
+              "fontFamily": "Avenir-Black",
+            },
+            undefined,
+          ],
+        ]
+      }>
+      Foo
+    </Text>
+  </View>
+</View>
+`;

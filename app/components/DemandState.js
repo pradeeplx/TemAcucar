@@ -1,7 +1,9 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import { fontFactor } from "../helpers"
-import Colors from "../Colors"
+import { fontFactor } from '../helpers'
+import Colors from '../Colors'
+import Icon from './Icon'
+import Sentence from './Sentence'
 
 export default DemandState = ({ state, style }) => (
   <View style={[{

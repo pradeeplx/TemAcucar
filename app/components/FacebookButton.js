@@ -2,18 +2,18 @@ import React from 'react'
 import Colors from "../Colors"
 import Button from "./Button"
 
-export default FacebookButton = (props) => (
+export default FacebookButton = ({ style, textStyle, children }, ...props) => (
   <Button
     activityIndicatorColor={Colors.white}
     {...props}
     style={[{
       backgroundColor: Colors.facebook,
       borderColor: Colors.facebook,
-    }, props.style]}
+    }, style]}
     textStyle={[{
       color: Colors.white,
-    }, props.textStyle]}
+    }, textStyle]}
   >
-    {props.children}
+    {children}
   </Button>
 )

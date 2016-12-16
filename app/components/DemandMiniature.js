@@ -3,7 +3,9 @@ import { View, TouchableOpacity, Platform } from 'react-native'
 import truncate from 'truncate'
 import { fontFactor } from "../helpers"
 import Colors from "../Colors"
+import Icon from "./Icon"
 import Sentence from "./Sentence"
+import TimeAgo from "./TimeAgo"
 import UserImage from "./UserImage"
 
 export default class DemandMiniature extends Component {

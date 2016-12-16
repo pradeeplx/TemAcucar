@@ -1,0 +1,167 @@
+exports[`test renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderBottomWidth": 0.5,
+        "borderColor": "lightgray",
+        "borderTopWidth": 0.5,
+      },
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#EFEDED",
+        },
+        undefined,
+      ],
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "flexDirection": "row",
+        "paddingBottom": 6,
+        "paddingTop": 6,
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "marginLeft": 6,
+          },
+          Object {},
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#2CB36E",
+              "fontFamily": "Ionicons",
+              "fontSize": 27,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Array [
+              Object {},
+              undefined,
+            ],
+          ]
+        }>
+        
+      </Text>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "flex": 0.5,
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "marginLeft": 6,
+          },
+          Array [
+            Object {
+              "color": "#654C50",
+              "fontFamily": "Avenir",
+              "fontSize": 18,
+            },
+            undefined,
+          ],
+        ]
+      }>
+      E-mail
+    </Text>
+    <TextInput
+      autoCapitalize="none"
+      clearButtonMode="while-editing"
+      icon={
+        <Icon
+          color="#654C50"
+          name="ios-at-outline" />
+      }
+      iconStyle={Object {}}
+      inputStyle={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#FF7F85",
+            "fontSize": 18,
+            "height": 54,
+          },
+          undefined,
+        ]
+      }
+      invalidIcon={
+        <Icon
+          color="#E6D3B7"
+          name="ios-more" />
+      }
+      keyboardType="email-address"
+      message={null}
+      messageStyle={
+        Array [
+          Object {
+            "color": "#E6D3B7",
+            "fontSize": 15,
+          },
+          undefined,
+        ]
+      }
+      name="email"
+      onBlur={undefined}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="Digite seu e-mail"
+      returnKeyType="done"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "white",
+            "flex": 1,
+            "fontSize": 14,
+            "height": 36,
+          },
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "#FF7F85",
+              "fontSize": 18,
+              "height": 54,
+            },
+            undefined,
+          ],
+        ]
+      }
+      title="E-mail"
+      titleStyle={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          undefined,
+        ]
+      }
+      valid={true}
+      validIcon={
+        <Icon
+          color="#2CB36E"
+          name="md-checkmark" />
+      }
+      value="foo" />
+  </View>
+</View>
+`;

@@ -1,7 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 import FormTextInput from "./FormTextInput"
 
-class PasswordInput extends Component {
+export default class PasswordInput extends Component {
+  static propTypes = {
+    value: PropTypes.string,
+    valid: PropTypes.bool,
+  }
+
   focus() {
     this.refs.input.focus()
   }
@@ -26,10 +31,3 @@ class PasswordInput extends Component {
     )
   }
 }
-
-PasswordInput.propTypes = {
-  value: PropTypes.string,
-  valid: PropTypes.bool,
-}
-
-export default PasswordInput

@@ -14,3 +14,11 @@ it('renders correctly', () => {
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+// BUG: account-circle is not a valid icon-name
+// it('renders the default props', () => {
+//   const tree = renderer.create(
+//     <Icon />
+//   ).toJSON();
+//   expect(tree).toMatchSnapshot();
+// });

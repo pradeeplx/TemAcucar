@@ -5,7 +5,12 @@ import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Icon from "./Icon"
 
-class FormTextInput extends Component {
+export default class FormTextInput extends Component {
+  static propTypes = {
+    value: PropTypes.string,
+    valid: PropTypes.bool,
+  }
+
   focus() {
     this.refs.input.focus()
   }
@@ -48,10 +53,3 @@ class FormTextInput extends Component {
     )
   }
 }
-
-FormTextInput.propTypes = {
-  value: PropTypes.string,
-  valid: PropTypes.bool,
-}
-
-export default FormTextInput

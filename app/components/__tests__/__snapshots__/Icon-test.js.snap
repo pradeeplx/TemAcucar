@@ -12,12 +12,9 @@ exports[`test renders correctly 1`] = `
         "fontStyle": "normal",
         "fontWeight": "normal",
       },
-      Array [
-        Object {},
-        Object {
-          "top": 0,
-        },
-      ],
+      Object {
+        "top": 0,
+      },
     ]
   }>
   

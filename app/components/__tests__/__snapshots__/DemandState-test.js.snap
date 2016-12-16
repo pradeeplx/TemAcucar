@@ -1,0 +1,259 @@
+exports[`test renders correctly with state canceled 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 4,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingHorizontal": 6,
+        "paddingVertical": 2,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 21,
+            "marginRight": 6,
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+        },
+      ]
+    }>
+    Cancelado
+  </Text>
+</View>
+`;
+
+exports[`test renders correctly with state completed 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 4,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingHorizontal": 6,
+        "paddingVertical": 2,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 21,
+            "marginRight": 6,
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+        },
+      ]
+    }>
+    Bem-sucedido
+  </Text>
+</View>
+`;
+
+exports[`test renders correctly with state flagged 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 4,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingHorizontal": 6,
+        "paddingVertical": 2,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 21,
+            "marginRight": 6,
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+        },
+      ]
+    }>
+    Denunciado como impróprio
+  </Text>
+</View>
+`;
+
+exports[`test renders correctly with state foo 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 4,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingHorizontal": 6,
+        "paddingVertical": 2,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Array [
+          Object {},
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 21,
+            "marginRight": 6,
+          },
+        ],
+      ]
+    }>
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+        },
+      ]
+    }>
+    Em andamento
+  </Text>
+</View>
+`;

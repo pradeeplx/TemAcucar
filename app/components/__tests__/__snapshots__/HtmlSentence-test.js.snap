@@ -1,0 +1,102 @@
+exports[`test renders correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#654C50",
+        "fontFamily": "Avenir",
+        "fontSize": 18,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Array [
+            Object {},
+            undefined,
+          ],
+        ]
+      }>
+      Foo
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Array [
+            Object {
+              "fontFamily": "Avenir-Black",
+            },
+            undefined,
+          ],
+        ]
+      }>
+      Bar
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Array [
+            Object {},
+            undefined,
+          ],
+        ]
+      }>
+       
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Array [
+            Object {
+              "fontFamily": "Avenir-Oblique",
+            },
+            undefined,
+          ],
+        ]
+      }>
+      !
+    </Text>
+  </Text>
+</Text>
+`;

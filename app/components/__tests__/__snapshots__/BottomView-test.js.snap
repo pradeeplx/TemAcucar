@@ -1,0 +1,92 @@
+exports[`test changes the viewWidth at onLayout 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      },
+      Object {
+        "top": 0,
+      },
+    ]
+  }>
+  <View
+    buttonsCount={1}
+    style={
+      Object {
+        "bottom": 0,
+      }
+    }
+    viewWidth={0}>
+    Foobar
+  </View>
+</View>
+`;
+
+exports[`test changes the viewWidth at onLayout 2`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      },
+      Object {
+        "top": 0,
+      },
+    ]
+  }>
+  <View
+    buttonsCount={1}
+    style={
+      Object {
+        "bottom": 0,
+      }
+    }
+    viewWidth={20}>
+    Foobar
+  </View>
+</View>
+`;
+
+exports[`test renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "bottom": 0,
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      },
+      Object {
+        "top": 0,
+      },
+    ]
+  }>
+  <View
+    buttonsCount={1}
+    style={
+      Object {
+        "bottom": 0,
+      }
+    }
+    viewWidth={0}>
+    Foobar
+  </View>
+</View>
+`;
