@@ -5,9 +5,7 @@ import renderer from 'react-test-renderer'
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <LoadMore
-      style={{top: 0}}
-    />
+    <LoadMore style={{top: 0}} />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

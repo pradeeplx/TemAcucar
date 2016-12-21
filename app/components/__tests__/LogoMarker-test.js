@@ -5,11 +5,7 @@ import renderer from 'react-test-renderer'
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <LogoMarker
-      style={{top: 0}}
-    >
-      FooBar
-    </LogoMarker>
+    <LogoMarker style={{top: 0}}>FooBar</LogoMarker>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

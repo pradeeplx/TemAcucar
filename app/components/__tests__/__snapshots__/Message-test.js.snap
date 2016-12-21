@@ -1,0 +1,215 @@
+exports[`test does not display date sentence when no date is given 1`] = `
+<View
+  style={Object {}}>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EFEDED",
+        "borderRadius": 4,
+        "marginBottom": 10,
+        "padding": 10,
+        "width": 562.5,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#807F7F",
+          },
+        ]
+      }>
+      Foo
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#000000",
+            "fontSize": 15,
+          },
+        ]
+      }>
+      19:01
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`test renders correctly 1`] = `
+<View
+  style={Object {}}>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 10,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          undefined,
+        ]
+      }>
+      1482354242154
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EFEDED",
+        "borderRadius": 4,
+        "marginBottom": 10,
+        "padding": 10,
+        "width": 562.5,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#807F7F",
+          },
+        ]
+      }>
+      Foo
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#000000",
+            "fontSize": 15,
+          },
+        ]
+      }>
+      19:01
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`test renders differently for current user 1`] = `
+<View
+  style={Object {}}>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 10,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          undefined,
+        ]
+      }>
+      1482354242154
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "backgroundColor": "#FAF6F1",
+        "borderRadius": 4,
+        "marginBottom": 10,
+        "padding": 10,
+        "width": 562.5,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#807F7F",
+          },
+        ]
+      }>
+      Foo
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#000000",
+            "fontSize": 15,
+          },
+        ]
+      }>
+      19:01
+    </Text>
+  </View>
+</View>
+`;
