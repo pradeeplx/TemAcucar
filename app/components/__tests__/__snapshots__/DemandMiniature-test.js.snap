@@ -195,15 +195,12 @@ exports[`test renders 800m instead of 0.8km for distance 1`] = `
             "fontStyle": "normal",
             "fontWeight": "normal",
           },
-          Array [
-            Object {},
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#CECED2",
-              "fontSize": 42,
-              "marginTop": 6,
-            },
-          ],
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#CECED2",
+            "fontSize": 42,
+            "marginTop": 6,
+          },
         ]
       }>
       
@@ -409,15 +406,12 @@ exports[`test renders borderTopWidth 0 when index is 0 1`] = `
             "fontStyle": "normal",
             "fontWeight": "normal",
           },
-          Array [
-            Object {},
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#CECED2",
-              "fontSize": 42,
-              "marginTop": 6,
-            },
-          ],
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#CECED2",
+            "fontSize": 42,
+            "marginTop": 6,
+          },
         ]
       }>
       
@@ -623,15 +617,12 @@ exports[`test renders correctly 1`] = `
             "fontStyle": "normal",
             "fontWeight": "normal",
           },
-          Array [
-            Object {},
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#CECED2",
-              "fontSize": 42,
-              "marginTop": 6,
-            },
-          ],
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#CECED2",
+            "fontSize": 42,
+            "marginTop": 6,
+          },
         ]
       }>
       
@@ -856,18 +847,15 @@ exports[`test renders showClose styles 1`] = `
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
-            Array [
-              Object {},
-              Object {
-                "backgroundColor": "transparent",
-                "color": "#CECED2",
-                "fontSize": 33,
-                "paddingBottom": 4,
-                "paddingHorizontal": 8,
-                "paddingTop": 4,
-                "textAlign": "center",
-              },
-            ],
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#CECED2",
+              "fontSize": 33,
+              "paddingBottom": 4,
+              "paddingHorizontal": 8,
+              "paddingTop": 4,
+              "textAlign": "center",
+            },
           ]
         }>
         
@@ -886,15 +874,12 @@ exports[`test renders showClose styles 1`] = `
             "fontStyle": "normal",
             "fontWeight": "normal",
           },
-          Array [
-            Object {},
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#EFEDED",
-              "fontSize": 42,
-              "marginTop": 18,
-            },
-          ],
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#EFEDED",
+            "fontSize": 42,
+            "marginTop": 18,
+          },
         ]
       }>
       
@@ -1100,15 +1085,12 @@ exports[`test renders user first_name if user is not the currentUser 1`] = `
             "fontStyle": "normal",
             "fontWeight": "normal",
           },
-          Array [
-            Object {},
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#CECED2",
-              "fontSize": 42,
-              "marginTop": 6,
-            },
-          ],
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#CECED2",
+            "fontSize": 42,
+            "marginTop": 6,
+          },
         ]
       }>
       

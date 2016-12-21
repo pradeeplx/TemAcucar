@@ -239,15 +239,12 @@ exports[`test renders correctly 1`] = `
                 "fontStyle": "normal",
                 "fontWeight": "normal",
               },
-              Array [
-                Object {},
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#CECED2",
-                  "fontSize": 42,
-                  "marginTop": 6,
-                },
-              ],
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#CECED2",
+                "fontSize": 42,
+                "marginTop": 6,
+              },
             ]
           }>
           
@@ -457,15 +454,12 @@ exports[`test renders tip when there is demands 1`] = `
                 "fontStyle": "normal",
                 "fontWeight": "normal",
               },
-              Array [
-                Object {},
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#CECED2",
-                  "fontSize": 42,
-                  "marginTop": 6,
-                },
-              ],
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#CECED2",
+                "fontSize": 42,
+                "marginTop": 6,
+              },
             ]
           }>
           

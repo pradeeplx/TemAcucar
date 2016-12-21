@@ -29,14 +29,11 @@ exports[`test renders correctly with state canceled 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFFFFF",
-            "fontSize": 21,
-            "marginRight": 6,
-          },
-        ],
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 21,
+          "marginRight": 6,
+        },
       ]
     }>
     
@@ -94,14 +91,11 @@ exports[`test renders correctly with state completed 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFFFFF",
-            "fontSize": 21,
-            "marginRight": 6,
-          },
-        ],
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 21,
+          "marginRight": 6,
+        },
       ]
     }>
     
@@ -159,14 +153,11 @@ exports[`test renders correctly with state flagged 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFFFFF",
-            "fontSize": 21,
-            "marginRight": 6,
-          },
-        ],
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 21,
+          "marginRight": 6,
+        },
       ]
     }>
     
@@ -224,14 +215,11 @@ exports[`test renders correctly with state foo 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFFFFF",
-            "fontSize": 21,
-            "marginRight": 6,
-          },
-        ],
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 21,
+          "marginRight": 6,
+        },
       ]
     }>
     

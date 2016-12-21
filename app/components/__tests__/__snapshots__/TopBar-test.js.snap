@@ -81,13 +81,10 @@ exports[`test renders correctly 1`] = `
             "fontStyle": "normal",
             "fontWeight": "normal",
           },
-          Array [
-            Object {},
-            Object {
-              "color": "#654C50",
-              "fontSize": 42,
-            },
-          ],
+          Object {
+            "color": "#654C50",
+            "fontSize": 42,
+          },
         ]
       }>
       

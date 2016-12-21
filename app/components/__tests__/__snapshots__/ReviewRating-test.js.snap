@@ -19,12 +19,9 @@ exports[`test renders correctly 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFBA00",
-          },
-        ],
+        Object {
+          "color": "#FFBA00",
+        },
       ]
     }>
     
@@ -42,12 +39,9 @@ exports[`test renders correctly 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFBA00",
-          },
-        ],
+        Object {
+          "color": "#FFBA00",
+        },
       ]
     }>
     
@@ -65,12 +59,9 @@ exports[`test renders correctly 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFBA00",
-          },
-        ],
+        Object {
+          "color": "#FFBA00",
+        },
       ]
     }>
     
@@ -88,12 +79,9 @@ exports[`test renders correctly 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFBA00",
-          },
-        ],
+        Object {
+          "color": "#FFBA00",
+        },
       ]
     }>
     
@@ -111,12 +99,9 @@ exports[`test renders correctly 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Array [
-          Object {},
-          Object {
-            "color": "#FFBA00",
-          },
-        ],
+        Object {
+          "color": "#FFBA00",
+        },
       ]
     }>
     
