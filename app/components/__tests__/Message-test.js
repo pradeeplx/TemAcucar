@@ -8,7 +8,7 @@ const props = {
     created_at: 1482354068787,
     text: 'Foo',
   },
-  date: 1482354242154,
+  date: 'HOJE',
   fromCurrentUser: false,
 }
 
@@ -25,7 +25,6 @@ it('renders differently for current user', () => {
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
-
 
 it('does not display date sentence when no date is given', () => {
   const tree = renderer.create(
