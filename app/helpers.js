@@ -1,9 +1,9 @@
 import React from 'react'
 import { Dimensions } from 'react-native'
+import { clamp } from 'lodash'
 
 export const calculateFontFactor = ({ height, scale }) => {
-  const factor = Math.max((height * scale) / 1024, 1)
-  return Math.min(factor, 1.5)
+  return clamp((height * scale) / 1024, 1, 1.5)
 }
 
 export const fontFactor = () => calculateFontFactor(Dimensions.get('window'))
