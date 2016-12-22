@@ -1,22 +1,11 @@
 import React from 'react'
 import { Image, PixelRatio, Dimensions } from 'react-native'
+import { maxLower } from '../helpers'
 
 export default WelcomeImage = ({ style }) => {
   const ratio = PixelRatio.get()
-  let image
-  if (ratio <= 1) {
-    image = require('../img/welcome100.png')
-  } else if (ratio <= 1.5) {
-    image = require('../img/welcome150.png')
-  } else if (ratio <= 2) {
-    image = require('../img/welcome200.png')
-  } else if (ratio <= 3) {
-    image = require('../img/welcome300.png')
-  } else if (ratio <= 3.5) {
-    image = require('../img/welcome350.png')
-  } else {
-    image = require('../img/welcome400.png')
-  }
+  const result = maxLower(ratio, 1, 1.5, 2, 3, 3.5, 4)
+  const image = require(`../img/welcome${result * 100}.png`)
   return (
     <Image source={image} style={[{
       width: Dimensions.get('window').width,

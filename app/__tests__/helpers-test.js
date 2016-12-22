@@ -24,3 +24,22 @@ describe('calculateFontFactor function', () => {
     })).toBe(1.5);
   })
 })
+
+describe('maxLower function', () => {
+  const options = [1, 1.5, 2, 3, 3.5, 4]
+
+  it('returns number that is smaller or equal to given value', () => {
+    const result = subject.maxLower(1.3, ...options)
+    expect(result).toBe(1.5)
+  })
+
+  it('returns smaller option from the right', () => {
+    const result = subject.maxLower(2, ...options)
+    expect(result).toBe(2)
+  })
+
+  it('returns default value if number is to big', () => {
+    const result = subject.maxLower(3.8, ...options)
+    expect(result).toBe(4)
+  })
+})

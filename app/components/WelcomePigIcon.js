@@ -1,22 +1,11 @@
 import React from 'react'
 import { Image, PixelRatio, Dimensions } from 'react-native'
+import { maxLower } from '../helpers'
 
 export default WelcomePigIcon = ({ style }) => {
   const ratio = PixelRatio.get()
-  let image
-  if (ratio <= 1) {
-    image = require('../img/pig100.png')
-  } else if (ratio <= 1.5) {
-    image = require('../img/pig150.png')
-  } else if (ratio <= 2) {
-    image = require('../img/pig200.png')
-  } else if (ratio <= 3) {
-    image = require('../img/pig300.png')
-  } else if (ratio <= 3.5) {
-    image = require('../img/pig350.png')
-  } else {
-    image = require('../img/pig400.png')
-  }
+  const result = maxLower(ratio, 1, 1.5, 2, 3, 3.5, 4)
+  const image = require(`../img/pig${result * 100}.png`)
   return (
     <Image source={image} style={[{
       width: 124,
