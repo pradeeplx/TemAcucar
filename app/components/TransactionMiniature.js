@@ -36,7 +36,7 @@ export default class TransacionMiniature extends Component {
           <Sentence style={{
             color: Colors.gray,
           }}>
-            { truncate((last_message_text ? last_message_text : 'Escreva uma mensagem para ' + transaction.demand.user.first_name), 35) }
+            { truncate((last_message_text ? last_message_text : 'Escreva uma mensagem para ' + demand.user.first_name), 35) }
           </Sentence>
         </View>
         <Icon name="ios-arrow-forward-outline" style={{

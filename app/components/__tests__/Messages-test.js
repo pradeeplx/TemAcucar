@@ -8,12 +8,12 @@ const props = {
   messages: [{
     id: 1,
     user_id: 1,
-    created_at: 1482354068787,
+    created_at: 10E4,
     text: 'Foo',
   }, {
     id: 2,
     user_id: 2,
-    created_at: 1482354068890,
+    created_at: 10E4,
     text: 'Bar',
   }],
   listing: false,

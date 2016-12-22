@@ -4,6 +4,7 @@ import { fontFactor } from "../helpers"
 import Colors from "../Colors"
 import Sentence from "./Sentence"
 import UserMenuItem from "./UserMenuItem"
+import UserImage from "./UserImage"
 
 export default UserMenu = ({ currentUser, onSettings, onFeedback, onAbout, onSignOut, onUserDemands, onUserReviews, onSetLocation, onFacebook, facebookConnecting, onAdminDemands, onFlaggedDemands, signingOut }) => (
   <View style={{

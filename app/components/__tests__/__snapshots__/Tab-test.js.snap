@@ -9,7 +9,7 @@ exports[`test renders correctly 1`] = `
           "#FFF2F3",
         ]
       }
-      onRefresh={[Function]}
+      onRefresh={undefined}
       progressBackgroundColor="#FFFFFF"
       refreshing={false}
       tintColor="#FC9CA3"

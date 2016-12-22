@@ -1,0 +1,443 @@
+exports[`test renders correctly 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#EFEDED",
+      "borderTopWidth": 0,
+      "flexDirection": "row",
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+  testID={undefined}>
+  <Image
+    size={32}
+    source={
+      Object {
+        "uri": "http://imgur.com/10",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderRadius": 24,
+          "height": 48,
+          "width": 48,
+        },
+        Object {
+          "marginRight": 10,
+        },
+      ]
+    } />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#654C50",
+          },
+        ]
+      }>
+      Baru Fooa
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#CECED2",
+          },
+        ]
+      }>
+      Escreva uma mensagem para Baru
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {
+          "color": "#CECED2",
+        },
+      ]
+    }>
+    
+  </Text>
+</View>
+`;
+
+exports[`test renders custom last_message_text and truncates 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#EFEDED",
+      "borderTopWidth": 0,
+      "flexDirection": "row",
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+  testID={undefined}>
+  <Image
+    size={32}
+    source={
+      Object {
+        "uri": "http://imgur.com/10",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderRadius": 24,
+          "height": 48,
+          "width": 48,
+        },
+        Object {
+          "marginRight": 10,
+        },
+      ]
+    } />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#654C50",
+          },
+        ]
+      }>
+      Baru Fooa
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#CECED2",
+          },
+        ]
+      }>
+      foobarfoobarfoobarfoobarfoobarfo...
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {
+          "color": "#CECED2",
+        },
+      ]
+    }>
+    
+  </Text>
+</View>
+`;
+
+exports[`test renders differently for other index 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#EFEDED",
+      "borderTopWidth": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+  testID={undefined}>
+  <Image
+    size={32}
+    source={
+      Object {
+        "uri": "http://imgur.com/10",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderRadius": 24,
+          "height": 48,
+          "width": 48,
+        },
+        Object {
+          "marginRight": 10,
+        },
+      ]
+    } />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#654C50",
+          },
+        ]
+      }>
+      Baru Fooa
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#CECED2",
+          },
+        ]
+      }>
+      Escreva uma mensagem para Baru
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {
+          "color": "#CECED2",
+        },
+      ]
+    }>
+    
+  </Text>
+</View>
+`;
+
+exports[`test renders for other user 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#EFEDED",
+      "borderTopWidth": 0,
+      "flexDirection": "row",
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+  testID={undefined}>
+  <Image
+    size={32}
+    source={
+      Object {
+        "uri": "http://google.com",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderRadius": 24,
+          "height": 48,
+          "width": 48,
+        },
+        Object {
+          "marginRight": 10,
+        },
+      ]
+    } />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#654C50",
+          },
+        ]
+      }>
+      Foo Bar
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#CECED2",
+          },
+        ]
+      }>
+      Escreva uma mensagem para Baru
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Ionicons",
+          "fontSize": 27,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {
+          "color": "#CECED2",
+        },
+      ]
+    }>
+    
+  </Text>
+</View>
+`;

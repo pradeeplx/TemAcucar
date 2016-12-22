@@ -193,7 +193,7 @@ exports[`test renders correctly 1`] = `
                 ],
               ]
             }>
-            há segundos
+            há 47 anos
           </Text>
         </View>
         <Text
@@ -408,7 +408,7 @@ exports[`test renders tip when there is demands 1`] = `
                 ],
               ]
             }>
-            há segundos
+            há 47 anos
           </Text>
         </View>
         <Text

@@ -34,7 +34,7 @@ exports[`test renders ActivityIndicator 1`] = `
             undefined,
           ]
         }>
-        HOJE
+        31/12/1969
       </Text>
     </View>
     <View
@@ -84,7 +84,7 @@ exports[`test renders ActivityIndicator 1`] = `
             },
           ]
         }>
-        19:01
+        21:01
       </Text>
     </View>
   </View>
@@ -137,7 +137,7 @@ exports[`test renders ActivityIndicator 1`] = `
             },
           ]
         }>
-        19:01
+        21:01
       </Text>
     </View>
   </View>
@@ -169,7 +169,7 @@ exports[`test renders correctly 1`] = `
             undefined,
           ]
         }>
-        HOJE
+        31/12/1969
       </Text>
     </View>
     <View
@@ -219,7 +219,7 @@ exports[`test renders correctly 1`] = `
             },
           ]
         }>
-        19:01
+        21:01
       </Text>
     </View>
   </View>
@@ -272,7 +272,7 @@ exports[`test renders correctly 1`] = `
             },
           ]
         }>
-        19:01
+        21:01
       </Text>
     </View>
   </View>
@@ -352,7 +352,7 @@ exports[`test renders load more button 1`] = `
             undefined,
           ]
         }>
-        HOJE
+        31/12/1969
       </Text>
     </View>
     <View
@@ -402,7 +402,7 @@ exports[`test renders load more button 1`] = `
             },
           ]
         }>
-        19:01
+        21:01
       </Text>
     </View>
   </View>
@@ -455,7 +455,7 @@ exports[`test renders load more button 1`] = `
             },
           ]
         }>
-        19:01
+        21:01
       </Text>
     </View>
   </View>

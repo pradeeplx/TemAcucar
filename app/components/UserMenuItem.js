@@ -5,7 +5,7 @@ import Colors from "../Colors"
 import Sentence from "./Sentence"
 import Icon from "./Icon"
 
-export default UserMenuItem = ({ onPress, style, icon, iconSet, iconStyle, children, type }) => (
+export default UserMenuItem = ({ onPress, style, icon, iconSet, iconStyle, children }) => (
   <TouchableOpacity onPress={onPress} style={[{
     alignSelf: 'stretch',
     padding: 10,
@@ -19,13 +19,13 @@ export default UserMenuItem = ({ onPress, style, icon, iconSet, iconStyle, child
     }}>
       <Icon name={icon} set={iconSet} style={[{
         fontSize: 24 * fontFactor(),
-        color: (type == "light" ? Colors.white : Colors.white),
+        color: Colors.white,
       }, iconStyle]} />
     </View>
     <Sentence style={{
       marginLeft: 8,
       fontSize: 16 * fontFactor(),
-      color: (type == "light" ? Colors.white : Colors.white),
+      color: Colors.white,
     }}>
       {children}
     </Sentence>

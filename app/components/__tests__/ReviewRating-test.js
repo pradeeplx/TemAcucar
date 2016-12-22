@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer'
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <ReviewRating rating={5} />
+    <ReviewRating rating={4} />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

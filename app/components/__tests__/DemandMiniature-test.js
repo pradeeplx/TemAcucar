@@ -9,7 +9,7 @@ const props = {
     name: 'Foo',
     description: 'Foo Bar',
     distance: 20,
-    created_at: Date.now(),
+    created_at: 10E4,
     state: 'bar',
   },
   currentUser: 1,

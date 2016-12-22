@@ -1,0 +1,70 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "marginVertical": 20,
+    }
+  }>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#CECED2",
+        "borderRadius": 6,
+        "borderWidth": 0.5,
+        "height": 12,
+        "marginHorizontal": 6,
+        "width": 12,
+      }
+    } />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#CECED2",
+        "borderRadius": 6,
+        "borderWidth": 0.5,
+        "height": 12,
+        "marginHorizontal": 6,
+        "width": 12,
+      }
+    } />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#44B5B1",
+        "borderColor": "#44B5B1",
+        "borderRadius": 6,
+        "borderWidth": 0.5,
+        "height": 12,
+        "marginHorizontal": 6,
+        "width": 12,
+      }
+    } />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#CECED2",
+        "borderRadius": 6,
+        "borderWidth": 0.5,
+        "height": 12,
+        "marginHorizontal": 6,
+        "width": 12,
+      }
+    } />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#CECED2",
+        "borderRadius": 6,
+        "borderWidth": 0.5,
+        "height": 12,
+        "marginHorizontal": 6,
+        "width": 12,
+      }
+    } />
+</View>
+`;

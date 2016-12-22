@@ -4,7 +4,7 @@ import Colors from "../Colors"
 import Icon from "./Icon"
 import TimeAgo from "./TimeAgo"
 
-export default TransactionDemandTimeAgo = ({ index, demand: { created_at, user }, currentUser }) => (
+export default TransactionDemandTimeAgo = ({ demand: { created_at } }) => (
   <View style={{
     flexDirection: 'column',
     flex: 1,

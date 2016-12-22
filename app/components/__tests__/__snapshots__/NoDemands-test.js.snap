@@ -37,3 +37,43 @@ exports[`test renders correctly 1`] = `
   </Text>
 </View>
 `;
+
+exports[`test renders default text 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#FAF6F1",
+        "borderTopWidth": 12,
+        "padding": 15,
+      },
+      Object {
+        "borderTopWidth": 0,
+      },
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Object {
+          "alignSelf": "stretch",
+          "fontSize": 15,
+          "marginHorizontal": 10,
+          "textAlign": "center",
+        },
+      ]
+    }>
+    Você ainda não recebeu pedidos dos seus vizinhos. Que tal agitar sua vizinhança pedindo algo que você precisa?
+  </Text>
+</View>
+`;

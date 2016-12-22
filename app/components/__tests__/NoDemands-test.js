@@ -9,3 +9,10 @@ it('renders correctly', () => {
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+it('renders default text', () => {
+  const tree = renderer.create(
+    <NoDemands />
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
+});

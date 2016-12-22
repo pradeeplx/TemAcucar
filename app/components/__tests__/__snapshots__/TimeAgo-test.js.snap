@@ -20,6 +20,30 @@ exports[`test renders correctly 1`] = `
       ],
     ]
   }>
-  há segundos
+  Há 47 anos
+</Text>
+`;
+
+exports[`test renders in lowerCase 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#654C50",
+        "fontFamily": "Avenir",
+        "fontSize": 18,
+      },
+      Array [
+        Object {
+          "fontSize": 13.5,
+        },
+        undefined,
+      ],
+    ]
+  }>
+  há 47 anos
 </Text>
 `;

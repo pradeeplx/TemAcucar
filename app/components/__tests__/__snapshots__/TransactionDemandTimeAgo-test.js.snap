@@ -1,0 +1,35 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-end",
+      "flex": 1,
+      "flexDirection": "column",
+      "marginTop": 10,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Array [
+          Object {
+            "fontSize": 13.5,
+          },
+          Object {
+            "color": "#000000",
+          },
+        ],
+      ]
+    }>
+    Há 47 anos
+  </Text>
+</View>
+`;

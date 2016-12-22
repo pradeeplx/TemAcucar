@@ -1,0 +1,82 @@
+exports[`test renders correctly 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "flexDirection": "row",
+      "opacity": 1,
+      "padding": 10,
+      "paddingBottom": 0,
+      "top": 0,
+    }
+  }
+  testID={undefined}>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "width": 36,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#654C50",
+            "fontFamily": "Ionicons",
+            "fontSize": 27,
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 36,
+            },
+            Object {
+              "top": 1,
+            },
+          ],
+        ]
+      }>
+      
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#654C50",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 24,
+          "marginLeft": 8,
+        },
+      ]
+    }>
+    FooBar
+  </Text>
+</View>
+`;

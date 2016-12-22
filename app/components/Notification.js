@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { TouchableOpacity, View, StyleSheet } from 'react-native'
 import Colors from "../Colors"
 import HtmlSentence from "./HtmlSentence"
+import UserImage from "./UserImage"
 import TimeAgo from "./TimeAgo"
 
 export default class Notification extends Component {

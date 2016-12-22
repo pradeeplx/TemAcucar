@@ -6,10 +6,7 @@ import { identity } from 'lodash'
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <TopBar
-      style={{top: 0}}
-      onMenuOpen={identity}
-    />
+    <TopBar style={{top: 0}} />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

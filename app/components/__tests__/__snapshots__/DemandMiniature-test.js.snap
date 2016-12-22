@@ -149,7 +149,7 @@ exports[`test renders 800m instead of 0.8km for distance 1`] = `
             ],
           ]
         }>
-        há segundos
+        há 47 anos
       </Text>
     </View>
     <Text
@@ -360,7 +360,7 @@ exports[`test renders borderTopWidth 0 when index is 0 1`] = `
             ],
           ]
         }>
-        há segundos
+        há 47 anos
       </Text>
     </View>
     <Text
@@ -571,7 +571,7 @@ exports[`test renders correctly 1`] = `
             ],
           ]
         }>
-        há segundos
+        há 47 anos
       </Text>
     </View>
     <Text
@@ -782,7 +782,7 @@ exports[`test renders showClose styles 1`] = `
             ],
           ]
         }>
-        há segundos
+        há 47 anos
       </Text>
     </View>
     <Text
@@ -1039,7 +1039,7 @@ exports[`test renders user first_name if user is not the currentUser 1`] = `
             ],
           ]
         }>
-        há segundos
+        há 47 anos
       </Text>
     </View>
     <Text
