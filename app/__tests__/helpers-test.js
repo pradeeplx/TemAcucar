@@ -34,12 +34,8 @@ describe('maxLower function', () => {
   })
 
   it('returns smaller option from the right', () => {
-    const result = subject.maxLower(2, ...options)
-    expect(result).toBe(2)
-  })
-
-  it('returns default value if number is to big', () => {
     const result = subject.maxLower(3.8, ...options)
     expect(result).toBe(4)
   })
+
 })
