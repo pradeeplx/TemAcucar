@@ -19,10 +19,5 @@ export default DemandValidators = {
       arguments: [1, 255],
     }]
   },
-  errorMessage: (error) => {
-    switch (error.id) {
-      default:
-        return 'Oops! Ocorreu um erro ao acessar nosso servidor. Por favor, tente novamente.'
-    }
-  }
+  errorMessage: () => 'Oops! Ocorreu um erro ao acessar nosso servidor. Por favor, tente novamente.',
 }

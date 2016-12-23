@@ -1,0 +1,19 @@
+exports[`MessageValidators.errorMessage cases has a default errorMessage 1`] = `"Oops! Ocorreu um erro ao acessar nosso servidor. Por favor, tente novamente."`;
+
+exports[`test MessageValidators object 1`] = `
+Object {
+  "errorMessage": [Function],
+  "text": Object {
+    "title": "Texto",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+}
+`;

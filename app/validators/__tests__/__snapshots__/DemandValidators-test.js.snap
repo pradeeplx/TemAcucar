@@ -1,0 +1,39 @@
+exports[`DemandValidators.errorMessage cases has a default errorMessage 1`] = `"Oops! Ocorreu um erro ao acessar nosso servidor. Por favor, tente novamente."`;
+
+exports[`test DemandValidators object 1`] = `
+Object {
+  "description": Object {
+    "title": "Para que você vai usar?",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "errorMessage": [Function],
+  "name": Object {
+    "title": "O que você precisa?",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "radius": Object {
+    "title": "Raio",
+    "validate": Array [
+      Object {
+        "validator": "isNumeric",
+      },
+    ],
+  },
+}
+`;

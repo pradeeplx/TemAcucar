@@ -1,0 +1,27 @@
+exports[`ReviewValidators.errorMessage cases has a default errorMessage 1`] = `"Oops! Ocorreu um erro ao acessar nosso servidor. Por favor, tente novamente."`;
+
+exports[`test ReviewValidators object 1`] = `
+Object {
+  "errorMessage": [Function],
+  "rating": Object {
+    "title": "Avaliação",
+    "validate": Array [
+      Object {
+        "validator": "isNumeric",
+      },
+    ],
+  },
+  "text": Object {
+    "title": "Descreva sua experiência",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+}
+`;

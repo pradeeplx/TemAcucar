@@ -1,4 +1,4 @@
-const Colors = {
+export default Colors = {
   brown: '#654C50',
   pink: '#FF7F85',
   lightPink: '#FFF2F3',
@@ -22,5 +22,3 @@ const Colors = {
   red: '#E9122B',
   green: '#2CB36E',
 }
-
-export default Colors

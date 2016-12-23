@@ -21,11 +21,12 @@ class MessagesContainer extends Component {
   render() {
     const { auth, messages } = this.props
     const { currentUser } = auth
+    const { list, listing, canList } = messages
     return (
       <Messages
-        messages={messages.list}
-        listing={messages.listing}
-        canList={messages.canList}
+        messages={list}
+        listing={listing}
+        canList={canList}
         currentUser={currentUser}
         onList={this.handleList.bind(this)}
       />

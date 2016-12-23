@@ -1,0 +1,150 @@
+exports[`UserValidators.errorMessage cases error.id is email_is_already_taken 1`] = `"E-mail já cadastrado para outro usuário."`;
+
+exports[`UserValidators.errorMessage cases error.id is not_found 1`] = `"Usuário não encontrado."`;
+
+exports[`UserValidators.errorMessage cases error.id is unauthorized 1`] = `"Código inválido. Confira seu e-mail ;)"`;
+
+exports[`UserValidators.errorMessage cases has a default errorMessage 1`] = `"Oops! Ocorreu um erro ao acessar nosso servidor. Por favor, tente novamente."`;
+
+exports[`test UserValidators object 1`] = `
+Object {
+  "address_administrative_area": Object {
+    "title": "Estado",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "address_complement": Object {
+    "title": "Complemento",
+    "validate": Array [
+      Object {
+        "validator": [Function],
+      },
+    ],
+  },
+  "address_country": Object {
+    "title": "País",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "address_locality": Object {
+    "title": "Cidade",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "address_sub_locality": Object {
+    "title": "Complemento",
+    "validate": Array [
+      Object {
+        "validator": [Function],
+      },
+    ],
+  },
+  "address_sub_thoroughfare": Object {
+    "title": "Número",
+    "validate": Array [
+      Object {
+        "validator": [Function],
+      },
+    ],
+  },
+  "address_thoroughfare": Object {
+    "title": "Rua, Av., etc",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "email": Object {
+    "title": "E-mail",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+      Object {
+        "message": "Complete seu e-mail",
+        "validator": "isEmail",
+      },
+    ],
+  },
+  "errorMessage": [Function],
+  "first_name": Object {
+    "title": "Nome",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "last_name": Object {
+    "title": "Sobrenome",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+  "password": Object {
+    "title": "Senha",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          8,
+          255,
+        ],
+        "message": "Use uma senha maior",
+        "validator": "isLength",
+      },
+    ],
+  },
+  "reset_password_token": Object {
+    "title": "Código enviado",
+    "validate": Array [
+      Object {
+        "arguments": Array [
+          1,
+          255,
+        ],
+        "validator": "isLength",
+      },
+    ],
+  },
+}
+`;

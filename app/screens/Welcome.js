@@ -4,19 +4,19 @@ import { Actions } from 'react-native-router-flux'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import Swiper from 'react-native-swiper'
 
-import Colors from "../Colors"
-import Button from "../components/Button"
-import Headline from "../components/Headline"
-import WelcomeView from "../components/WelcomeView"
-import WelcomeImage from "../components/WelcomeImage"
-import WelcomeHeader from "../components/WelcomeHeader"
-import WelcomeBullets from "../components/WelcomeBullets"
-import WelcomeGlassIcon from "../components/WelcomeGlassIcon"
-import WelcomeMegaphoneIcon from "../components/WelcomeMegaphoneIcon"
-import WelcomePigIcon from "../components/WelcomePigIcon"
-import WelcomeNotebookIcon from "../components/WelcomeNotebookIcon"
-import WelcomeBottomView from "../components/WelcomeBottomView"
-import SignInOrSignUpLink from "../components/SignInOrSignUpLink"
+import Colors from '../Colors'
+import Button from '../components/Button'
+import Headline from '../components/Headline'
+import WelcomeView from '../components/WelcomeView'
+import WelcomeImage from '../components/WelcomeImage'
+import WelcomeHeader from '../components/WelcomeHeader'
+import WelcomeBullets from '../components/WelcomeBullets'
+import WelcomeGlassIcon from '../components/WelcomeGlassIcon'
+import WelcomeMegaphoneIcon from '../components/WelcomeMegaphoneIcon'
+import WelcomePigIcon from '../components/WelcomePigIcon'
+import WelcomeNotebookIcon from '../components/WelcomeNotebookIcon'
+import WelcomeBottomView from '../components/WelcomeBottomView'
+import SignInOrSignUpLink from '../components/SignInOrSignUpLink'
 
 export default class Welcome extends Component {
   componentDidMount() {

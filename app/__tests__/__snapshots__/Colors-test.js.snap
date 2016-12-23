@@ -1,0 +1,26 @@
+exports[`test Colors object 1`] = `
+Object {
+  "beige": "#E6D3B7",
+  "black": "#000000",
+  "blue": "#44B5B1",
+  "brown": "#654C50",
+  "darkBeige": "#DBC3A3",
+  "darkGray": "#807F7F",
+  "darkYellow": "#FFBA00",
+  "facebook": "#557BD3",
+  "gray": "#CECED2",
+  "green": "#2CB36E",
+  "lightBeige": "#FAF6F1",
+  "lightBlue": "#ECF8F7",
+  "lightGray": "#EFEDED",
+  "lightPink": "#FFF2F3",
+  "lightYellow": "#FFFBD5",
+  "mediumLightBeige": "#FFE9AE",
+  "mediumLightPink": "#FEBCC3",
+  "mediumPink": "#FC9CA3",
+  "pink": "#FF7F85",
+  "red": "#E9122B",
+  "white": "#FFFFFF",
+  "yellow": "#FFEA2D",
+}
+`;

@@ -85,8 +85,8 @@ export default UserValidators = {
       arguments: [1, 255],
     }]
   },
-  errorMessage: (error) => {
-    switch (error.id) {
+  errorMessage: ({ id }) => {
+    switch (id) {
       case 'not_found':
         return 'Usuário não encontrado.'
       case 'email_is_already_taken':
